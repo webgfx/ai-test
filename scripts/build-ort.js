@@ -102,11 +102,15 @@ async function buildOrt({ eps = ['webgpu'] } = {}) {
     }
   }
 
-  // Web build (WASM) - separate build since it uses Emscripten toolchain
+  // Web build: Stage 1 (WASM) + Stage 2 (JS/Web package)
+  // Follows https://aiinfra.visualstudio.com/Lotus/_build/results?buildId=1105144
   if (useWeb) {
+    // Stage 1: Build WASM files
+    const webBuildDir = path.join('build', 'Wasm');
     const webBuildArgs = [
       BUILD_CMD,
-      `--config ${BUILD_CONFIG}`,
+      '--config MinSizeRel',
+      `--build_dir "${webBuildDir}"`,
       '--build_wasm',
       '--enable_wasm_simd',
       '--enable_wasm_threads',
@@ -115,17 +119,54 @@ async function buildOrt({ eps = ['webgpu'] } = {}) {
       '--skip_submodule_sync',
       '--use_jsep',
       '--target onnxruntime_webassembly',
+      '--disable_wasm_exception_catching',
+      '--disable_rtti',
     ];
 
     const webBuildCmd = webBuildArgs.join(' ');
 
     try {
-      await runCommand(webBuildCmd, ORT_PATH, 'ORT Web Build');
+      await runCommand(webBuildCmd, ORT_PATH, 'ORT Web: Stage 1 (WASM)');
     } catch (err) {
       console.log('\n[ORT Web] Build failed, retrying without --skip_submodule_sync...\n');
       const retryArgs = webBuildArgs.filter(a => a !== '--skip_submodule_sync');
-      await runCommand(retryArgs.join(' '), ORT_PATH, 'ORT Web Build (retry)');
+      await runCommand(retryArgs.join(' '), ORT_PATH, 'ORT Web: Stage 1 (retry)');
     }
+
+    // Stage 2: Build JS/Web package
+    // npm ci for js, js/common, js/web
+    const jsDir = path.join(ORT_PATH, 'js');
+    await runCommand('npm ci', jsDir, 'ORT Web: npm ci (js)');
+    await runCommand('npm ci', path.join(jsDir, 'common'), 'ORT Web: npm ci (js/common)');
+    await runCommand('npm ci', path.join(jsDir, 'web'), 'ORT Web: npm ci (js/web)');
+
+    // Pull pre-built WASM variants (asyncify etc.) that we didn't build locally
+    try {
+      await runCommand('npm run pull:wasm', path.join(jsDir, 'web'), 'ORT Web: pull:wasm');
+    } catch (err) {
+      console.log('[ORT Web] pull:wasm failed (non-critical), continuing...');
+    }
+
+    // Copy our locally built WASM files to js/web/dist (overrides pulled ones)
+    const wasmBuildOut = path.join(ORT_PATH, webBuildDir, 'MinSizeRel');
+    const webDist = path.join(jsDir, 'web', 'dist');
+    fs.mkdirSync(webDist, { recursive: true });
+
+    const wasmFiles = ['ort-wasm-simd-threaded.jsep.mjs', 'ort-wasm-simd-threaded.jsep.wasm'];
+    for (const file of wasmFiles) {
+      const src = path.join(wasmBuildOut, file);
+      if (fs.existsSync(src)) {
+        fs.copyFileSync(src, path.join(webDist, file));
+        console.log(`[ORT Web] Copied ${file} to js/web/dist/`);
+      } else {
+        console.warn(`[ORT Web] Warning: ${file} not found at ${src}`);
+      }
+    }
+
+    // Build the web package
+    await runCommand('npm run build', path.join(jsDir, 'web'), 'ORT Web: Stage 2 (JS build)');
+
+    console.log(`[ORT Web] Built files in: ${webDist}`);
   }
 
   // cmake --install into <onnxruntime>/install/<config>

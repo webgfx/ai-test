@@ -15,6 +15,7 @@
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
+const { getSystemInfo } = require('./common');
 
 const config = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config.json'), 'utf8'));
 
@@ -103,11 +104,11 @@ function parseArgs() {
         opts.model = args[++i];
         break;
       case '--prompt-length':
-      case '-l':
+      case '-pl':
         opts.promptLength = parseInt(args[++i]);
         break;
       case '--gen-length':
-      case '-g':
+      case '-gl':
         opts.genLength = parseInt(args[++i]);
         break;
       case '--prompt':
@@ -154,8 +155,8 @@ Usage: node scripts/perf-test.js [options]
 Options:
   -m, --model <name>          Model name (default: ${Object.keys(config.models)[0]})
   -e, --ep <provider>         Execution provider: cuda, cpu (default: WebGPU via native build)
-  -l, --prompt-length <n>     Number of prompt tokens (default: ${config.perf.promptTokens})
-  -g, --gen-length <n>        Number of tokens to generate (default: ${config.perf.genTokens})
+  -pl, --prompt-length <n>    Number of prompt tokens (default: ${config.perf.promptTokens})
+  -gl, --gen-length <n>       Number of tokens to generate (default: ${config.perf.genTokens})
       --prompt <text>         Use specific prompt text instead of generated prompt
   -r, --iterations <n>        Number of benchmark iterations (default: ${config.perf.iterations})
   -w, --warmup <n>            Number of warmup iterations (default: ${config.perf.warmup})
