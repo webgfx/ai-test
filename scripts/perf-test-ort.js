@@ -192,7 +192,7 @@ function parseArgs(options = {}) {
     maxLength: 0,
     ep: null,  // execution provider: cuda, cpu (default: WebGPU via native build)
     ortVersion: null,  // ORT backup version (yyyymmdd), null = latest
-    graphCapture: null, // null = don't change, true = enable, false = disable
+    graphCapture: true, // true = enable (default), false = disable, null = don't change
   };
 
   for (let i = 0; i < args.length; i++) {

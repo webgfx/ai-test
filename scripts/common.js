@@ -57,14 +57,23 @@ function getSystemInfo() {
     gpuDriver: 'Unknown',
   };
 
-  // Try to get GPU info via nvidia-smi
+  // Get GPU info via WMI (works for NVIDIA, AMD, Intel)
+  // Fetch all controllers and skip virtual/remote display adapters
   try {
-    const smi = execSync('nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader,nounits', { encoding: 'utf8', timeout: 10000, stdio: 'pipe' }).trim();
-    const parts = smi.split(', ');
-    if (parts.length >= 3) {
-      info.gpu = parts[0];
-      info.gpuDriver = parts[1];
-      info.gpuMemoryMB = parts[2];
+    const wmi = execSync(
+      'powershell -NoProfile -Command "Get-WmiObject Win32_VideoController | Select-Object Name,DriverVersion,AdapterRAM | ConvertTo-Json"',
+      { encoding: 'utf8', timeout: 10000, stdio: 'pipe' }
+    ).trim();
+    const parsed = JSON.parse(wmi);
+    const controllers = Array.isArray(parsed) ? parsed : [parsed];
+    const virtualNames = /microsoft remote display|microsoft basic display|hyper-v video|indirect display/i;
+    const obj = controllers.find(c => c && c.Name && !virtualNames.test(c.Name)) || controllers[0];
+    if (obj && obj.Name) {
+      info.gpu = obj.Name.trim();
+      if (obj.DriverVersion) info.gpuDriver = obj.DriverVersion.trim();
+      if (obj.AdapterRAM && obj.AdapterRAM > 0) {
+        info.gpuMemoryMB = Math.round(obj.AdapterRAM / 1024 / 1024).toString();
+      }
     }
   } catch {}
 
