@@ -68,9 +68,9 @@ const path = require('path');
 const fs = require('fs');
 const { main: runLlamaCpp } = require('./perf-test-llamacpp');
 const { main: runOrt } = require('./perf-test-ort');
-const { getSystemInfo } = require('./common');
+const { getSystemInfo, loadConfig } = require('./common');
 
-const config = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config.json'), 'utf8'));
+const config = loadConfig();
 const RESULTS_DIR = config.paths.results || path.resolve(path.join(__dirname, '..', 'gitignore', 'results'));
 
 async function main() {

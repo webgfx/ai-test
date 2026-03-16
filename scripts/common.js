@@ -4,6 +4,43 @@
 
 const { execSync } = require('child_process');
 const os = require('os');
+const path = require('path');
+const fs = require('fs');
+
+/**
+ * Load config.json merged with local_config.json (if exists).
+ * local_config.json overrides config.json values (shallow merge per section).
+ */
+function loadConfig() {
+  const projectRoot = path.join(__dirname, '..');
+  const configPath = path.join(projectRoot, 'config.json');
+  const localConfigPath = path.join(projectRoot, 'local_config.json');
+
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+
+  if (fs.existsSync(localConfigPath)) {
+    const local = JSON.parse(fs.readFileSync(localConfigPath, 'utf8'));
+    // Deep merge: override each section
+    for (const [key, value] of Object.entries(local)) {
+      if (typeof value === 'object' && !Array.isArray(value) && config[key] && typeof config[key] === 'object') {
+        config[key] = { ...config[key], ...value };
+      } else {
+        config[key] = value;
+      }
+    }
+  }
+
+  // Resolve relative paths in config.paths to absolute (relative to project root)
+  if (config.paths) {
+    for (const [key, value] of Object.entries(config.paths)) {
+      if (typeof value === 'string' && !path.isAbsolute(value)) {
+        config.paths[key] = path.resolve(projectRoot, value);
+      }
+    }
+  }
+
+  return config;
+}
 
 /**
  * Collect system information (CPU, GPU, memory, OS).
@@ -34,4 +71,4 @@ function getSystemInfo() {
   return info;
 }
 
-module.exports = { getSystemInfo };
+module.exports = { getSystemInfo, loadConfig };

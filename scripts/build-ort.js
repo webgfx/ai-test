@@ -20,7 +20,7 @@ const config = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config.jso
 const ORT_PATH = config.paths.onnxruntime;
 const GENAI_PATH = config.paths['onnxruntime-genai'];
 const BUILD_CONFIG = config.build.config;
-const OS_DIR = process.platform === 'win32' ? 'Windows' : 'Linux';
+const NATIVE_BUILD_DIR = 'native';
 const BUILD_CMD = process.platform === 'win32' ? '.\\build.bat' : './build.sh';
 
 // ORT install directory: <onnxruntime>/install/<config>
@@ -88,6 +88,7 @@ async function buildOrt({ eps = ['webgpu'] } = {}) {
       '--parallel',
       '--skip_submodule_sync',
       '--use_webgpu',
+      `--build_dir "build/${NATIVE_BUILD_DIR}"`,
       '--cmake_extra_defines onnxruntime_BUILD_UNIT_TESTS=OFF',
     ];
 
@@ -105,32 +106,65 @@ async function buildOrt({ eps = ['webgpu'] } = {}) {
   // Web build: Stage 1 (WASM) + Stage 2 (JS/Web package)
   // Follows https://aiinfra.visualstudio.com/Lotus/_build/results?buildId=1105144
   if (useWeb) {
-    // Stage 1: Build WASM files
-    const webBuildDir = path.join('build', 'Wasm');
-    const webBuildArgs = [
+    // Stage 1a: Build WASM files (JSEP variant)
+    const webBuildDir = path.join('build', 'wasm');
+    const commonWasmArgs = [
       BUILD_CMD,
-      '--config MinSizeRel',
-      `--build_dir "${webBuildDir}"`,
+      `--config ${BUILD_CONFIG}`,
       '--build_wasm',
       '--enable_wasm_simd',
       '--enable_wasm_threads',
       '--skip_tests',
       '--parallel',
       '--skip_submodule_sync',
-      '--use_jsep',
       '--target onnxruntime_webassembly',
       '--disable_wasm_exception_catching',
       '--disable_rtti',
     ];
 
-    const webBuildCmd = webBuildArgs.join(' ');
+    const jsepBuildArgs = [
+      ...commonWasmArgs,
+      `--build_dir "${webBuildDir}"`,
+    ];
 
     try {
-      await runCommand(webBuildCmd, ORT_PATH, 'ORT Web: Stage 1 (WASM)');
+      await runCommand(jsepBuildArgs.join(' '), ORT_PATH, 'ORT Web: Stage 1a (WASM JSEP)');
     } catch (err) {
-      console.log('\n[ORT Web] Build failed, retrying without --skip_submodule_sync...\n');
-      const retryArgs = webBuildArgs.filter(a => a !== '--skip_submodule_sync');
-      await runCommand(retryArgs.join(' '), ORT_PATH, 'ORT Web: Stage 1 (retry)');
+      console.log('\n[ORT Web] JSEP build failed, retrying without --skip_submodule_sync...\n');
+      const retryArgs = jsepBuildArgs.filter(a => a !== '--skip_submodule_sync');
+      await runCommand(retryArgs.join(' '), ORT_PATH, 'ORT Web: Stage 1a (retry)');
+    }
+
+    // Stage 1b: Build WASM files (JSPI variant — WebGPU + JSPI)
+    const jspiBuildDir = path.join('build', 'wasm_jspi');
+    const jspiBuildArgs = [
+      BUILD_CMD,
+      `--config ${BUILD_CONFIG}`,
+      '--build_wasm',
+      '--enable_wasm_simd',
+      '--enable_wasm_threads',
+      '--skip_tests',
+      '--parallel',
+      '--skip_submodule_sync',
+      '--target onnxruntime_webassembly',
+      '--disable_rtti',
+      `--build_dir "${jspiBuildDir}"`,
+      '--use_webgpu',
+      '--enable_wasm_jspi',
+      '--disable_rtti',
+      '--disable_ml_ops',
+      '--disable_generation_ops',
+      '--disable_types string float4 float8 optional sparsetensor',
+      '--include_ops_by_config onnxruntime/wasm/reduced_types.config',
+      '--enable_reduced_operator_type_support',
+    ];
+
+    try {
+      await runCommand(jspiBuildArgs.join(' '), ORT_PATH, 'ORT Web: Stage 1b (WASM JSPI)');
+    } catch (err) {
+      console.log('\n[ORT Web] JSPI build failed, retrying without --skip_submodule_sync...\n');
+      const retryArgs = jspiBuildArgs.filter(a => a !== '--skip_submodule_sync');
+      await runCommand(retryArgs.join(' '), ORT_PATH, 'ORT Web: Stage 1b (retry)');
     }
 
     // Stage 2: Build JS/Web package
@@ -148,13 +182,25 @@ async function buildOrt({ eps = ['webgpu'] } = {}) {
     }
 
     // Copy our locally built WASM files to js/web/dist (overrides pulled ones)
-    const wasmBuildOut = path.join(ORT_PATH, webBuildDir, 'MinSizeRel');
     const webDist = path.join(jsDir, 'web', 'dist');
     fs.mkdirSync(webDist, { recursive: true });
 
-    const wasmFiles = ['ort-wasm-simd-threaded.jsep.mjs', 'ort-wasm-simd-threaded.jsep.wasm'];
-    for (const file of wasmFiles) {
-      const src = path.join(wasmBuildOut, file);
+    // JSEP variant
+    const jsepBuildOut = path.join(ORT_PATH, webBuildDir, BUILD_CONFIG);
+    for (const file of ['ort-wasm-simd-threaded.jsep.mjs', 'ort-wasm-simd-threaded.jsep.wasm']) {
+      const src = path.join(jsepBuildOut, file);
+      if (fs.existsSync(src)) {
+        fs.copyFileSync(src, path.join(webDist, file));
+        console.log(`[ORT Web] Copied ${file} to js/web/dist/`);
+      } else {
+        console.warn(`[ORT Web] Warning: ${file} not found at ${src}`);
+      }
+    }
+
+    // JSPI variant
+    const jspiBuildOut = path.join(ORT_PATH, jspiBuildDir, BUILD_CONFIG);
+    for (const file of ['ort-wasm-simd-threaded.jspi.mjs', 'ort-wasm-simd-threaded.jspi.wasm']) {
+      const src = path.join(jspiBuildOut, file);
       if (fs.existsSync(src)) {
         fs.copyFileSync(src, path.join(webDist, file));
         console.log(`[ORT Web] Copied ${file} to js/web/dist/`);
@@ -170,7 +216,7 @@ async function buildOrt({ eps = ['webgpu'] } = {}) {
   }
 
   // cmake --install into <onnxruntime>/install/<config>
-  const buildDir = path.join(ORT_PATH, 'build', OS_DIR);
+  const buildDir = path.join(ORT_PATH, 'build', NATIVE_BUILD_DIR);
   const ortHome = path.join(ORT_INSTALL_DIR, BUILD_CONFIG);
   fs.mkdirSync(ortHome, { recursive: true });
 
@@ -271,6 +317,7 @@ async function buildGenai() {
     'python build.py',
     `--config ${BUILD_CONFIG}`,
     `--ort_home "${ortHome}"`,
+    `--build_dir "build/${NATIVE_BUILD_DIR}"`,
     '--skip_tests',
     '--skip_wheel',
     '--skip_examples',

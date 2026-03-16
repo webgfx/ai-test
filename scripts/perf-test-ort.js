@@ -15,9 +15,9 @@ const { spawn, spawnSync, execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
-const { getSystemInfo } = require('./common');
+const { getSystemInfo, loadConfig } = require('./common');
 
-const config = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config.json'), 'utf8'));
+const config = loadConfig();
 
 const ORT_PATH = config.paths.onnxruntime;
 const GENAI_PATH = config.paths['onnxruntime-genai'];

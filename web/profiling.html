@@ -1,0 +1,260 @@
+<body id="drop-area">
+  <h1 align="center">ORT Profiling Analyzer</h1>
+  <div align="center">
+    <b>Run index (e.g., 0 or 2-3)</b>
+    <input type="text" id="index" value="0"></input>
+    <p>Usage: Please drop your file here</p>
+    <p>[Info]</p>
+    <p id="info"></p>
+  </div>
+  <link href="sortable.min.css" rel="stylesheet" />
+  <script src="sortable.min.js"></script>
+  <script src="util.js"></script>
+  <script>
+    "use strict";
+
+    let cpuProfilingData;
+    let gpuProfilingData;
+    let indexInSession;
+    let sessionCount;
+    let sessionStartKernelId;
+
+    const dropArea = document.getElementById('drop-area');
+    const indexInput = document.getElementById('index');
+    const reNative = /\[.*\] "(\{"cat".*)", source:.*/;
+    const reWeb = /\[profiling\] kernel \"(.*)\" (input.*), execution time\: (\d+) ns/;
+    const unitConversionFactor = 1000000;
+
+    dropArea.addEventListener('dragover', (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'copy';
+    });
+
+    dropArea.addEventListener('drop', (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      const file = event.dataTransfer.files[0];
+      readFile(file);
+    });
+
+    indexInput.addEventListener('change', (event) => {
+      displayData();
+    });
+
+    function isJson(str) {
+      try {
+        JSON.parse(str);
+      } catch (e) {
+        return false;
+      }
+      return true;
+    }
+
+    function readFile(file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          cpuProfilingData = [];
+          gpuProfilingData = [];
+          indexInSession = 0;
+          sessionCount = 0;
+          sessionStartKernelId = '';
+
+          let dataSource = '';
+
+          if (isJson(e.target.result)) {
+            dataSource = 'native';
+            handleNativeData(JSON.parse(e.target.result));
+          } else {
+            let lines = e.target.result.split('\n');
+            let newLines = [];
+
+            for (let line of lines) {
+              let matchNative = line.match(reNative);
+              let matchWeb = line.match(reWeb);
+
+              if (matchNative) {
+                if (dataSource === '') {
+                  dataSource = 'native';
+                }
+                newLines.push(matchNative[1]);
+              } else if (matchWeb) {
+                if (dataSource === '') {
+                  dataSource = 'web';
+                }
+                newLines.push(matchWeb[0]);
+              }
+            }
+
+            if (dataSource === 'native') {
+              newLines.unshift('[');
+              newLines.push(']');
+              handleNativeData(JSON.parse(newLines.join('')));
+            } else {
+              handleWebData(newLines);
+            }
+          }
+        } catch (error) {
+          console.error('Could not parse the file as json:', error);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function handleNativeData(data) {
+      let gpuProfilingRunStart;
+      let gpuRunCount = 0;
+      let modelRunCount = 0;
+      let hasModelRun = false;
+
+      // First pass: count model_run entries to determine actual run count
+      for (let line of data) {
+        if (line['cat'] === 'Session' && line['name'] === 'model_run') {
+          hasModelRun = true;
+          modelRunCount++;
+        }
+      }
+
+      // Set run count based on model_run entries, fallback to 1 if none found
+      sessionCount = hasModelRun ? modelRunCount : 1;
+
+      // Initialize CPU profiling data arrays
+      for (let i = 0; i < sessionCount; i++) {
+        cpuProfilingData.push([]);
+      }
+
+      let currentRunIndex = 0;
+      let nodeIndex = 0;
+
+      for (let line of data) {
+        if (line['cat'] === 'Session') {
+          // Track model_run entries for run switching
+          if (hasModelRun && line['name'] === 'model_run') {
+            // Move to next run after processing model_run (except for the first one)
+            if (nodeIndex > 0) {
+              currentRunIndex++;
+              nodeIndex = 0;
+            }
+          }
+          // Skip all Session entries for now
+          continue;
+        } else if (line['cat'] === 'Node') {
+          if (!('provider' in line['args'])) {
+            continue;
+          }
+          // Add Node entries to current run
+          if (currentRunIndex < sessionCount) {
+            cpuProfilingData[currentRunIndex].push([nodeIndex++, line['args']['op_name'], line['dur'] / 1000, `input_type_shape: ${JSON.stringify(line['args']['input_type_shape'])}, output_type_shape: ${JSON.stringify(line['args']['output_type_shape'])}`, line['args']['provider'].replace('ExecutionProvider', '')]);
+          }
+        } else if (line['cat'] === 'Api') {
+          // Simple approach: if only one run, put all GPU data in one run
+          if (sessionCount === 1) {
+            // Single run case: just add all GPU data to run 0
+            if (gpuProfilingData.length === 0) {
+              gpuProfilingData.push([]);
+              indexInSession = 0;
+            }
+            let names = line['name'].split('/').pop().split('&');
+            let kernelType = names[1];
+            let programName = names[2];
+            let kernelName;
+            if (kernelType === programName) {
+              kernelName = programName;
+            } else {
+              kernelName = `${kernelType}|${programName}`;
+            }
+            gpuProfilingData[0].push([indexInSession++, kernelName, line['dur'] / 1000, JSON.stringify(line['args']['shapes'])]);
+          } else {
+            // Multiple runs case: use original kernel-pattern-based approach
+            let names = line['name'].split('/').pop().split('&');
+            if (gpuProfilingRunStart === undefined) {
+              gpuProfilingRunStart = names[0];
+              gpuRunCount = 1;
+              indexInSession = 0;
+              gpuProfilingData.push([]);
+            } else if (names[0] === gpuProfilingRunStart && gpuProfilingData[gpuRunCount - 1].length > 0) {
+              gpuRunCount++;
+              indexInSession = 0;
+              gpuProfilingData.push([]);
+            }
+            let kernelType = names[1];
+            let programName = names[2];
+            let kernelName;
+            if (kernelType === programName) {
+              kernelName = programName;
+            } else {
+              kernelName = `${kernelType}|${programName}`;
+            }
+            gpuProfilingData[gpuRunCount - 1].push([indexInSession++, kernelName, line['dur'] / 1000, JSON.stringify(line['args']['shapes'])]);
+          }
+        }
+      }
+      displayData();
+    }
+
+    function handleWebData(lines) {
+      for (let line of lines) {
+        let matchWeb = line.match(reWeb);
+
+        let kernelName = "";
+        const kernelInfo = matchWeb[1].split("|");
+        const kernelId = kernelInfo[0];
+        if (sessionStartKernelId === '') {
+          sessionStartKernelId = kernelId;
+          gpuProfilingData.push([]);
+        }
+        if (kernelId === sessionStartKernelId) {
+          sessionCount++;
+          indexInSession = 0;
+          gpuProfilingData.push([]);
+        }
+        const opType = kernelInfo[1];
+        const programName = kernelInfo[kernelInfo.length - 1];
+        if (opType == programName) {
+          kernelName = opType;
+        } else {
+          kernelName = `${opType}|${programName}`;
+        }
+        gpuProfilingData[sessionCount - 1].push([indexInSession++, kernelName, parseInt(matchWeb[3]) / unitConversionFactor, matchWeb[2]]);
+      }
+      displayData();
+    }
+
+    function displayData() {
+      const swaps = document.querySelectorAll('.swap');
+      swaps.forEach(swap => {
+        swap.remove();
+      });
+
+      document.getElementById('info').innerHTML = `Run Times: ${sessionCount}`;
+
+      let validIndex = [];
+      const indexToDisplay = indexInput.value;
+      if (indexToDisplay.includes('-')) {
+        let indexMinMax = indexToDisplay.split('-');
+        let min = parseInt(indexMinMax[0]);
+        let max = parseInt(indexMinMax[1]);
+
+        for (let i = min; i <= max; i++) {
+          validIndex.push(i);
+        }
+      } else {
+        validIndex.push(parseInt(indexToDisplay));
+      }
+
+      if (gpuProfilingData.length > 0) {
+        renderAggregatedData(["Kernel", "Time (ms)", "Percentage (%)"], gpuProfilingData, validIndex, 'GPU Aggregated Profiling Data');
+      }
+      if (cpuProfilingData.length > 0) {
+        renderAggregatedData(["Kernel", "Time (ms)", "Percentage (%)"], cpuProfilingData, validIndex, 'CPU Aggregated Profiling Data');
+      }
+      if (gpuProfilingData.length > 0 && validIndex.length <= 1) {
+        renderData(["Index", "Kernel", "Time (ms)", "Shape"], gpuProfilingData[validIndex[0]], 'GPU Profiling Data');
+      }
+      if (cpuProfilingData.length > 0 && validIndex.length <= 1) {
+        renderData(["Index", "Kernel", "Time (ms)", "Shape", "Provider"], cpuProfilingData[validIndex[0]], 'CPU Profiling Data');
+      }
+    }
+  </script>
+</body>

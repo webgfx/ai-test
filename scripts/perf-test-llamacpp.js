@@ -13,9 +13,9 @@ const { execSync, spawnSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const https = require('https');
-const { getSystemInfo } = require('./common');
+const { getSystemInfo, loadConfig } = require('./common');
 
-const config = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config.json'), 'utf8'));
+const config = loadConfig();
 
 const LLAMA_CPP_ROOT = config.paths['llama.cpp'] || 'E:\\workspace\\project\\test\\llama.cpp';
 const MODEL_ROOT = config.paths.models;
