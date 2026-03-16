@@ -343,6 +343,22 @@ function findModelPath(modelName) {
     }
   }
 
+  // Fuzzy search: scan subdirectories in each root for a case-insensitive, dash-normalized match
+  const normName = modelName.replace(/-/g, '').toLowerCase();
+  for (const root of roots) {
+    if (!fs.existsSync(root)) continue;
+    const dirs = fs.readdirSync(root, { withFileTypes: true }).filter(d => d.isDirectory());
+    for (const dir of dirs) {
+      if (!dir.name.replace(/-/g, '').toLowerCase().includes(normName)) continue;
+      const modelDir = path.join(root, dir.name);
+      if (fs.existsSync(path.join(modelDir, 'genai_config.json'))) return modelDir;
+      for (const sub of ['onnx', 'webgpu']) {
+        const subDir = path.join(modelDir, sub);
+        if (fs.existsSync(path.join(subDir, 'genai_config.json'))) return subDir;
+      }
+    }
+  }
+
   return null;
 }
 
@@ -443,7 +459,8 @@ function main(options = {}) {
   for (const modelName of opts.models) {
     const modelPath = findModelPath(modelName);
     if (!modelPath) {
-      throw new Error(`Model not found: ${modelName}. Searched: ${modelName}, ${MODEL_ROOT}/${modelName}, ${MODEL_ROOT}/${modelName}/onnx, config.models`);
+      const roots = [MODEL_ROOT, AI_MODEL_ROOT].filter((v, i, a) => a.indexOf(v) === i);
+      throw new Error(`Model not found: ${modelName}. Searched model roots: ${roots.join(', ')}`);
     }
     // Read and optionally set enableGraphCapture in genai_config.json
     let graphCapture = null;

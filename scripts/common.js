@@ -59,7 +59,7 @@ function getSystemInfo() {
 
   // Try to get GPU info via nvidia-smi
   try {
-    const smi = execSync('nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader,nounits', { encoding: 'utf8', timeout: 10000 }).trim();
+    const smi = execSync('nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader,nounits', { encoding: 'utf8', timeout: 10000, stdio: 'pipe' }).trim();
     const parts = smi.split(', ');
     if (parts.length >= 3) {
       info.gpu = parts[0];

@@ -164,7 +164,7 @@ const VULKAN_PATTERN = /llama-b\d+-bin-win-vulkan-x64\.zip$/;
 
 function getSystemCudaVersion() {
   try {
-    const out = execSync('nvcc --version', { encoding: 'utf8', timeout: 5000 });
+    const out = execSync('nvcc --version', { encoding: 'utf8', timeout: 5000, stdio: 'pipe' });
     const m = out.match(/release ([\d.]+)/);
     return m ? m[1] : null;
   } catch { return null; }
@@ -343,7 +343,7 @@ async function downloadLlamaCpp(version) {
 // ============================================================
 
 function findModel(modelName) {
-  const roots = [MODEL_ROOT, AI_MODEL_ROOT].filter((v, i, a) => a.indexOf(v) === i);
+  const roots = [AI_MODEL_ROOT];
   const candidates = [];
 
   for (const root of roots) {
@@ -363,14 +363,25 @@ function findModel(modelName) {
       } catch {}
     }
 
-    // Search subdirectories for matching GGUF files (case-insensitive)
+    // Search subdirectories for matching GGUF files (case-insensitive, dash-normalized)
     if (fs.existsSync(root)) {
+      const normName = modelName.replace(/-/g, '').toLowerCase();
+
+      // Also scan GGUF files directly in the root
+      try {
+        const rootFiles = fs.readdirSync(root).filter(f => f.endsWith('.gguf'));
+        const rootMatch = rootFiles.find(f => f.toLowerCase() === `${modelName.toLowerCase()}.gguf`) ||
+                          rootFiles.find(f => f.replace(/-/g, '').toLowerCase().includes(normName));
+        if (rootMatch) candidates.push(path.join(root, rootMatch));
+      } catch {}
+
       const dirs = fs.readdirSync(root, { withFileTypes: true }).filter(d => d.isDirectory());
       for (const dir of dirs) {
         const dirPath = path.join(root, dir.name);
         try {
           const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.gguf'));
-          const match = files.find(f => f === `${modelName}.gguf`) || files.find(f => f.includes(modelName));
+          const match = files.find(f => f.toLowerCase() === `${modelName.toLowerCase()}.gguf`) ||
+                        files.find(f => f.replace(/-/g, '').toLowerCase().includes(normName));
           if (match) candidates.push(path.join(dirPath, match));
         } catch {}
       }
@@ -511,7 +522,8 @@ async function main(options = {}) {
   for (const modelName of opts.models) {
     const modelPath = findModel(modelName);
     if (!modelPath) {
-      throw new Error(`Model not found: ${modelName}`);
+      const roots = [MODEL_ROOT, AI_MODEL_ROOT].filter((v, i, a) => a.indexOf(v) === i);
+      throw new Error(`Model not found: ${modelName}. Searched roots: ${roots.join(', ')}`);
     }
     modelEntries.push({ name: modelName, path: modelPath });
   }
