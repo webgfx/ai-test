@@ -1,0 +1,49 @@
+{
+  "agent": "webgfx-30",
+  "runtime": "ort",
+  "version": "ort-pr-29586",
+  "gpus": {
+    "150E": {
+      "backend": "webgpu",
+      "models": {
+        "Phi-4-mini-instruct": {
+          "128": {
+            "ttftMs": 368.57,
+            "plTs": 347.29,
+            "tgTs": 20.62,
+            "e2eMs": 6528.47,
+            "peakMemoryBytes": 1991520256,
+            "testedAt": "2026-07-08T07:22:45.317Z"
+          },
+          "1024": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": null,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "timeout",
+            "testedAt": "2026-07-08T07:22:45.317Z"
+          }
+        },
+        "Qwen3-1.7B": {
+          "128": {
+            "ttftMs": 185.34,
+            "plTs": 690.62,
+            "tgTs": 39.45,
+            "e2eMs": 3404.63,
+            "peakMemoryBytes": 869683200,
+            "testedAt": "2026-07-08T07:22:45.317Z"
+          },
+          "1024": {
+            "ttftMs": 1570.96,
+            "plTs": 651.83,
+            "tgTs": 36.61,
+            "e2eMs": 5039.87,
+            "peakMemoryBytes": 1061163008,
+            "testedAt": "2026-07-08T07:22:45.317Z"
+          }
+        }
+      }
+    }
+  }
+}
