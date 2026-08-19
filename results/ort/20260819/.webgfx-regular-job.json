@@ -1,0 +1,111 @@
+{
+  "runtime": "ort",
+  "version": "20260819",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-08-19T07:24:23.447Z",
+  "builtAt": "2026-08-19T15:23:18.243224+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "0c32e39a151211fdac6bf7fb9ed0ae1cf42426a5",
+      "commitDate": "2026-08-18T18:50:55-07:00",
+      "title": "Add CPU and WebGPU kernels for Qwen-3.5 ops (#32106)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/0c32e39a151211fdac6bf7fb9ed0ae1cf42426a5"
+    },
+    "onnxruntime-genai": {
+      "commit": "19f55dc091b21c424e4322298fcfa6106390f654",
+      "commitDate": "2026-08-18T23:56:45-07:00",
+      "title": "Add n-gram speculative decoding implementation (v0) (#2314)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/19f55dc091b21c424e4322298fcfa6106390f654"
+    }
+  },
+  "previousBuild": {
+    "version": "20260818",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "1e9aee07237aa8b1c099df16d17bf88ed6aa60e1",
+        "commitDate": "2026-08-18T11:38:50+08:00",
+        "title": "[WebGPU] Zero-initialize writable device allocator buffers (#32063)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/1e9aee07237aa8b1c099df16d17bf88ed6aa60e1"
+      },
+      "onnxruntime-genai": {
+        "commit": "edf5f96f589b01b68aff4f3a41a0b3627c8aafc0",
+        "commitDate": "2026-08-18T04:02:45Z",
+        "title": "Serve sliding-window paged layers from a ring of blocks (runtime) (#2357)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/edf5f96f589b01b68aff4f3a41a0b3627c8aafc0"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32106,
+      "title": "Add CPU and WebGPU kernels for Qwen-3.5 ops (#32106)",
+      "commit": "0c32e39a151211fdac6bf7fb9ed0ae1cf42426a5",
+      "committedAt": "2026-08-18T18:50:55-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32106",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32128,
+      "title": "[CUDA] Vectorize the NVFP4 weight dequantization for prefill (#32128)",
+      "commit": "2d211f8ce8440e43a2e9b9a3924ceb8f06a4e42a",
+      "committedAt": "2026-08-18T13:25:34-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32128",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32129,
+      "title": "[CUDA] Bound the FP8 weight dequant scratch by tiling over N (#32129)",
+      "commit": "8b9258f1124094ec09815d7a30e54eef7eb6483d",
+      "committedAt": "2026-08-18T13:23:47-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32129",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2314,
+      "title": "Add n-gram speculative decoding implementation (v0) (#2314)",
+      "commit": "19f55dc091b21c424e4322298fcfa6106390f654",
+      "committedAt": "2026-08-18T23:56:45-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2314",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2353,
+      "title": "Qwen3.6: build the MTP self-speculative head (#2353)",
+      "commit": "de5be1728c5f646c4ca063d53ca735e65f48eeff",
+      "committedAt": "2026-08-18T23:53:26-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2353",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2393,
+      "title": "Optimize paged-attention logits memory usage (#2393)",
+      "commit": "1e7a41fa26832345233111d67aeebed83dbfff7e",
+      "committedAt": "2026-08-18T11:03:44-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2393",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31970,
+      "title": "Bump cuda plugin ep version to 0.2 (#31970)",
+      "commit": "f37adf82b811b29b8e9f3379117d20b2018a5ce0",
+      "committedAt": "2026-08-18T17:24:16-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31970",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
