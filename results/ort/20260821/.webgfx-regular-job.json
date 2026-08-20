@@ -1,0 +1,271 @@
+{
+  "runtime": "ort",
+  "version": "20260821",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-08-20T23:26:26.853Z",
+  "builtAt": "2026-08-21T07:25:17.799812+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "71f7c781d042e835b1907b19fd59d6ee9ad451f8",
+      "commitDate": "2026-08-20T13:46:43-07:00",
+      "title": "Harden Crop operator validation (#32157)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/71f7c781d042e835b1907b19fd59d6ee9ad451f8"
+    },
+    "onnxruntime-genai": {
+      "commit": "b8ca49b001ea866c42c0105cc92f0cc5396a8bcb",
+      "commitDate": "2026-08-20T21:21:09Z",
+      "title": "adds 5th percentile stats for decode baseline (#2432)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/b8ca49b001ea866c42c0105cc92f0cc5396a8bcb"
+    }
+  },
+  "previousBuild": {
+    "version": "20260819",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "0c32e39a151211fdac6bf7fb9ed0ae1cf42426a5",
+        "commitDate": "2026-08-18T18:50:55-07:00",
+        "title": "Add CPU and WebGPU kernels for Qwen-3.5 ops (#32106)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/0c32e39a151211fdac6bf7fb9ed0ae1cf42426a5"
+      },
+      "onnxruntime-genai": {
+        "commit": "19f55dc091b21c424e4322298fcfa6106390f654",
+        "commitDate": "2026-08-18T23:56:45-07:00",
+        "title": "Add n-gram speculative decoding implementation (v0) (#2314)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/19f55dc091b21c424e4322298fcfa6106390f654"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32053,
+      "title": "[WebGPU] Enable GeluFusion and BiasGeluFusion for the WebGPU EP (#32053)",
+      "commit": "10ea381ca911f510318af8ddb5b790407f246fd2",
+      "committedAt": "2026-08-19T14:34:33-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32053",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32144,
+      "title": "Validate QEmbed segment inputs (#32144)",
+      "commit": "924b4d1d042bba041dde102d63fae8e4956e7469",
+      "committedAt": "2026-08-20T10:56:36-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32144",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2423,
+      "title": "Add continuous decoding to the Engine (#2423)",
+      "commit": "ebcac1e1549ae00a0beb0aa3644b0216156896ed",
+      "committedAt": "2026-08-19T14:34:24Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2423",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2426,
+      "title": "Refactor MTP builder components (#2426)",
+      "commit": "fa6fc132bab7d840e1749bb33630c8179c778a92",
+      "committedAt": "2026-08-20T03:27:37Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2426",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 29461,
+      "title": "Validate per-element split sizes on the input-tensor path to prevent OOB read (#29461)",
+      "commit": "abc74dc03f3006e46109da003c9388efacbe46b4",
+      "committedAt": "2026-08-20T12:06:42-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29461",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32012,
+      "title": "Avoid overflow in CPU TensorScatter indices (#32012)",
+      "commit": "f703c5286eae0b4bdcc526e66016ce9eb2f9a64f",
+      "committedAt": "2026-08-20T10:53:10-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32012",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32034,
+      "title": "Validate ScatterND index depth (#32034)",
+      "commit": "d63396d9c20f7ce098d414be8942350fd82db9a4",
+      "committedAt": "2026-08-20T10:57:03-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32034",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32111,
+      "title": "[CUDA] upgrade cutlass 4.7 and cudnn-frontend 1.27 (#32111)",
+      "commit": "fccfa10c1c737ec3f069b94d2069f26622b8a0a8",
+      "committedAt": "2026-08-19T14:36:33-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32111",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32138,
+      "title": "Handle empty initializer axis scaling (#32138)",
+      "commit": "597e4a6aef37464e7653c1f1b725f5c0034f7920",
+      "committedAt": "2026-08-20T10:53:16-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32138",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32143,
+      "title": "Skip overridable initializer fusion (#32143)",
+      "commit": "8805b399b1bfdacddc5d44d4b6bb212494c39451",
+      "committedAt": "2026-08-20T10:53:19-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32143",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32156,
+      "title": "Validate empty reduction axes (#32156)",
+      "commit": "113375edd61695ff62b81fba40bfc4c0f90704e9",
+      "committedAt": "2026-08-20T10:56:29-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32156",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32157,
+      "title": "Harden Crop operator validation (#32157)",
+      "commit": "71f7c781d042e835b1907b19fd59d6ee9ad451f8",
+      "committedAt": "2026-08-20T13:46:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32157",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32160,
+      "title": "Validate Conv bias size (#32160)",
+      "commit": "d9872d8e507af145c07983e51493f0ccf7858b61",
+      "committedAt": "2026-08-20T10:56:19-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32160",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32161,
+      "title": "Reject scalar Normalizer inputs (#32161)",
+      "commit": "c6a81e4bb6193e76e22b1c306194d6e3388505b4",
+      "committedAt": "2026-08-20T10:53:24-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32161",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32163,
+      "title": "[Build] FP4 QMoE in Windows (#32163)",
+      "commit": "f1d07f0d15d91ba4be889b7f0b02f304329bed89",
+      "committedAt": "2026-08-19T09:46:40-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32163",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2344,
+      "title": "decode baseline engine benchmark (#2344)",
+      "commit": "0be131aa74a097f1c067f63b366334e2ea670f6b",
+      "committedAt": "2026-08-19T21:02:07-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2344",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2414,
+      "title": "Add documentation for speculative decoding (base + n-gram) (#2414)",
+      "commit": "e1cb3ed3d00bd326a602aa0948a40a0c6e5a8a99",
+      "committedAt": "2026-08-19T07:37:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2414",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2432,
+      "title": "adds 5th percentile stats for decode baseline (#2432)",
+      "commit": "b8ca49b001ea866c42c0105cc92f0cc5396a8bcb",
+      "committedAt": "2026-08-20T21:21:09Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2432",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32041,
+      "title": "Retain Python async run resources (#32041)",
+      "commit": "1cb4307d2c2f9f322d08c44e491832fd078e1482",
+      "committedAt": "2026-08-20T10:58:03-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32041",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32057,
+      "title": "Fix #31573, prevent ARM64 SymmQgemm int16 overflow (#32057)",
+      "commit": "f73b9ef807703fd2d2e1f4d993feebb97925209f",
+      "committedAt": "2026-08-19T16:33:44-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32057",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32095,
+      "title": "Use commit timestamps for plugin EP dev versions (#32095)",
+      "commit": "84e87b4be13c3b572bf4c13c2ade2e22bb20c9f0",
+      "committedAt": "2026-08-19T22:31:36Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32095",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32135,
+      "title": "Canonicalize external data locations (#32135)",
+      "commit": "d3b86e7c0044dcdde78bcb00ac15aec0914161d3",
+      "committedAt": "2026-08-20T10:53:13-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32135",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32165,
+      "title": "[Build] Update cuda plugin linux aarch64 parallel to 8 (#32165)",
+      "commit": "00b6cdb566bf8b385fa4971061828c04267111ca",
+      "committedAt": "2026-08-19T23:02:12Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32165",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
