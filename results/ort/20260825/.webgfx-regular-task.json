@@ -1,0 +1,231 @@
+{
+  "runtime": "ort",
+  "version": "20260825",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-08-25T07:03:54.900Z",
+  "builtAt": "2026-08-25T14:58:50.195741+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "9cbf665b59fe6591898e3371946ce3d87924f39e",
+      "commitDate": "2026-08-24T21:13:51-07:00",
+      "title": "[MLAS] Reject Arm® KleidiAI™ Q4 prepack with dynamic scales (#32068)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/9cbf665b59fe6591898e3371946ce3d87924f39e"
+    },
+    "onnxruntime-genai": {
+      "commit": "a8e0fdf81b061e67c1c3f9485bfdc06735ccd473",
+      "commitDate": "2026-08-24T22:06:00-07:00",
+      "title": "Extend search.chunk_size prefill chunking to the multimodal (VLM) pipeline (#2378)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/a8e0fdf81b061e67c1c3f9485bfdc06735ccd473"
+    }
+  },
+  "previousBuild": {
+    "version": "20260824",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "4d308dacbbb385fcba9911cd9c07f5603d65cbd6",
+        "commitDate": "2026-08-22T22:12:44-07:00",
+        "title": "[WebGPU] Supply fused activation parameters to Conv/MatMul as uniforms (#32116)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/4d308dacbbb385fcba9911cd9c07f5603d65cbd6"
+      },
+      "onnxruntime-genai": {
+        "commit": "a0c04eb1313b886c963e415bbd974748cb89a4eb",
+        "commitDate": "2026-08-22T07:33:09Z",
+        "title": "Add Tool Calling and Constrained Decoding to Engine (#2412)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/a0c04eb1313b886c963e415bbd974748cb89a4eb"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 29906,
+      "title": "Upgrade Protobuf to v33.6 (#29906)",
+      "commit": "993cd13577634b36d078fb17a2ba4f2eabbdc824",
+      "committedAt": "2026-08-24T14:47:12-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29906",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31643,
+      "title": "Validate MatMulNBits 8-bit g_idx bounds on CUDA (#31643)",
+      "commit": "066b90efc7c9a8f1cc2a3995b0eb4e59cfb24928",
+      "committedAt": "2026-08-24T16:02:42-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31643",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31720,
+      "title": "[MLAS] Refactor QNBit KleidiAI integration into dedicated layer (#31720)",
+      "commit": "5cb241b57a3eff44b241679c978aa28d18c9e499",
+      "committedAt": "2026-08-24T21:11:20-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31720",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32068,
+      "title": "[MLAS] Reject Arm® KleidiAI™ Q4 prepack with dynamic scales (#32068)",
+      "commit": "9cbf665b59fe6591898e3371946ce3d87924f39e",
+      "committedAt": "2026-08-24T21:13:51-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32068",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32229,
+      "title": "[CUDA] Extend paged XQA decode to head size 256 (#32229)",
+      "commit": "15920d08afcc219d79d4a2823ae24e2f958b6b54",
+      "committedAt": "2026-08-24T09:58:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32229",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2427,
+      "title": "Add decoder state manifest contract for hybrid model support (#2427)",
+      "commit": "300f0117d749e5c85d60ed6018f265ad04c12dd8",
+      "committedAt": "2026-08-24T09:56:26-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2427",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2428,
+      "title": "Enable sparse paged KV layers in the continuous batching Engine (#2428)",
+      "commit": "ac22387b8c858b6bbb1815f59440f57a596eb8bb",
+      "committedAt": "2026-08-24T14:13:36-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2428",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2450,
+      "title": "Optimize greedy multi-token MTP scheduling (#2450)",
+      "commit": "79ff5f6298642828184041d5cf0da2746f899a01",
+      "committedAt": "2026-08-24T00:17:48-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2450",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2451,
+      "title": "Add MTP generator reset API (#2451)",
+      "commit": "7795deda3af2469889192fd18061ef6df8c7d0bb",
+      "committedAt": "2026-08-24T00:18:06-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2451",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2452,
+      "title": "Share recurrent state under CUDA graph capture (#2452)",
+      "commit": "43c83146946b2320b9b2e7555665b1692d46a4e1",
+      "committedAt": "2026-08-24T13:50:20-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2452",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2463,
+      "title": "Move state bindings to decoder IO config (#2463)",
+      "commit": "885bb9faf6d368e8ad2bf386fff0d2dea22b6586",
+      "committedAt": "2026-08-24T21:22:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2463",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32168,
+      "title": "[CUDA] Add VarlenCausalConvWithState for continuous batching (#32168)",
+      "commit": "2a9bf1e9fc679a6d66039ce6cf4dafbdbd79a54d",
+      "committedAt": "2026-08-24T10:33:19-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32168",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2378,
+      "title": "Extend search.chunk_size prefill chunking to the multimodal (VLM) pipeline (#2378)",
+      "commit": "a8e0fdf81b061e67c1c3f9485bfdc06735ccd473",
+      "committedAt": "2026-08-24T22:06:00-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2378",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 29726,
+      "title": "Extend memory importer with host pointer support (#29726)",
+      "commit": "710f0ce397c961301b8adf860a84efa720647e09",
+      "committedAt": "2026-08-24T18:12:05Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29726",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32114,
+      "title": "Fix Windows CUDA 12.9 SM120 compilation (#32114)",
+      "commit": "939e180abcb6d9318a5e477dd4e884c20237d2cd",
+      "committedAt": "2026-08-24T14:20:45-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32114",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32193,
+      "title": "Move ort-release-notes skill to new .github/skills location. (#32193)",
+      "commit": "ddbcef7dc7ac09d60b16d1d18711ce7439c61bd8",
+      "committedAt": "2026-08-24T09:55:55-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32193",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32208,
+      "title": "pin review dog (#32208)",
+      "commit": "ddc8f0c3261b9110e0f60ca13e0ded430a1e665b",
+      "committedAt": "2026-08-24T14:47:34-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32208",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32221,
+      "title": "Support LoRA adapters with plugin EP allocators (#32221)",
+      "commit": "4f7d0f5b32f9fea187d91f6d23748ccce845fb70",
+      "committedAt": "2026-08-24T10:28:16-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32221",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32226,
+      "title": "[Telemetry] Prevent crashes in shell-less containers (#32226)",
+      "commit": "9aa8fb069273d75d07d137629d9127f9ef5deb69",
+      "committedAt": "2026-08-24T10:33:41-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32226",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
