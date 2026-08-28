@@ -1,0 +1,211 @@
+{
+  "runtime": "ort",
+  "version": "20260828",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-08-28T05:28:08.215Z",
+  "builtAt": "2026-08-28T13:24:59.278530+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "a75c9b639b7726268da4f49c12d831358cc77207",
+      "commitDate": "2026-08-28T04:37:00Z",
+      "title": "[CUDA] Add an is_causal attribute to PagedAttention (#32225)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/a75c9b639b7726268da4f49c12d831358cc77207"
+    },
+    "onnxruntime-genai": {
+      "commit": "9d336e4db4e49eeceda909517b882c0d73cc6c86",
+      "commitDate": "2026-08-28T01:38:29Z",
+      "title": "Enable WebGPU paged attention exports (#2470)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/9d336e4db4e49eeceda909517b882c0d73cc6c86"
+    }
+  },
+  "previousBuild": {
+    "version": "20260826",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "d67cc269518ab6e7e68a6dc58f7dcdce48ba51f8",
+        "commitDate": "2026-08-25T16:12:43-07:00",
+        "title": "Harden head-size-256 paged XQA coverage (#32262)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/d67cc269518ab6e7e68a6dc58f7dcdce48ba51f8"
+      },
+      "onnxruntime-genai": {
+        "commit": "8de60c5af315f6e2040b56d0d61018e86a182c95",
+        "commitDate": "2026-08-25T15:13:34-07:00",
+        "title": "Add a transactional fixed request-state pool (#2434)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/8de60c5af315f6e2040b56d0d61018e86a182c95"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32225,
+      "title": "[CUDA] Add an is_causal attribute to PagedAttention (#32225)",
+      "commit": "a75c9b639b7726268da4f49c12d831358cc77207",
+      "committedAt": "2026-08-28T04:37:00Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32225",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32263,
+      "title": "[CUDA] Add FP16-cache paged XQA decode for head size 256 (#32263)",
+      "commit": "b1f76d586aaf545ccb92198934fa49553a806a1c",
+      "committedAt": "2026-08-26T21:39:14Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32263",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32269,
+      "title": "Enable WebGPU subgroup matrix path for WASM builds (#32269)",
+      "commit": "4f6af34e497f6d8b8fa803b075bd5e428102c1bc",
+      "committedAt": "2026-08-28T10:53:46+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32269",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2386,
+      "title": "Add Qwen VL/3.5 support and refactor model builder infrastructure (#2386)",
+      "commit": "24ad4e7097778c50c8fab076a215c1c9b6811287",
+      "committedAt": "2026-08-26T10:19:37-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2386",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2425,
+      "title": "Validate engine EOS token bounds (#2425)",
+      "commit": "8ab0e285a5c2dbc6ac96c86162ae102a17d93fce",
+      "committedAt": "2026-08-26T22:37:05-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2425",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2436,
+      "title": "Split paged cache reservation commit into validate and publish phases (#2436)",
+      "commit": "00fa49cdc37e7957b6c7b35bab630d83a467a962",
+      "committedAt": "2026-08-27T17:44:19-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2436",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2449,
+      "title": "Support compressed-tensors NVFP4/FP8 Qwen checkpoints (#2449)",
+      "commit": "fc84a7095f8aff3bede468734541a97ab02a0162",
+      "committedAt": "2026-08-27T10:06:04-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2449",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2465,
+      "title": "Refactor source layout and stabilize KV cache/EP integration (#2465)",
+      "commit": "0a5f2de5f7a1157ebce997f25bc2223222095ce8",
+      "committedAt": "2026-08-27T14:54:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2465",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2470,
+      "title": "Enable WebGPU paged attention exports (#2470)",
+      "commit": "9d336e4db4e49eeceda909517b882c0d73cc6c86",
+      "committedAt": "2026-08-28T01:38:29Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2470",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2477,
+      "title": "Add job ids to genai runs (#2477)",
+      "commit": "c143627965d1e5c8cd95af02d8a1cd219fa2ac8c",
+      "committedAt": "2026-08-27T15:27:21-04:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2477",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32290,
+      "title": "[CUDA] Add compact VarlenCausalConv state updates (#32290)",
+      "commit": "7e0f9b0117f31419231959f02b22508ea2d9fe63",
+      "committedAt": "2026-08-27T18:01:41-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32290",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2424,
+      "title": "Use cuda plugin ep (#2424)",
+      "commit": "db907247a9f134f618a25e1d7129848538f49bba",
+      "committedAt": "2026-08-26T21:48:06-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2424",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2447,
+      "title": "mixed workload engine benchmark (#2447)",
+      "commit": "e60940387fbfef9f2d341ee34547cbcc3a81947b",
+      "committedAt": "2026-08-26T21:32:51Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2447",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2461,
+      "title": "continuation + capacity pressure engine benchmark (#2461)",
+      "commit": "07cb19b2c6c6354169f9718f37e1be46c14b0671",
+      "committedAt": "2026-08-27T15:32:40Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2461",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2471,
+      "title": "Fix dockerfile netiso (#2471)",
+      "commit": "dfa18e57e4bd7bb704a7f300b74d464665171ab3",
+      "committedAt": "2026-08-26T20:48:27Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2471",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2474,
+      "title": "Use tokenizer options for chat template kwargs (#2474)",
+      "commit": "b82601e5c9c856d19a322bfac5547c01bd91df32",
+      "committedAt": "2026-08-27T19:12:05Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2474",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32248,
+      "title": "Fix ort-ci/SKILL.md yaml frontmatter syntax. (#32248)",
+      "commit": "054915305a2f430de816d5a1d568e421b5fbd91e",
+      "committedAt": "2026-08-26T21:34:09Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32248",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
