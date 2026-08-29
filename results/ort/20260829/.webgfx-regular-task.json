@@ -1,0 +1,211 @@
+{
+  "runtime": "ort",
+  "version": "20260829",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-08-29T01:22:30.836Z",
+  "builtAt": "2026-08-29T09:18:54.820763+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "2fee06a0c1ffe98d82d8eaf6cde20b02faf46b1b",
+      "commitDate": "2026-08-28T15:23:57-07:00",
+      "title": "Add packed attention workspace recipes (#32283)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/2fee06a0c1ffe98d82d8eaf6cde20b02faf46b1b"
+    },
+    "onnxruntime-genai": {
+      "commit": "3feedff6d1fa7ebbcc3fc6c964f3526372434e51",
+      "commitDate": "2026-08-28T21:40:33Z",
+      "title": "Export compact GatedDeltaNet state updates for Qwen3.5/3.8 (#2453)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/3feedff6d1fa7ebbcc3fc6c964f3526372434e51"
+    }
+  },
+  "previousBuild": {
+    "version": "20260828",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "a75c9b639b7726268da4f49c12d831358cc77207",
+        "commitDate": "2026-08-28T04:37:00Z",
+        "title": "[CUDA] Add an is_causal attribute to PagedAttention (#32225)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/a75c9b639b7726268da4f49c12d831358cc77207"
+      },
+      "onnxruntime-genai": {
+        "commit": "9d336e4db4e49eeceda909517b882c0d73cc6c86",
+        "commitDate": "2026-08-28T01:38:29Z",
+        "title": "Enable WebGPU paged attention exports (#2470)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/9d336e4db4e49eeceda909517b882c0d73cc6c86"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32038,
+      "title": "Prevent overlapping MatMulIntegerToFloat fusions (#32038)",
+      "commit": "0e3af8f08c8f12a2d35d2070cfdf11e424b9f959",
+      "committedAt": "2026-08-28T12:44:49-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32038",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32253,
+      "title": "Enable D3D12 Agility SDK support for Dawn WebGPU builds (#32253)",
+      "commit": "24c836a19cefb241f94aadadd7c7a3c2c344bf9a",
+      "committedAt": "2026-08-28T11:57:32-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32253",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32259,
+      "title": "[WebGPU] Fix synchronization for user-provided GPUDevice (#32259)",
+      "commit": "2187135ff231a9ebed6c59fb2e81b21a9a6a106f",
+      "committedAt": "2026-08-28T13:57:26+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32259",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32272,
+      "title": "Preserve custom allocator during EP registration (#32272)",
+      "commit": "173b51bf64a0041df46749f62257508afde4f18d",
+      "committedAt": "2026-08-28T13:57:18+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32272",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32281,
+      "title": "Update ARM64 pool in an effort for infra unification. ARM64 now builds off Win2025. (#32281)",
+      "commit": "917a18e01e3f4e29f2b94133125797eb859ccb47",
+      "committedAt": "2026-08-28T09:13:46-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32281",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32283,
+      "title": "Add packed attention workspace recipes (#32283)",
+      "commit": "2fee06a0c1ffe98d82d8eaf6cde20b02faf46b1b",
+      "committedAt": "2026-08-28T15:23:57-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32283",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32287,
+      "title": "Enable Linux AArch64 WebGPU plugin EP packages (#32287)",
+      "commit": "95e71d26df966c69838d811dd5e191f29f3d8a31",
+      "committedAt": "2026-08-28T09:08:32-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32287",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2453,
+      "title": "Export compact GatedDeltaNet state updates for Qwen3.5/3.8 (#2453)",
+      "commit": "3feedff6d1fa7ebbcc3fc6c964f3526372434e51",
+      "committedAt": "2026-08-28T21:40:33Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2453",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2487,
+      "title": "Tap auxiliary hidden states for speculative block drafters (#2487)",
+      "commit": "70bc9d3f5422c0d7e723c76dc58a5460d27ace7b",
+      "committedAt": "2026-08-28T10:50:14-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2487",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2488,
+      "title": "Align MTP head with main model packed token layouts (#2488)",
+      "commit": "c8768d940c82d87e814890be9d550d9c504ff745",
+      "committedAt": "2026-08-28T10:50:34-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2488",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32282,
+      "title": "[CUDA] Add compact GatedDeltaNet operator (#32282)",
+      "commit": "7fe62a35ae5de31ae42f90e5b48ca197d815fbb0",
+      "committedAt": "2026-08-27T23:26:23-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32282",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32303,
+      "title": "Fix Compile API duplicate graph serialization (#32303)",
+      "commit": "cf5737297dd8c77a3b5499607b9fe2480e171748",
+      "committedAt": "2026-08-28T11:37:28+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32303",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32307,
+      "title": "Add BFloat16 support for CUDA GatedDeltaNet (#32307)",
+      "commit": "c5f91da595ac940e76355aa21191703f5974406f",
+      "committedAt": "2026-08-28T12:58:00-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32307",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2403,
+      "title": "Validate static batching configuration (#2403)",
+      "commit": "b7cd7bcfe6e74ddccc558664e23fb7977a2b280e",
+      "committedAt": "2026-08-27T23:06:33-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2403",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2476,
+      "title": "Update pool reference to centralized pool for WinARM64 (#2476)",
+      "commit": "f18bed418bb219812225750fdcab5cb9b78751ec",
+      "committedAt": "2026-08-28T08:58:04-04:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2476",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2485,
+      "title": "Add tokenizer constructors from config and path (#2485)",
+      "commit": "67578462aaf215237fbd4e29c449baf4731b916c",
+      "committedAt": "2026-08-28T14:51:21Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2485",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32311,
+      "title": "Remove internal URL from Guardian baseline (#32311)",
+      "commit": "dba389de4c261343976da4890d9d79a1cbbeff24",
+      "committedAt": "2026-08-28T12:23:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32311",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
