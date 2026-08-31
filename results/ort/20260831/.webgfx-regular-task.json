@@ -1,0 +1,191 @@
+{
+  "runtime": "ort",
+  "version": "20260831",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-08-31T13:26:05.347Z",
+  "builtAt": "2026-08-31T21:20:59.523676+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "d59a89030f9c31d5d231fdb84348a1925cffafa8",
+      "commitDate": "2026-08-30T20:21:34-07:00",
+      "title": "[CUDA] Build compact fpA intB kernels by default (#32324)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/d59a89030f9c31d5d231fdb84348a1925cffafa8"
+    },
+    "onnxruntime-genai": {
+      "commit": "811bf14f1c43579031c6ff753be9094df8f6c4c6",
+      "commitDate": "2026-08-30T22:11:15-07:00",
+      "title": "Verify speculative drafts in dynamic Engine steps (#2491)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/811bf14f1c43579031c6ff753be9094df8f6c4c6"
+    }
+  },
+  "previousBuild": {
+    "version": "20260829",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "2fee06a0c1ffe98d82d8eaf6cde20b02faf46b1b",
+        "commitDate": "2026-08-28T15:23:57-07:00",
+        "title": "Add packed attention workspace recipes (#32283)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/2fee06a0c1ffe98d82d8eaf6cde20b02faf46b1b"
+      },
+      "onnxruntime-genai": {
+        "commit": "3feedff6d1fa7ebbcc3fc6c964f3526372434e51",
+        "commitDate": "2026-08-28T21:40:33Z",
+        "title": "Export compact GatedDeltaNet state updates for Qwen3.5/3.8 (#2453)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/3feedff6d1fa7ebbcc3fc6c964f3526372434e51"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32117,
+      "title": "[WebGPU] Fuse eight more activations into Conv (#32117)",
+      "commit": "76b1d967e7d3c01a638f44312c79d810fd2ce44e",
+      "committedAt": "2026-08-29T22:54:01-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32117",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32140,
+      "title": "[CUDA] Tune NVFP4 GEMV tiling for Qwen MTP (#32140)",
+      "commit": "e79a40aa7d80a99764b9384f256a855abb4171ee",
+      "committedAt": "2026-08-29T17:11:02Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32140",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32289,
+      "title": "[CUDA] Extend speculative decode GEMVs to 64 rows (#32289)",
+      "commit": "27e64f961d36fa34b8393fd1743fbc5cf579af16",
+      "committedAt": "2026-08-30T08:15:06Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32289",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32324,
+      "title": "[CUDA] Build compact fpA intB kernels by default (#32324)",
+      "commit": "d59a89030f9c31d5d231fdb84348a1925cffafa8",
+      "committedAt": "2026-08-30T20:21:34-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32324",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2437,
+      "title": "Integrate composite decoder state transactions (#2437)",
+      "commit": "67120aa3b7d98f269bff90a5103944be2397413c",
+      "committedAt": "2026-08-28T19:20:36-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2437",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2438,
+      "title": "Bind packed hybrid decoder state (#2438)",
+      "commit": "f1261f33e827ba8925ad2f5374ef91ab071e215a",
+      "committedAt": "2026-08-29T00:37:40-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2438",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2454,
+      "title": "Replay compact fixed state for hybrid decoding (#2454)",
+      "commit": "6a8323cba9da93bc008a22a289908bbcf474f692",
+      "committedAt": "2026-08-29T23:41:07-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2454",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2489,
+      "title": "Export DFlash 2 block drafters for Qwen 3.5 and 3.8 (#2489)",
+      "commit": "78074c51249a63c31e499d393e06062f690f9d5e",
+      "committedAt": "2026-08-29T00:15:04-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2489",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2501,
+      "title": "Bind resident fixed state directly (#2501)",
+      "commit": "af5de52a3fba9b60f82d70f16801f8bf37c04472",
+      "committedAt": "2026-08-30T09:58:49Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2501",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2502,
+      "title": "Fix compact state configuration and staging (#2502)",
+      "commit": "a754b3e9012a50e1475832fe3331beac1bb7effa",
+      "committedAt": "2026-08-30T11:28:13-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2502",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32121,
+      "title": "[CUDA] Keep CudaAsyncBuffer's staging buffer alive across a graph replay (#32121)",
+      "commit": "cd13bdd819dcbdb9e0be2e8c38d2698ae2e56097",
+      "committedAt": "2026-08-29T07:08:36Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32121",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32197,
+      "title": "Force fp32 fallback for CPU-assigned fp16 nodes with no matching kernel (#32197)",
+      "commit": "09f2e5623eeeb815f89627f4a11b91d889febaa3",
+      "committedAt": "2026-08-29T02:05:10Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32197",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32329,
+      "title": "[CUDA] Fix malformed GatedDeltaNet test output verification (#32329)",
+      "commit": "f578ef8abcbf560ed21749a95fefee100d8aed53",
+      "committedAt": "2026-08-30T20:19:29-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32329",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2481,
+      "title": "adds engine benchmark to integration tests (#2481)",
+      "commit": "d0d9a61816bedc552312199e8091e62c0c520619",
+      "committedAt": "2026-08-30T22:41:46Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2481",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2491,
+      "title": "Verify speculative drafts in dynamic Engine steps (#2491)",
+      "commit": "811bf14f1c43579031c6ff753be9094df8f6c4c6",
+      "committedAt": "2026-08-30T22:11:15-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2491",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    }
+  ]
+}
