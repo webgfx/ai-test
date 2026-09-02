@@ -1,0 +1,141 @@
+{
+  "runtime": "ort",
+  "version": "20260902",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-02T05:25:26.008Z",
+  "builtAt": "2026-09-02T13:22:29.099603+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "a6e96aa798ef318af99d2cb905af719122f5e258",
+      "commitDate": "2026-09-01T15:43:50-07:00",
+      "title": "Validate 'num_scan_inputs' attribute in Scan kernel construction (#31668)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/a6e96aa798ef318af99d2cb905af719122f5e258"
+    },
+    "onnxruntime-genai": {
+      "commit": "c93c35fa18963dd37ca5b68c813b50405f2fe58b",
+      "commitDate": "2026-09-01T21:36:12-07:00",
+      "title": "Run chained MTP drafting in the batch engine (#2495)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/c93c35fa18963dd37ca5b68c813b50405f2fe58b"
+    }
+  },
+  "previousBuild": {
+    "version": "20260901",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "57affceaad5da6db7f8e9043a6273e2abc59cd3c",
+        "commitDate": "2026-09-01T07:19:44Z",
+        "title": "Fix int32 overflow in softmax_warp_forward offset arithmetic (#32330)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/57affceaad5da6db7f8e9043a6273e2abc59cd3c"
+      },
+      "onnxruntime-genai": {
+        "commit": "b19542e1aa3a90299cfb820fc156ab8d9d2bf8b7",
+        "commitDate": "2026-09-01T08:03:08Z",
+        "title": "Fix nightly package version overflow (#2512)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/b19542e1aa3a90299cfb820fc156ab8d9d2bf8b7"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2448,
+      "title": "Harden Engine request lifetime and sampler acquisition (#2448)",
+      "commit": "ee63e50ce6ba11b9c819947ecf3731732ab1d16c",
+      "committedAt": "2026-09-01T20:25:57Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2448",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2495,
+      "title": "Run chained MTP drafting in the batch engine (#2495)",
+      "commit": "c93c35fa18963dd37ca5b68c813b50405f2fe58b",
+      "committedAt": "2026-09-01T21:36:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2495",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2510,
+      "title": "[WebGPU] fixes pointer arithmetic bug for multi-image inputs for mistral3  (#2510)",
+      "commit": "f31a3ef8c642187fb4fb70c90249590e07cc2d60",
+      "committedAt": "2026-09-01T20:59:49Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2510",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 29879,
+      "title": "[CUDA] Fix ScatterElements reduction dispatch by element type (#29879)",
+      "commit": "16e6592b4ba5836e2327051a54aa1c7884f3deca",
+      "committedAt": "2026-09-01T11:48:36-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29879",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31668,
+      "title": "Validate 'num_scan_inputs' attribute in Scan kernel construction (#31668)",
+      "commit": "a6e96aa798ef318af99d2cb905af719122f5e258",
+      "committedAt": "2026-09-01T15:43:50-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31668",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32345,
+      "title": "Validate ScatterND indexed dimensions (#32345)",
+      "commit": "01529bd5373529be4b6945eed895a9599911a298",
+      "committedAt": "2026-09-01T13:48:35+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32345",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32349,
+      "title": "Validate GatherND indices rank before access (#32349)",
+      "commit": "ef965a9d8a3ef48268e70fd1707a123a8d1b1783",
+      "committedAt": "2026-09-01T09:11:28-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32349",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2514,
+      "title": "stamps onnx model files with genai commit (#2514)",
+      "commit": "d8ab08ee3f251c87172a656b095f7d2903bee792",
+      "committedAt": "2026-09-01T21:39:20Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2514",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31690,
+      "title": "optimize int4 prepacking of the weight on CPU (#31690)",
+      "commit": "fb6422c4e4a7747f939ed4f23f3c5499aabcf367",
+      "committedAt": "2026-09-01T12:33:14+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31690",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32355,
+      "title": "[Build] Fix Win Arm64 Cuda Plugin Packaging (#32355)",
+      "commit": "ac94fed93ae6d3310fef4920995e8d6a68a3df8a",
+      "committedAt": "2026-09-01T18:54:38Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32355",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
