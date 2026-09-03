@@ -1,0 +1,181 @@
+{
+  "runtime": "ort",
+  "version": "20260904",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-03T21:28:46.039Z",
+  "builtAt": "2026-09-04T05:23:56.232377+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "fe52a3ce09b3076e0689a0dea8822cfd4b70c80a",
+      "commitDate": "2026-09-03T13:37:29-07:00",
+      "title": "Separate onnxruntime_providers compilation from its archive (#32162)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/fe52a3ce09b3076e0689a0dea8822cfd4b70c80a"
+    },
+    "onnxruntime-genai": {
+      "commit": "3dfb6514b363a10baab0d58ac429da56246b3e44",
+      "commitDate": "2026-09-03T20:21:13Z",
+      "title": "pin to newer commit of onnxruntime extensions (#2523)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/3dfb6514b363a10baab0d58ac429da56246b3e44"
+    }
+  },
+  "previousBuild": {
+    "version": "20260903",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "a7f80f7ea734e7cfce210db2c0136dc1efc1d3a8",
+        "commitDate": "2026-09-02T23:45:05Z",
+        "title": "[WebGPU] Forward -i provider options to the WebGPU EP in perf_test (#32316)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/a7f80f7ea734e7cfce210db2c0136dc1efc1d3a8"
+      },
+      "onnxruntime-genai": {
+        "commit": "e8b5dd816b1d0bb5ef8c88946f865af36db52261",
+        "commitDate": "2026-09-02T15:42:36-07:00",
+        "title": "increases timeout for full engine benchmark to 120 minutes (#2520)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/e8b5dd816b1d0bb5ef8c88946f865af36db52261"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32162,
+      "title": "Separate onnxruntime_providers compilation from its archive (#32162)",
+      "commit": "fe52a3ce09b3076e0689a0dea8822cfd4b70c80a",
+      "committedAt": "2026-09-03T13:37:29-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32162",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32327,
+      "title": "[CUDA] Fix PagedAttention build without FlashAttention (#32327)",
+      "commit": "2ea96f75dac830a1c1c89103e713f7b89362bd8f",
+      "committedAt": "2026-09-03T13:12:49-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32327",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32343,
+      "title": "[WebGPU] Fix 1D-dispatch shader fast path (#32343)",
+      "commit": "db3bc5a06b0ba92c318e460ab6f6e9c738670dda",
+      "committedAt": "2026-09-03T15:09:59+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32343",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2492,
+      "title": "Add support for quant_auto format in model builder (#2492)",
+      "commit": "86b9a58499c4dcad7c6814d4e81db8fb44b54a35",
+      "committedAt": "2026-09-03T16:42:54Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2492",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2496,
+      "title": "Run a DFlash2 block drafter in the batch engine (#2496)",
+      "commit": "d174abb06196ccf90d2e5964d461fa6f881bc4b1",
+      "committedAt": "2026-09-03T10:07:49-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2496",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 28902,
+      "title": "[CUDA EP] Slice: single-memcpy fast path for contiguous subregions (#28902)",
+      "commit": "dcc70f5cfbdc4f5ee0f8e75580b8e26de66518a9",
+      "committedAt": "2026-09-03T11:36:06-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/28902",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31828,
+      "title": "Java: release provider option values with the correct strings (#31828)",
+      "commit": "ff8d83b82d87a0b019e40a8c0ff11621a7caf39b",
+      "committedAt": "2026-09-03T17:58:15+10:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31828",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32377,
+      "title": "[WebNN EP] Support SkipLayerNormalization op (#32377)",
+      "commit": "c5ead598c8ec2483eea127a5709c20cec57ac33a",
+      "committedAt": "2026-09-02T20:36:56-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32377",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32415,
+      "title": "[TRT] Fix trt shape values (#32415)",
+      "commit": "d46218a8ca85da83542cbf2625bfcc84cddca5b8",
+      "committedAt": "2026-09-03T14:26:29+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32415",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2505,
+      "title": "Set top_k to 0 in top-p tests (#2505)",
+      "commit": "6916e8e8d7f7adf8fa29686a0eee1036a82121d3",
+      "committedAt": "2026-09-03T06:12:08Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2505",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2523,
+      "title": "pin to newer commit of onnxruntime extensions (#2523)",
+      "commit": "3dfb6514b363a10baab0d58ac429da56246b3e44",
+      "committedAt": "2026-09-03T20:21:13Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2523",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2525,
+      "title": "Fix Nemotron streaming mel tensor validation (#2525)",
+      "commit": "3c18483623147d760e3abd2dc67bafc8675db5c6",
+      "committedAt": "2026-09-02T22:43:16-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2525",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32399,
+      "title": "Use core available for CUDA plugin ARM64 build. Build time 4 hours -> 1.5 hours. (#32399)",
+      "commit": "c41c291836246043d4dc17b9e6a21904841fbd10",
+      "committedAt": "2026-09-02T18:21:00-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32399",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32400,
+      "title": "Primary nuget pipeline runs with CFS clean. (#32400)",
+      "commit": "3ad12b032b5fc25a446de6c559c58276709ea712",
+      "committedAt": "2026-09-03T03:13:13Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32400",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
