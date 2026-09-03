@@ -1,0 +1,38 @@
+{
+  "device": "webgfx-104",
+  "runtime": "ort",
+  "version": "20260904-qwen35-2b-klinear-pruned-local",
+  "gpus": {
+    "2C02": {
+      "backend": "webgpu",
+      "models": {
+        "Qwen3.5-2B-klinear-pruned-local": {
+          "128": {
+            "ttftMs": 32.81,
+            "plTs": 3901.39,
+            "tgTs": 148.96,
+            "e2eMs": 885.46,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-03T18:08:17.189Z"
+          },
+          "512": {
+            "ttftMs": 53.26,
+            "plTs": 9613.81,
+            "tgTs": 148.31,
+            "e2eMs": 909.66,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-03T18:08:17.189Z"
+          },
+          "1024": {
+            "ttftMs": 86.86,
+            "plTs": 11789,
+            "tgTs": 148.98,
+            "e2eMs": 939.55,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-03T18:08:17.189Z"
+          }
+        }
+      }
+    }
+  }
+}
