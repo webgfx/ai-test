@@ -1,0 +1,141 @@
+{
+  "runtime": "ort",
+  "version": "20260909",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-09T00:52:44.237Z",
+  "builtAt": "2026-09-09T08:47:20.008125+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "79fc8c60a52e8b85e62adfe8e7044a47d485bbb8",
+      "commitDate": "2026-09-08T16:15:32-07:00",
+      "title": "Limit nested model graph depth (#32344)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/79fc8c60a52e8b85e62adfe8e7044a47d485bbb8"
+    },
+    "onnxruntime-genai": {
+      "commit": "fa4ea166b6967eb47e926f35215b5ed77f223f6c",
+      "commitDate": "2026-09-08T09:44:43-07:00",
+      "title": "Fix DFlash target hidden-state taps (#2538)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/fa4ea166b6967eb47e926f35215b5ed77f223f6c"
+    }
+  },
+  "previousBuild": {
+    "version": "20260908",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "9f913ae524b50217e9f7c09ce35b363832a44928",
+        "commitDate": "2026-09-07T22:16:25-07:00",
+        "title": "Fix CUDA plugin user stream test lifetime (#32449)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/9f913ae524b50217e9f7c09ce35b363832a44928"
+      },
+      "onnxruntime-genai": {
+        "commit": "400d5d2a5b41c7d026982ea05f393f9f98ecab13",
+        "commitDate": "2026-09-05T08:14:18Z",
+        "title": "Enable per-turn generation options in the Engine (#2532)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/400d5d2a5b41c7d026982ea05f393f9f98ecab13"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32284,
+      "title": "[WebGPU] Add int8 kv cache block quantization (#32284)",
+      "commit": "c7c640854b00858587d3fb2484a06ac6ee8f89a3",
+      "committedAt": "2026-09-08T15:59:48-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32284",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32364,
+      "title": "webgpu: fix OOB subgroup-matrix loads for trailing partial tiles (#32364)",
+      "commit": "2a2833affc67aab098e755aca76ae9f362ec34a8",
+      "committedAt": "2026-09-08T10:01:18-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32364",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2538,
+      "title": "Fix DFlash target hidden-state taps (#2538)",
+      "commit": "fa4ea166b6967eb47e926f35215b5ed77f223f6c",
+      "committedAt": "2026-09-08T09:44:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2538",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31974,
+      "title": "Register BFloat16 LayerNorm/RMSNorm kernels on the CPU EP (#31974)",
+      "commit": "a6545f949ba2cfa22369aff2b7dd32c142807772",
+      "committedAt": "2026-09-08T23:14:29Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31974",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32344,
+      "title": "Limit nested model graph depth (#32344)",
+      "commit": "79fc8c60a52e8b85e62adfe8e7044a47d485bbb8",
+      "committedAt": "2026-09-08T16:15:32-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32344",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32426,
+      "title": "Fix FuseInitializersTransformer consumer input lookup (#32426)",
+      "commit": "bb331b7a235435863a89f4bfcc3b2138928026ec",
+      "committedAt": "2026-09-08T12:02:43+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32426",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2530,
+      "title": "Enable prefill chunking for text-only mRoPE models (#2530)",
+      "commit": "c967cc60b394cabc1b162d3a9a53775dd2c1eb32",
+      "committedAt": "2026-09-08T14:39:47Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2530",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2539,
+      "title": "Add initialization latency metrics to Python E2E benchmark (#2539)",
+      "commit": "0d0716f37a0c4c221d6875bf8eb23f95513cc562",
+      "committedAt": "2026-09-08T07:32:44-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2539",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32206,
+      "title": "Bump reviewdog/action-shellcheck from 1.31.0 to 1.32.1 (#32206)",
+      "commit": "a750fda25ab95d939d6fda63f1c0f7b40b24bf86",
+      "committedAt": "2026-09-08T22:35:16Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32206",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32244,
+      "title": "perftest: Use plugin EP device allocators for input/output buffers (#32244)",
+      "commit": "314986634a36d1a8ae17eac29e4132685b79b4bd",
+      "committedAt": "2026-09-08T11:56:59-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32244",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
