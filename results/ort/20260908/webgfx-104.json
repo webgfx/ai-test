@@ -156,5 +156,41 @@
         }
       }
     }
+  },
+  "variants": {
+    "cfg-cbf87c7d": {
+      "id": "cfg-cbf87c7d",
+      "label": "Robustness enabled",
+      "config": {
+        "backend": "webgpu",
+        "generationLength": 128,
+        "repetitions": 5,
+        "maxLength": 8192,
+        "randomTokens": true,
+        "reuseGenerator": true,
+        "graphCapture": false,
+        "constantFolding": "default",
+        "webgpuRobustness": "enabled",
+        "validationMode": "disabled"
+      },
+      "gpus": {
+        "2C02": {
+          "backend": "webgpu",
+          "models": {
+            "Phi-4-mini-instruct": {
+              "1024": {
+                "ttftMs": 78.26,
+                "plTs": 13085.2,
+                "tgTs": 159.53,
+                "e2eMs": 874.46,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-09T00:50:52.011Z"
+              }
+            }
+          }
+        }
+      },
+      "updatedAt": "2026-09-09T00:50:52.011Z"
+    }
   }
 }
