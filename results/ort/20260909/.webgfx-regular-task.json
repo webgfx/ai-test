@@ -3,14 +3,14 @@
   "version": "20260909",
   "builtFromSource": true,
   "workflow": "ort-webgpu-perf",
-  "recordedAt": "2026-09-09T00:52:44.237Z",
-  "builtAt": "2026-09-09T08:47:20.008125+08:00",
+  "recordedAt": "2026-09-09T02:05:58.431Z",
+  "builtAt": "2026-09-09T10:02:48.328226+08:00",
   "repositories": {
     "onnxruntime": {
-      "commit": "79fc8c60a52e8b85e62adfe8e7044a47d485bbb8",
-      "commitDate": "2026-09-08T16:15:32-07:00",
-      "title": "Limit nested model graph depth (#32344)",
-      "url": "https://github.com/microsoft/onnxruntime/commit/79fc8c60a52e8b85e62adfe8e7044a47d485bbb8"
+      "commit": "4d28551952439ad30ad9c1e9f0c6dcfbbf5f83d2",
+      "commitDate": "2026-09-08T18:23:58-07:00",
+      "title": "Update python doc dependencies (#32424)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/4d28551952439ad30ad9c1e9f0c6dcfbbf5f83d2"
     },
     "onnxruntime-genai": {
       "commit": "fa4ea166b6967eb47e926f35215b5ed77f223f6c",
@@ -54,6 +54,16 @@
       "commit": "2a2833affc67aab098e755aca76ae9f362ec34a8",
       "committedAt": "2026-09-08T10:01:18-07:00",
       "url": "https://github.com/microsoft/onnxruntime/pull/32364",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32409,
+      "title": "Add FP8 GEMV KSplit32 scheduling for the 48-SM SM121 GPU (#32409)",
+      "commit": "e91577800d1fa0b0e3fd56f72ede90de703f6356",
+      "committedAt": "2026-09-09T00:48:43Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32409",
       "relevance": "high",
       "reason": "Touches WebGPU or LLM performance-sensitive code"
     },
@@ -136,6 +146,26 @@
       "url": "https://github.com/microsoft/onnxruntime/pull/32244",
       "relevance": "low",
       "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32424,
+      "title": "Update python doc dependencies (#32424)",
+      "commit": "4d28551952439ad30ad9c1e9f0c6dcfbbf5f83d2",
+      "committedAt": "2026-09-08T18:23:58-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32424",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
     }
+  ],
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
   ]
 }
