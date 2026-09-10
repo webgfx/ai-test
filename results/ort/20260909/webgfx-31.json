@@ -312,6 +312,99 @@
         }
       },
       "updatedAt": "2026-09-09T02:22:59.562Z"
+    },
+    "cfg-0b419a78": {
+      "id": "cfg-0b419a78",
+      "label": "D3D12, Constant folding disabled",
+      "config": {
+        "backend": "webgpu",
+        "generationLength": 128,
+        "repetitions": 5,
+        "maxLength": 8192,
+        "randomTokens": true,
+        "reuseGenerator": true,
+        "graphCapture": false,
+        "constantFolding": "disabled",
+        "webgpuRobustness": "default",
+        "validationMode": "disabled",
+        "webgpuBackend": "d3d12",
+        "constantFoldingSections": [
+          "decoder",
+          "embedding",
+          "encoder",
+          "speech",
+          "vision"
+        ]
+      },
+      "gpus": {
+        "64A0": {
+          "backend": "webgpu",
+          "models": {
+            "Phi-4-mini-instruct": {
+              "1024": {
+                "ttftMs": 1956.54,
+                "plTs": 523.37,
+                "tgTs": 19.61,
+                "e2eMs": 8434.56,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-10T06:20:43.166Z"
+              }
+            },
+            "Qwen3-1.7B": {
+              "1024": {
+                "ttftMs": 1167.18,
+                "plTs": 877.33,
+                "tgTs": 32.96,
+                "e2eMs": 5020.98,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-10T06:20:43.166Z"
+              }
+            },
+            "Qwen3.5-2B": {
+              "1024": {
+                "ttftMs": 983.99,
+                "plTs": 1040.66,
+                "tgTs": 32.47,
+                "e2eMs": 4895.85,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-10T06:20:43.166Z"
+              }
+            },
+            "aion": {
+              "1024": {
+                "ttftMs": 1386.75,
+                "plTs": 738.42,
+                "tgTs": 30.15,
+                "e2eMs": 5599.85,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-10T06:20:43.166Z"
+              }
+            },
+            "gpt-oss-20b": {
+              "1024": {
+                "ttftMs": 3848.85,
+                "plTs": 266.05,
+                "tgTs": 19,
+                "e2eMs": 10533.4,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-10T06:20:43.166Z"
+              }
+            },
+            "whisper-tiny": {
+              "1024": {
+                "ttftMs": null,
+                "plTs": null,
+                "tgTs": null,
+                "e2eMs": null,
+                "peakMemoryBytes": null,
+                "error": "exit code 1",
+                "testedAt": "2026-09-10T06:20:43.166Z"
+              }
+            }
+          }
+        }
+      },
+      "updatedAt": "2026-09-10T06:20:43.166Z"
     }
   }
 }
