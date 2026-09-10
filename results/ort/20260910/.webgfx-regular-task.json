@@ -1,0 +1,321 @@
+{
+  "runtime": "ort",
+  "version": "20260910",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-10T06:32:32.124Z",
+  "builtAt": "2026-09-10T14:07:24.321484+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "5894ba8a53526b3aeb702bd86e6b117c9df8fa4f",
+      "commitDate": "2026-09-10T07:53:35+02:00",
+      "title": "Add portable random-access file reads to Env (#32503)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/5894ba8a53526b3aeb702bd86e6b117c9df8fa4f"
+    },
+    "onnxruntime-genai": {
+      "commit": "0be47e377ab49e1a5f1766dea98a06589f82eed9",
+      "commitDate": "2026-09-09T21:47:35-07:00",
+      "title": "Validate Qwen vision embedding output (#2511)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/0be47e377ab49e1a5f1766dea98a06589f82eed9"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20260909",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "4d28551952439ad30ad9c1e9f0c6dcfbbf5f83d2",
+        "commitDate": "2026-09-08T18:23:58-07:00",
+        "title": "Update python doc dependencies (#32424)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/4d28551952439ad30ad9c1e9f0c6dcfbbf5f83d2"
+      },
+      "onnxruntime-genai": {
+        "commit": "fa4ea166b6967eb47e926f35215b5ed77f223f6c",
+        "commitDate": "2026-09-08T09:44:43-07:00",
+        "title": "Fix DFlash target hidden-state taps (#2538)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/fa4ea166b6967eb47e926f35215b5ed77f223f6c"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32139,
+      "title": "Add session option for a BNHS GroupQueryAttention Value cache layout (#32139)",
+      "commit": "82583c5b6398a9c37815f91e9cd1d7c165a132a7",
+      "committedAt": "2026-09-09T19:14:09Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32139",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32152,
+      "title": "[MLAS] Enable SBGemm fastmath path for Darwin on Arm64 (#32152)",
+      "commit": "d45bbafa8d68a365fb4839e7a397a3f317d6f14c",
+      "committedAt": "2026-09-09T06:10:46Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32152",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32209,
+      "title": "Bump actions/upload-artifact from 4.6.2 to 7.0.1 (#32209)",
+      "commit": "bcbe0a1c42dbe3a8bd36b8bad6e9ea8251df4259",
+      "committedAt": "2026-09-09T11:26:39-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32209",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32277,
+      "title": "[WebGPU] Add PagedAttention metadata and GPT-OSS support (#32277)",
+      "commit": "b9735decb54434bac380fa2b271fba264d1870b5",
+      "committedAt": "2026-09-09T17:47:10Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32277",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32380,
+      "title": "Prevent Agility SDK use with WebGPU Plugin EP builds (#32380)",
+      "commit": "5bc57a26b7cac88029504dae00912535c2206198",
+      "committedAt": "2026-09-09T11:11:45-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32380",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32420,
+      "title": "[WebGPU] Prepack Conv weights for the im2col-matmul path (#32420)",
+      "commit": "b652e595b04d202b7f71af1d9105a183fac2b100",
+      "committedAt": "2026-09-10T09:36:45+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32420",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32433,
+      "title": "[CUDA] Pin FP8 GEMV residency for grids just past two blocks per SM (#32433)",
+      "commit": "e76036b8e49515ee7dd2dd0ac39c9d8b7533d38a",
+      "committedAt": "2026-09-09T19:29:44Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32433",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32452,
+      "title": "Fix float16 QuantizeLinear rounding on CPU (#32452)",
+      "commit": "ae562b5cf02bad5f38ad2e9c870c5cb4c89ac307",
+      "committedAt": "2026-09-09T12:55:41+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32452",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32485,
+      "title": "[CUDA] Fix Windows DeepGEMM build errors and warnings (#32485)",
+      "commit": "8c3988cb7b87308956764e4d48f871a9ad7cae1a",
+      "committedAt": "2026-09-09T02:49:30Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32485",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2511,
+      "title": "Validate Qwen vision embedding output (#2511)",
+      "commit": "0be47e377ab49e1a5f1766dea98a06589f82eed9",
+      "committedAt": "2026-09-09T21:47:35-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2511",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32435,
+      "title": "fix: avoid fusing identity transpose into Gemm (#32435)",
+      "commit": "b905e946b7efee691fec7b81d82a25d0f7601803",
+      "committedAt": "2026-09-09T13:48:49+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32435",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32442,
+      "title": "Clarify external initializer and EP context path interaction (#32442)",
+      "commit": "2e3c24d5963d62d0bd7c9d306433b19b7304d5d2",
+      "committedAt": "2026-09-09T13:48:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32442",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32502,
+      "title": "Release external data loaders after graph initialization (#32502)",
+      "commit": "33af5d32801b2e631ebece4f382f4ba775f17d8c",
+      "committedAt": "2026-09-09T15:38:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32502",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32517,
+      "title": "Fix CUDA plugin device discovery on WSL (#32517)",
+      "commit": "a2ee3eb43052de307003e6256fc9258ce19d9c34",
+      "committedAt": "2026-09-09T21:57:13-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32517",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32204,
+      "title": "Bump lintrunner-adapters from 0.12.5 to 0.14.1 (#32204)",
+      "commit": "3177241aaa0ab7664f38a35bb3c8d9ce9127f584",
+      "committedAt": "2026-09-09T18:47:41Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32204",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32207,
+      "title": "Bump actions/download-artifact from 7.0.0 to 8.0.1 (#32207)",
+      "commit": "4ece57f14fa55608e16fb787769afc0fa47bfa65",
+      "committedAt": "2026-09-09T14:50:45-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32207",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32353,
+      "title": "Register ONNX schemas only when static registration is disabled (#32353)",
+      "commit": "23dd6510fd395b4556f474c1c0079be2a8b7a8c8",
+      "committedAt": "2026-09-09T22:53:44Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32353",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32397,
+      "title": "Bump fast-uri from 3.1.2 to 3.1.7 in /js/react_native/e2e (#32397)",
+      "commit": "b1f762bc88b366b8860b219b6ce03939977c8d8f",
+      "committedAt": "2026-09-09T13:31:49-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32397",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32469,
+      "title": "[Node.js] Avoid duplicate N-API cleanup hook registration (#32469)",
+      "commit": "5eabb963b82549061754467e977477f197c2f5d7",
+      "committedAt": "2026-09-09T03:28:46Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32469",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32482,
+      "title": "Update misspelling linter version (#32482)",
+      "commit": "c795fc7cacbc9647de06360b527c89624bb932c1",
+      "committedAt": "2026-09-08T20:54:54-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32482",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32486,
+      "title": "Bump js-yaml in /js/react_native/e2e (#32486)",
+      "commit": "94b20ca1097ad10eccf4196736ab70b025fd219d",
+      "committedAt": "2026-09-09T09:24:55-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32486",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32488,
+      "title": "Bump next from 15.5.22 to 15.5.24 in /js/web/test/e2e/exports/testcases/nextjs-default (#32488)",
+      "commit": "29063077b866ac5fc5361c2093f32fbb2557bd34",
+      "committedAt": "2026-09-09T10:28:44-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32488",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32491,
+      "title": "Install uuid-dev in the Linux minimal build_full_ort job (#32491)",
+      "commit": "f26e546fe25b04e737ec460f05a7d57f4938f23c",
+      "committedAt": "2026-09-09T06:19:58Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32491",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32503,
+      "title": "Add portable random-access file reads to Env (#32503)",
+      "commit": "5894ba8a53526b3aeb702bd86e6b117c9df8fa4f",
+      "committedAt": "2026-09-10T07:53:35+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32503",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32505,
+      "title": "Bump joi from 17.13.3 to 17.13.7 in /js/react_native/e2e (#32505)",
+      "commit": "647e389680310bc43d74082ad17bc7035469d602",
+      "committedAt": "2026-09-09T13:35:19-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32505",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32508,
+      "title": "Bump js-yaml from 4.3.0 to 4.3.2 in /js (#32508)",
+      "commit": "472b7206d473537f05f520410a92dcfe64bcaab1",
+      "committedAt": "2026-09-09T14:47:21-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32508",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32516,
+      "title": "Get rid of spurious warning about not being able to find spectre mitigation (#32516)",
+      "commit": "0f0f29f5015f16926912ae47061e6a3eedcfbe04",
+      "committedAt": "2026-09-10T00:00:37Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32516",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
