@@ -1,0 +1,101 @@
+{
+  "runtime": "ort",
+  "version": "20260911",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-11T02:15:52.188Z",
+  "builtAt": "2026-09-11T10:11:14.205814+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "05343f959aca2131f76847ee04bfc736612e154e",
+      "commitDate": "2026-09-10T16:53:21-07:00",
+      "title": "Bump version to 1.31.0 (#32523)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/05343f959aca2131f76847ee04bfc736612e154e"
+    },
+    "onnxruntime-genai": {
+      "commit": "0be47e377ab49e1a5f1766dea98a06589f82eed9",
+      "commitDate": "2026-09-09T21:47:35-07:00",
+      "title": "Validate Qwen vision embedding output (#2511)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/0be47e377ab49e1a5f1766dea98a06589f82eed9"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20260910",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "5894ba8a53526b3aeb702bd86e6b117c9df8fa4f",
+        "commitDate": "2026-09-10T07:53:35+02:00",
+        "title": "Add portable random-access file reads to Env (#32503)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/5894ba8a53526b3aeb702bd86e6b117c9df8fa4f"
+      },
+      "onnxruntime-genai": {
+        "commit": "0be47e377ab49e1a5f1766dea98a06589f82eed9",
+        "commitDate": "2026-09-09T21:47:35-07:00",
+        "title": "Validate Qwen vision embedding output (#2511)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/0be47e377ab49e1a5f1766dea98a06589f82eed9"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32213,
+      "title": "[plan docs] WebGPU EP extraction plans (#32213)",
+      "commit": "c617094643b38d3b05b5ab10adbd23bd958fd058",
+      "committedAt": "2026-09-10T13:20:40-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32213",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32478,
+      "title": "[WebGPU EP] grouped conv audio underflow fix (#32478)",
+      "commit": "42e06c400382838628d52e207f3eed1a8ee66ccd",
+      "committedAt": "2026-09-10T20:36:10Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32478",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32515,
+      "title": "[CUDA] Add INT4 paged KV cache with per-channel scales (#32515)",
+      "commit": "f2c39fe2f838cf35ce7da92824f5a5e3ee6e88a7",
+      "committedAt": "2026-09-09T23:09:41-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32515",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32215,
+      "title": "swift-package: Add ORTTensorElementDataTypeBool support (#32215)",
+      "commit": "b5e4d51c00bef024664d19c7c8c817b02d124b1a",
+      "committedAt": "2026-09-10T11:25:31-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32215",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32523,
+      "title": "Bump version to 1.31.0 (#32523)",
+      "commit": "05343f959aca2131f76847ee04bfc736612e154e",
+      "committedAt": "2026-09-10T16:53:21-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32523",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
