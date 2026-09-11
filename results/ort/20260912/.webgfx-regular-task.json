@@ -1,0 +1,161 @@
+{
+  "runtime": "ort",
+  "version": "20260912",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-11T22:16:46.000Z",
+  "builtAt": "2026-09-12T06:11:21.404869+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "8ec7981a7439546a54196b9cbc777ae5de708b6b",
+      "commitDate": "2026-09-11T10:07:17-07:00",
+      "title": "[CUDA] Guard FP8 XQA test by compute capability (#32559)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/8ec7981a7439546a54196b9cbc777ae5de708b6b"
+    },
+    "onnxruntime-genai": {
+      "commit": "8d9bc003fe01d5db9cc8220f38fe7961ad805d0d",
+      "commitDate": "2026-09-11T18:30:06Z",
+      "title": "Fix explicit cache budgeting for windowed block drafters (#2533)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/8d9bc003fe01d5db9cc8220f38fe7961ad805d0d"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20260911",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "05343f959aca2131f76847ee04bfc736612e154e",
+        "commitDate": "2026-09-10T16:53:21-07:00",
+        "title": "Bump version to 1.31.0 (#32523)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/05343f959aca2131f76847ee04bfc736612e154e"
+      },
+      "onnxruntime-genai": {
+        "commit": "0be47e377ab49e1a5f1766dea98a06589f82eed9",
+        "commitDate": "2026-09-09T21:47:35-07:00",
+        "title": "Validate Qwen vision embedding output (#2511)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/0be47e377ab49e1a5f1766dea98a06589f82eed9"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 29599,
+      "title": "feat(webgpu): add enableMatmulFp32Accumulation provider option for MatMulNBits (#29599)",
+      "commit": "29f53b51176d931283cf55eed0ef68a4db8495d2",
+      "committedAt": "2026-09-11T14:10:52+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29599",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32314,
+      "title": "Update vcpkg version (#32314)",
+      "commit": "a20e3fb335934d62b877d31a02f520dfd9b76f8e",
+      "committedAt": "2026-09-11T09:47:41-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32314",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32463,
+      "title": "[WebGPU] Add GroupNorm and SkipGroupNorm contrib kernels (#32463)",
+      "commit": "abe8c435985a3abe8196e3febfea57aa11d0cea8",
+      "committedAt": "2026-09-11T14:04:43+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32463",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32536,
+      "title": "[WebGPU] Support nullable WGSL template variables (#32536)",
+      "commit": "2a43ec07e67df9263c7c56c15da76cc7f74d7b32",
+      "committedAt": "2026-09-11T17:12:20+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32536",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32558,
+      "title": "Bump plugin-ep-webgpu/VERSION_NUMBER to 0.5.0. (#32558)",
+      "commit": "396306cd41009fc765cc7bfc4b027e4ebc7dcf59",
+      "committedAt": "2026-09-11T02:28:57Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32558",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32559,
+      "title": "[CUDA] Guard FP8 XQA test by compute capability (#32559)",
+      "commit": "8ec7981a7439546a54196b9cbc777ae5de708b6b",
+      "committedAt": "2026-09-11T10:07:17-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32559",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2533,
+      "title": "Fix explicit cache budgeting for windowed block drafters (#2533)",
+      "commit": "8d9bc003fe01d5db9cc8220f38fe7961ad805d0d",
+      "committedAt": "2026-09-11T18:30:06Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2533",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2537,
+      "title": "Fix tool calling: preserve tool schemas and stop at end of turn (#2537)",
+      "commit": "c8910bb660dc5faae7414b42bfcd739d77dc4cc3",
+      "committedAt": "2026-09-11T10:30:17-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2537",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32203,
+      "title": "Bump lintrunner from 0.12.7 to 0.13.1 (#32203)",
+      "commit": "3fa5b27a3cf770c5d24f0c7365046e65696c1608",
+      "committedAt": "2026-09-10T22:13:16-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32203",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32434,
+      "title": "Create a dedicated location for PCI vendor ID constants (#32434)",
+      "commit": "91f170bb653c72c1322ae83e01a2f1417061adfb",
+      "committedAt": "2026-09-11T04:04:15Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32434",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32513,
+      "title": "Bump sharp from 0.34.5 to 0.35.4 in /js/web/test/e2e/exports/testcases/nextjs-default (#32513)",
+      "commit": "34d9ec729ba7b80a1ebb79e029f674a06cc871be",
+      "committedAt": "2026-09-10T22:14:47-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32513",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
