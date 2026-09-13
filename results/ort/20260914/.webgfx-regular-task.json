@@ -1,0 +1,50 @@
+{
+  "runtime": "ort",
+  "version": "20260914",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-13T20:35:08.206Z",
+  "builtAt": "2026-09-14T04:27:48.291564+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "4d95047dfb2c9395388dd17bdb87f3dda561b091",
+      "commitDate": "2026-09-12T23:11:16-07:00",
+      "title": "Add workspace estimation accounting and reporting (#31962)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/4d95047dfb2c9395388dd17bdb87f3dda561b091"
+    },
+    "onnxruntime-genai": {
+      "commit": "7f154b84a7fe84613d256acd05b0a3e3bab5cc52",
+      "commitDate": "2026-09-12T17:31:28-07:00",
+      "title": "Add opt-in DFlash2 gate/up projection fusion (#2554)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/7f154b84a7fe84613d256acd05b0a3e3bab5cc52"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20260913",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "4d95047dfb2c9395388dd17bdb87f3dda561b091",
+        "commitDate": "2026-09-12T23:11:16-07:00",
+        "title": "Add workspace estimation accounting and reporting (#31962)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/4d95047dfb2c9395388dd17bdb87f3dda561b091"
+      },
+      "onnxruntime-genai": {
+        "commit": "7f154b84a7fe84613d256acd05b0a3e3bab5cc52",
+        "commitDate": "2026-09-12T17:31:28-07:00",
+        "title": "Add opt-in DFlash2 gate/up projection fusion (#2554)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/7f154b84a7fe84613d256acd05b0a3e3bab5cc52"
+      }
+    }
+  },
+  "pullRequests": []
+}
