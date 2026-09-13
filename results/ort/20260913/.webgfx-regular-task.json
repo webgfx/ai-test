@@ -1,0 +1,121 @@
+{
+  "runtime": "ort",
+  "version": "20260913",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-13T14:17:33.240Z",
+  "builtAt": "2026-09-13T22:12:43.541759+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "4d95047dfb2c9395388dd17bdb87f3dda561b091",
+      "commitDate": "2026-09-12T23:11:16-07:00",
+      "title": "Add workspace estimation accounting and reporting (#31962)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/4d95047dfb2c9395388dd17bdb87f3dda561b091"
+    },
+    "onnxruntime-genai": {
+      "commit": "7f154b84a7fe84613d256acd05b0a3e3bab5cc52",
+      "commitDate": "2026-09-12T17:31:28-07:00",
+      "title": "Add opt-in DFlash2 gate/up projection fusion (#2554)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/7f154b84a7fe84613d256acd05b0a3e3bab5cc52"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20260912",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "8ec7981a7439546a54196b9cbc777ae5de708b6b",
+        "commitDate": "2026-09-11T10:07:17-07:00",
+        "title": "[CUDA] Guard FP8 XQA test by compute capability (#32559)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/8ec7981a7439546a54196b9cbc777ae5de708b6b"
+      },
+      "onnxruntime-genai": {
+        "commit": "8d9bc003fe01d5db9cc8220f38fe7961ad805d0d",
+        "commitDate": "2026-09-11T18:30:06Z",
+        "title": "Fix explicit cache budgeting for windowed block drafters (#2533)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/8d9bc003fe01d5db9cc8220f38fe7961ad805d0d"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 31962,
+      "title": "Add workspace estimation accounting and reporting (#31962)",
+      "commit": "4d95047dfb2c9395388dd17bdb87f3dda561b091",
+      "committedAt": "2026-09-12T23:11:16-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31962",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2544,
+      "title": "Add INT4 paged KV and DFlash2 builder support (#2544)",
+      "commit": "c6f7afc8b5945e3d9a84b1df6d5a0b46a760331d",
+      "committedAt": "2026-09-11T21:41:03-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2544",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2554,
+      "title": "Add opt-in DFlash2 gate/up projection fusion (#2554)",
+      "commit": "7f154b84a7fe84613d256acd05b0a3e3bab5cc52",
+      "committedAt": "2026-09-12T17:31:28-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2554",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2548,
+      "title": "packaging pipeline passes CFS cleanly (#2548)",
+      "commit": "3be9ee0496c8f479ae5d608dc7909ae577e021a5",
+      "committedAt": "2026-09-11T23:43:19-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2548",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2550,
+      "title": "Update Extensions for Marian byte-fallback casing fixes (#2550)",
+      "commit": "ce4d5c6bd9e2a76819d149e94c0a6f97ddcb6905",
+      "committedAt": "2026-09-12T13:37:46-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2550",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2551,
+      "title": "Fix accepted draft EOS classification after sampler slot reuse (#2551)",
+      "commit": "a1c73fbab8a2dd77291cf77a12272f9ee71361dd",
+      "committedAt": "2026-09-12T08:18:49Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2551",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32548,
+      "title": "Support RTX 50-series GPUs in Linux CUDA Docker builds (#32548)",
+      "commit": "a7df32cf6087a11884042a2a95526d72100e3b95",
+      "committedAt": "2026-09-11T15:39:17-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32548",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
