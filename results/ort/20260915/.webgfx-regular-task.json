@@ -1,0 +1,81 @@
+{
+  "runtime": "ort",
+  "version": "20260915",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-14T16:43:31.237Z",
+  "builtAt": "2026-09-15T00:31:06.293033+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "dfd2228b6a40d7ee3ebfe20734d0c6aa76f388fe",
+      "commitDate": "2026-09-14T10:10:41-04:00",
+      "title": "Auto-generated baselines by 1ES Pipeline Templates (#31136)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/dfd2228b6a40d7ee3ebfe20734d0c6aa76f388fe"
+    },
+    "onnxruntime-genai": {
+      "commit": "d5b40851ba80ffa8e95b6b01f921dbb9008fac80",
+      "commitDate": "2026-09-14T04:46:50Z",
+      "title": "Fix state update construction with Clang (#2560)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/d5b40851ba80ffa8e95b6b01f921dbb9008fac80"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20260914",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "4d95047dfb2c9395388dd17bdb87f3dda561b091",
+        "commitDate": "2026-09-12T23:11:16-07:00",
+        "title": "Add workspace estimation accounting and reporting (#31962)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/4d95047dfb2c9395388dd17bdb87f3dda561b091"
+      },
+      "onnxruntime-genai": {
+        "commit": "7f154b84a7fe84613d256acd05b0a3e3bab5cc52",
+        "commitDate": "2026-09-12T17:31:28-07:00",
+        "title": "Add opt-in DFlash2 gate/up projection fusion (#2554)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/7f154b84a7fe84613d256acd05b0a3e3bab5cc52"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32560,
+      "title": "[WebGPU] Support QuickGelu activation in the im2col-matmul path (#32560)",
+      "commit": "8d85527a010e294a26b274749f74294b2a32cec5",
+      "committedAt": "2026-09-14T05:40:44Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32560",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2560,
+      "title": "Fix state update construction with Clang (#2560)",
+      "commit": "d5b40851ba80ffa8e95b6b01f921dbb9008fac80",
+      "committedAt": "2026-09-14T04:46:50Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2560",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31136,
+      "title": "Auto-generated baselines by 1ES Pipeline Templates (#31136)",
+      "commit": "dfd2228b6a40d7ee3ebfe20734d0c6aa76f388fe",
+      "committedAt": "2026-09-14T10:10:41-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31136",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
