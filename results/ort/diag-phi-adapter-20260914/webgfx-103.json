@@ -1,0 +1,43 @@
+{
+  "device": "webgfx-103",
+  "runtime": "ort",
+  "version": "diag-phi-adapter-20260914",
+  "gpus": {},
+  "variants": {
+    "cfg-68c372c4": {
+      "id": "cfg-68c372c4",
+      "label": "D3D12, 8 generated tokens, 1 repetitions",
+      "config": {
+        "backend": "webgpu",
+        "generationLength": 8,
+        "repetitions": 1,
+        "maxLength": 8192,
+        "randomTokens": true,
+        "reuseGenerator": true,
+        "graphCapture": false,
+        "constantFolding": "default",
+        "webgpuRobustness": "default",
+        "validationMode": "disabled",
+        "webgpuBackend": "d3d12"
+      },
+      "gpus": {
+        "13C0": {
+          "backend": "webgpu",
+          "models": {
+            "Phi-4-mini-instruct": {
+              "512": {
+                "ttftMs": 10969.5,
+                "plTs": 46.67,
+                "tgTs": 2.23,
+                "e2eMs": 14107,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-14T00:25:29.687Z"
+              }
+            }
+          }
+        }
+      },
+      "updatedAt": "2026-09-14T00:25:29.687Z"
+    }
+  }
+}
