@@ -3,14 +3,14 @@
   "version": "20260915",
   "builtFromSource": true,
   "workflow": "ort-webgpu-perf",
-  "recordedAt": "2026-09-14T16:52:48.648Z",
-  "builtAt": "2026-09-15T00:31:06.293033+08:00",
+  "recordedAt": "2026-09-15T12:35:44.533Z",
+  "builtAt": "2026-09-15T20:31:46.066398+08:00",
   "repositories": {
     "onnxruntime": {
-      "commit": "dfd2228b6a40d7ee3ebfe20734d0c6aa76f388fe",
-      "commitDate": "2026-09-14T10:10:41-04:00",
-      "title": "Auto-generated baselines by 1ES Pipeline Templates (#31136)",
-      "url": "https://github.com/microsoft/onnxruntime/commit/dfd2228b6a40d7ee3ebfe20734d0c6aa76f388fe"
+      "commit": "fed7f01a06872456f3374054f89e0e496f97257d",
+      "commitDate": "2026-09-15T16:05:55+08:00",
+      "title": "Enable WebGPU GQA local-window flash attention (#32462)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/fed7f01a06872456f3374054f89e0e496f97257d"
     },
     "onnxruntime-genai": {
       "commit": "d5b40851ba80ffa8e95b6b01f921dbb9008fac80",
@@ -49,6 +49,46 @@
   "pullRequests": [
     {
       "repository": "onnxruntime",
+      "number": 32446,
+      "title": "Add GQA workspace preparation recipes (#32446)",
+      "commit": "b03fb522be1e1574e86835c9dca84b2b94ef2ca5",
+      "committedAt": "2026-09-14T18:19:15Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32446",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32462,
+      "title": "Enable WebGPU GQA local-window flash attention (#32462)",
+      "commit": "fed7f01a06872456f3374054f89e0e496f97257d",
+      "committedAt": "2026-09-15T16:05:55+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32462",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32477,
+      "title": "[WebGPU EP] implements VarlenCausalConvWithState operator (#32477)",
+      "commit": "d6750b398d6c8fce90544ddef954e5016de524a2",
+      "committedAt": "2026-09-14T22:28:28-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32477",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32498,
+      "title": "[WebGPU] Vectorize NHWC depthwise convolution across channels (#32498)",
+      "commit": "73534a26cd86e725f602d28457fadd46d4a96fb4",
+      "committedAt": "2026-09-15T15:58:41+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32498",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
       "number": 32560,
       "title": "[WebGPU] Support QuickGelu activation in the im2col-matmul path (#32560)",
       "commit": "8d85527a010e294a26b274749f74294b2a32cec5",
@@ -56,6 +96,36 @@
       "url": "https://github.com/microsoft/onnxruntime/pull/32560",
       "relevance": "high",
       "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32588,
+      "title": "Move kCutlassSafeMaskFilterValue outside USE_MEMORY_EFFICIENT_ATTENTION guard (#32588)",
+      "commit": "bf8b4f1af22fde79908832e0402ed114d2bb9d60",
+      "committedAt": "2026-09-14T20:35:20Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32588",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32564,
+      "title": "Deprecate ACL EP (#32564)",
+      "commit": "719b9fa305d14ba5a0b04e14491dbcd25684d700",
+      "committedAt": "2026-09-14T15:40:38-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32564",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32584,
+      "title": "[CUDA] Fix SM120 QMoE MoE GEMM TMA build failure with GCC (#32584)",
+      "commit": "5f44b5b59c79d017e937d972b7f3557b800b46cb",
+      "committedAt": "2026-09-14T21:38:45-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32584",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
     },
     {
       "repository": "onnxruntime-genai",
@@ -74,6 +144,26 @@
       "commit": "dfd2228b6a40d7ee3ebfe20734d0c6aa76f388fe",
       "committedAt": "2026-09-14T10:10:41-04:00",
       "url": "https://github.com/microsoft/onnxruntime/pull/31136",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32425,
+      "title": "[Telemetry] Reduce 1DS event volume (#32425)",
+      "commit": "0a82f2caa1feedb950d57aa2ab72c256f440a193",
+      "committedAt": "2026-09-14T22:48:05-05:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32425",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32586,
+      "title": "Bump core mltools: 7.1 -> 9.0 (#32586)",
+      "commit": "154c8218b850422070c846150a1dc4e48cd7402f",
+      "committedAt": "2026-09-14T15:22:05-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32586",
       "relevance": "low",
       "reason": "Merged between the two benchmarked source revisions"
     }
