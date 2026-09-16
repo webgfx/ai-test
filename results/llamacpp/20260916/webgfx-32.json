@@ -1,0 +1,129 @@
+{
+  "device": "webgfx-32",
+  "runtime": "llamacpp",
+  "version": "20260916",
+  "gpus": {
+    "B080": {
+      "backend": "vulkan",
+      "models": {
+        "Phi-4-mini-instruct": {
+          "128": {
+            "ttftMs": 97.5,
+            "plTs": 1315.57,
+            "tgTs": 40.15,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "512": {
+            "ttftMs": 194.94,
+            "plTs": 2626.41,
+            "tgTs": 37.74,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "1024": {
+            "ttftMs": 458.52,
+            "plTs": 2233.29,
+            "tgTs": 36.35,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          }
+        },
+        "Qwen3.5-2B": {
+          "128": {
+            "ttftMs": 49.4,
+            "plTs": 2643.44,
+            "tgTs": 73.2,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "512": {
+            "ttftMs": 118,
+            "plTs": 4339.08,
+            "tgTs": 71.96,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "1024": {
+            "ttftMs": 257.58,
+            "plTs": 3976.2,
+            "tgTs": 70.9,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          }
+        },
+        "Qwen3.5-4B": {
+          "128": {
+            "ttftMs": 121.31,
+            "plTs": 1055.13,
+            "tgTs": 34.01,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "512": {
+            "ttftMs": 335.19,
+            "plTs": 1527.58,
+            "tgTs": 33.87,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "1024": {
+            "ttftMs": 565.74,
+            "plTs": 1810.06,
+            "tgTs": 33.83,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          }
+        },
+        "gemma-4-E2B-it": {
+          "128": {
+            "ttftMs": 65.87,
+            "plTs": 1943.67,
+            "tgTs": 58.3,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "512": {
+            "ttftMs": 190.31,
+            "plTs": 2690.37,
+            "tgTs": 57.77,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          },
+          "1024": {
+            "ttftMs": 390.91,
+            "plTs": 2619.72,
+            "tgTs": 56.17,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-16T04:49:14.810Z"
+          }
+        }
+      }
+    }
+  },
+  "runtimeVersion": "b10991",
+  "defaultVariant": {
+    "id": "default",
+    "label": "Default options",
+    "config": {
+      "backend": "vulkan",
+      "generationLength": 128,
+      "repetitions": 5,
+      "flashAttention": true,
+      "benchmarkMode": "separate-prefill-decode"
+    },
+    "updatedAt": "2026-09-16T04:49:14.810Z"
+  }
+}
