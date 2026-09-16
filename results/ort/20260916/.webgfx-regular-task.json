@@ -1,0 +1,151 @@
+{
+  "runtime": "ort",
+  "version": "20260916",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-16T02:00:30.054Z",
+  "builtAt": "2026-09-16T09:48:32.678769+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "4725a20010769c19370cb1566f64f8c2321a69d9",
+      "commitDate": "2026-09-15T17:01:33-07:00",
+      "title": "[CUDA] Add cuDNN paged SDPA decode tier for PagedAttention (#32493)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/4725a20010769c19370cb1566f64f8c2321a69d9"
+    },
+    "onnxruntime-genai": {
+      "commit": "d5b40851ba80ffa8e95b6b01f921dbb9008fac80",
+      "commitDate": "2026-09-14T04:46:50Z",
+      "title": "Fix state update construction with Clang (#2560)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/d5b40851ba80ffa8e95b6b01f921dbb9008fac80"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20260915",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "fed7f01a06872456f3374054f89e0e496f97257d",
+        "commitDate": "2026-09-15T16:05:55+08:00",
+        "title": "Enable WebGPU GQA local-window flash attention (#32462)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/fed7f01a06872456f3374054f89e0e496f97257d"
+      },
+      "onnxruntime-genai": {
+        "commit": "d5b40851ba80ffa8e95b6b01f921dbb9008fac80",
+        "commitDate": "2026-09-14T04:46:50Z",
+        "title": "Fix state update construction with Clang (#2560)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/d5b40851ba80ffa8e95b6b01f921dbb9008fac80"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32285,
+      "title": "Add Qwen4-Exp EngramGate and NGramHashMapping support (#32285)",
+      "commit": "d71d2789171fe18e620c7decc6ccbfeb35843bec",
+      "committedAt": "2026-09-15T13:35:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32285",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32453,
+      "title": "Add GQA XQA and Flash workspace recipes (#32453)",
+      "commit": "8ed3bea2502cadd1f17ce409f3e6a37d72afe4fe",
+      "committedAt": "2026-09-15T11:20:42-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32453",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32480,
+      "title": "Add FP8/FP4 block-quantized support to GatherBlockQuantized contrib op (#32480)",
+      "commit": "aad07ef24d6cd5f547ea5cd91b9a7f9b79b860ee",
+      "committedAt": "2026-09-15T15:20:34-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32480",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32493,
+      "title": "[CUDA] Add cuDNN paged SDPA decode tier for PagedAttention (#32493)",
+      "commit": "4725a20010769c19370cb1566f64f8c2321a69d9",
+      "committedAt": "2026-09-15T17:01:33-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32493",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32580,
+      "title": "Skip compiling Flash Attention .cu sources when onnxruntime_USE_FLASH_ATTENTION=OFF (#32580)",
+      "commit": "e8787e287a07263999684f11097c7562d2f76bdf",
+      "committedAt": "2026-09-15T14:24:55-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32580",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32582,
+      "title": "[WebGPU] Fix OOB store in 8x16x16 subgroup-matrix MatMulNBits (#32582)",
+      "commit": "3578d7719a25e960da0db218118e8a9090ef6e29",
+      "committedAt": "2026-09-15T15:13:30Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32582",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31761,
+      "title": "[MLAS] Fix Inf/NaN comparison and add fp16 extreme-value coverage for ARM64 HGEMM NEON (#31761)",
+      "commit": "6f6e88152c1785371d9b86b056e526d75aabbd33",
+      "committedAt": "2026-09-15T12:41:53-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31761",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32112,
+      "title": "Suppress preload errors for optional CUDA libraries (#32112)",
+      "commit": "84d758f8cf95e0a436eab11d88ea69166c9441d5",
+      "committedAt": "2026-09-15T14:25:25-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32112",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32549,
+      "title": "Add contributor sorting option to compile_contributors.py (#32549)",
+      "commit": "c96cf8de205f59d474b048d9b28f234a737a1214",
+      "committedAt": "2026-09-15T08:31:44-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32549",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32612,
+      "title": "Start transitioning pools to unified Windows pool (#32612)",
+      "commit": "1474dfc63f100771390860a3a6689c7744b85f19",
+      "committedAt": "2026-09-15T16:44:02Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32612",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ]
+}
