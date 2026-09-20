@@ -1,0 +1,317 @@
+{
+  "device": "webgfx-104",
+  "runtime": "ort",
+  "version": "20260921",
+  "gpus": {
+    "2C02": {
+      "backend": "webgpu",
+      "models": {
+        "Phi-4-mini-instruct": {
+          "128": {
+            "ttftMs": 40.18,
+            "plTs": 3185.88,
+            "tgTs": 183.66,
+            "e2eMs": 731.79,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "512": {
+            "ttftMs": 119.81,
+            "plTs": 4273.37,
+            "tgTs": 182.02,
+            "e2eMs": 817.92,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "1024": {
+            "ttftMs": 232.76,
+            "plTs": 4399.36,
+            "tgTs": 175.62,
+            "e2eMs": 956.26,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          }
+        },
+        "aion": {
+          "128": {
+            "ttftMs": 30.38,
+            "plTs": 4213.55,
+            "tgTs": 263.31,
+            "e2eMs": 512.85,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "512": {
+            "ttftMs": 86.1,
+            "plTs": 5946.32,
+            "tgTs": 247.82,
+            "e2eMs": 599.01,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "1024": {
+            "ttftMs": 162.71,
+            "plTs": 6293.3,
+            "tgTs": 254.65,
+            "e2eMs": 662.22,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          }
+        },
+        "Qwen3.5-2B": {
+          "128": {
+            "ttftMs": 29.74,
+            "plTs": 4304,
+            "tgTs": 145.47,
+            "e2eMs": 902.9,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "512": {
+            "ttftMs": 88.39,
+            "plTs": 5792.5,
+            "tgTs": 142.3,
+            "e2eMs": 981.13,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "1024": {
+            "ttftMs": 161.57,
+            "plTs": 6337.62,
+            "tgTs": 142.01,
+            "e2eMs": 1056.19,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          }
+        },
+        "Qwen3.5-4B": {
+          "128": {
+            "ttftMs": 54.51,
+            "plTs": 2348.07,
+            "tgTs": 117.76,
+            "e2eMs": 1133.04,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "512": {
+            "ttftMs": 165.59,
+            "plTs": 3092.06,
+            "tgTs": 115.34,
+            "e2eMs": 1267.02,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "1024": {
+            "ttftMs": 315.6,
+            "plTs": 3244.58,
+            "tgTs": 115.48,
+            "e2eMs": 1415.72,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          }
+        },
+        "gemma-4-e2b-it": {
+          "128": {
+            "ttftMs": 63.23,
+            "plTs": 2024.26,
+            "tgTs": 82.13,
+            "e2eMs": 1609.6,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "512": {
+            "ttftMs": 157.12,
+            "plTs": 3258.57,
+            "tgTs": 82.48,
+            "e2eMs": 1696.93,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          },
+          "1024": {
+            "ttftMs": 272.86,
+            "plTs": 3752.84,
+            "tgTs": 82.16,
+            "e2eMs": 1818.78,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-20T16:23:54.044Z"
+          }
+        }
+      }
+    }
+  },
+  "variants": {
+    "cfg-32e252fe": {
+      "id": "cfg-32e252fe",
+      "label": "D3D12",
+      "config": {
+        "backend": "webgpu",
+        "generationLength": 128,
+        "repetitions": 5,
+        "maxLength": 8192,
+        "randomTokens": true,
+        "reuseGenerator": true,
+        "graphCapture": false,
+        "constantFolding": "default",
+        "webgpuRobustness": "default",
+        "validationMode": "disabled",
+        "webgpuBackend": "d3d12"
+      },
+      "gpus": {
+        "2C02": {
+          "backend": "webgpu",
+          "models": {
+            "Phi-4-mini-instruct": {
+              "128": {
+                "ttftMs": 40.18,
+                "plTs": 3185.88,
+                "tgTs": 183.66,
+                "e2eMs": 731.79,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "512": {
+                "ttftMs": 119.81,
+                "plTs": 4273.37,
+                "tgTs": 182.02,
+                "e2eMs": 817.92,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "1024": {
+                "ttftMs": 232.76,
+                "plTs": 4399.36,
+                "tgTs": 175.62,
+                "e2eMs": 956.26,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              }
+            },
+            "aion": {
+              "128": {
+                "ttftMs": 30.38,
+                "plTs": 4213.55,
+                "tgTs": 263.31,
+                "e2eMs": 512.85,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "512": {
+                "ttftMs": 86.1,
+                "plTs": 5946.32,
+                "tgTs": 247.82,
+                "e2eMs": 599.01,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "1024": {
+                "ttftMs": 162.71,
+                "plTs": 6293.3,
+                "tgTs": 254.65,
+                "e2eMs": 662.22,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              }
+            },
+            "Qwen3.5-2B": {
+              "128": {
+                "ttftMs": 29.74,
+                "plTs": 4304,
+                "tgTs": 145.47,
+                "e2eMs": 902.9,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "512": {
+                "ttftMs": 88.39,
+                "plTs": 5792.5,
+                "tgTs": 142.3,
+                "e2eMs": 981.13,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "1024": {
+                "ttftMs": 161.57,
+                "plTs": 6337.62,
+                "tgTs": 142.01,
+                "e2eMs": 1056.19,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              }
+            },
+            "Qwen3.5-4B": {
+              "128": {
+                "ttftMs": 54.51,
+                "plTs": 2348.07,
+                "tgTs": 117.76,
+                "e2eMs": 1133.04,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "512": {
+                "ttftMs": 165.59,
+                "plTs": 3092.06,
+                "tgTs": 115.34,
+                "e2eMs": 1267.02,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "1024": {
+                "ttftMs": 315.6,
+                "plTs": 3244.58,
+                "tgTs": 115.48,
+                "e2eMs": 1415.72,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              }
+            },
+            "gemma-4-e2b-it": {
+              "128": {
+                "ttftMs": 63.23,
+                "plTs": 2024.26,
+                "tgTs": 82.13,
+                "e2eMs": 1609.6,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "512": {
+                "ttftMs": 157.12,
+                "plTs": 3258.57,
+                "tgTs": 82.48,
+                "e2eMs": 1696.93,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              },
+              "1024": {
+                "ttftMs": 272.86,
+                "plTs": 3752.84,
+                "tgTs": 82.16,
+                "e2eMs": 1818.78,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-09-20T16:23:54.043Z"
+              }
+            }
+          }
+        }
+      },
+      "updatedAt": "2026-09-20T16:23:54.043Z"
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "D3D12 (daily)",
+    "config": {
+      "backend": "webgpu",
+      "generationLength": 128,
+      "repetitions": 5,
+      "maxLength": 8192,
+      "randomTokens": true,
+      "reuseGenerator": true,
+      "graphCapture": false,
+      "constantFolding": "default",
+      "webgpuRobustness": "default",
+      "validationMode": "disabled",
+      "webgpuBackend": "d3d12"
+    },
+    "updatedAt": "2026-09-20T16:23:54.044Z"
+  }
+}
