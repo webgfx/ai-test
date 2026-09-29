@@ -1,0 +1,109 @@
+{
+  "device": "webgfx-11",
+  "runtime": "llamacpp",
+  "version": "b11259",
+  "gpus": {
+    "0C36": {
+      "backend": "vulkan",
+      "models": {
+        "Qwen3.5-2B": {
+          "128": {
+            "ttftMs": 8994.37,
+            "plTs": 14.23,
+            "tgTs": 35.44,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "512": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 35.17,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "ttftMs is missing, zero, or invalid",
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "1024": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": null,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "timeout",
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          }
+        },
+        "Qwen3.5-4B": {
+          "128": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 12.28,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "ttftMs is missing, zero, or invalid",
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "512": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 12.6,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "ttftMs is missing, zero, or invalid",
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "1024": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": null,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "timeout",
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          }
+        },
+        "gemma-4-e2b-it": {
+          "128": {
+            "ttftMs": 8041.11,
+            "plTs": 15.92,
+            "tgTs": 31.54,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "512": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 20.64,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "ttftMs is missing, zero, or invalid",
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "1024": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": null,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "timeout",
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          }
+        }
+      }
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "Default options",
+    "config": {
+      "backend": "vulkan",
+      "generationLength": 128,
+      "repetitions": 5,
+      "flashAttention": true,
+      "benchmarkMode": "separate-prefill-decode"
+    },
+    "updatedAt": "2026-09-29T23:02:34.046Z"
+  }
+}

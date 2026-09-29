@@ -1,0 +1,142 @@
+{
+  "device": "webgfx-104",
+  "runtime": "llamacpp",
+  "version": "20260930",
+  "gpus": {
+    "2C02": {
+      "backend": "vulkan",
+      "models": {
+        "Phi-4-mini-instruct": {
+          "128": {
+            "ttftMs": 16.63,
+            "plTs": 7696.3,
+            "tgTs": 231.89,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "512": {
+            "ttftMs": 34.86,
+            "plTs": 14687.89,
+            "tgTs": 224.69,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "1024": {
+            "ttftMs": 70.5,
+            "plTs": 14524.81,
+            "tgTs": 222.42,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          }
+        },
+        "Qwen3.5-2B": {
+          "128": {
+            "ttftMs": 9.36,
+            "plTs": 13674.01,
+            "tgTs": 328.74,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "512": {
+            "ttftMs": 26.74,
+            "plTs": 19149.14,
+            "tgTs": 333.8,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "1024": {
+            "ttftMs": 53.08,
+            "plTs": 19292.6,
+            "tgTs": 332.26,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          }
+        },
+        "Qwen3.5-4B": {
+          "128": {
+            "ttftMs": 20.75,
+            "plTs": 6169.46,
+            "tgTs": 185.34,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "512": {
+            "ttftMs": 49.83,
+            "plTs": 10275.74,
+            "tgTs": 182.28,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "1024": {
+            "ttftMs": 100.32,
+            "plTs": 10207.48,
+            "tgTs": 181.69,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          }
+        },
+        "gemma-4-e2b-it": {
+          "128": {
+            "ttftMs": 17.53,
+            "plTs": 7303.54,
+            "tgTs": 241.86,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "512": {
+            "ttftMs": 35.44,
+            "plTs": 14448.06,
+            "tgTs": 237.57,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          },
+          "1024": {
+            "ttftMs": 70.16,
+            "plTs": 14596.36,
+            "tgTs": 237.32,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T19:10:11.287Z"
+          }
+        }
+      }
+    }
+  },
+  "runtimeVersion": "b11259",
+  "defaultVariant": {
+    "id": "default",
+    "label": "Default options (daily recovery)",
+    "config": {
+      "backend": "vulkan",
+      "generationLength": 128,
+      "repetitions": 5,
+      "flashAttention": true,
+      "benchmarkMode": "separate-prefill-decode"
+    },
+    "updatedAt": "2026-09-29T19:10:11.287Z"
+  },
+  "dailyRecoveries": [
+    {
+      "taskId": "1112",
+      "deviceRunId": "2910c8e1-6fe0-44f2-b54d-11632733a96c",
+      "sourceVersion": "b11259",
+      "sourceVariantId": "default",
+      "sourceResultSha256": "76290ee2d2266ef0408800a227a00b3940690acfe2724d40e3893c777d1c877c",
+      "completedAt": "2026-09-29T19:10:11.282Z",
+      "publishedAt": "2026-09-29T20:56:05.203Z",
+      "measurementsUnchanged": true,
+      "reason": "Explicit full-workload recovery selected for the daily series; original variants retained."
+    }
+  ]
+}
