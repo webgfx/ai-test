@@ -1,0 +1,56 @@
+{
+  "runtime": "ort",
+  "version": "20260930-100954",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-09-30T02:11:17.925Z",
+  "builtAt": "2026-09-30T01:58:26.640952+00:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "96f73115c95968a3f31f2a110b33c164d847dda4",
+      "commitDate": "2026-09-29T09:39:44Z",
+      "title": "[WebGPU] Fix initializer upload on GPUs without Resizable BAR (#32816)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/96f73115c95968a3f31f2a110b33c164d847dda4"
+    },
+    "onnxruntime-genai": {
+      "commit": "66a5cacc86171d866e2125846521a32e17c7efce",
+      "commitDate": "2026-09-29T01:42:13-07:00",
+      "title": "Reduce per-step host overhead in CUDA speculative decoding (#2642)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/66a5cacc86171d866e2125846521a32e17c7efce"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5"
+    }
+  ],
+  "recovery": {
+    "baseVersion": "20260930-011912",
+    "devices": [
+      "webgfx-30"
+    ],
+    "validated": true,
+    "sourcePatchSha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+    "validationTaskIds": [
+      "1151",
+      "1153",
+      "1154",
+      "1155",
+      "1156"
+    ],
+    "validationResultHashes": {
+      "1151": "087402c1678378035badc6f7e023b0c6e8fa9c97493c320c03499e0b2a811bd6",
+      "1153": "cca32350f2e8832a21230b142f0a3a0cda5ff0e8435185edb564bfa673ec3dcc",
+      "1154": "3d603347567e1f07b1859577f08bf2f9ab9b55790b3863ced6a5b89875405153",
+      "1155": "65d75f84fdda4cd399cd7436358ba6cf5cb1c5b2fed4740d0701e33707df219f",
+      "1156": "5813383ceaeb335f2fa3c22b3dfdc6d5ba0668b44bf0bc08dd9047955ffcf10d"
+    },
+    "validatedAt": "2026-09-30T02:09:56.236632+00:00"
+  },
+  "publicationTaskId": "1157"
+}

@@ -1,0 +1,266 @@
+{
+  "device": "webgfx-11",
+  "runtime": "llamacpp",
+  "version": "20260930",
+  "runtimeVersion": "b11259",
+  "gpus": {
+    "0C36": {
+      "backend": "vulkan",
+      "models": {
+        "Qwen3.5-2B": {
+          "128": {
+            "ttftMs": 8994.37,
+            "plTs": 14.23,
+            "tgTs": 35.44,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "512": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 35.17,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z",
+            "phaseErrors": {
+              "prefill": "ttftMs is missing, zero, or invalid"
+            },
+            "sourceError": "ttftMs is missing, zero, or invalid"
+          }
+        },
+        "gemma-4-e2b-it": {
+          "128": {
+            "ttftMs": 8041.11,
+            "plTs": 15.92,
+            "tgTs": 31.54,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z"
+          },
+          "512": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 20.64,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z",
+            "phaseErrors": {
+              "prefill": "ttftMs is missing, zero, or invalid"
+            },
+            "sourceError": "ttftMs is missing, zero, or invalid"
+          }
+        },
+        "Qwen3.5-4B": {
+          "128": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 12.28,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z",
+            "phaseErrors": {
+              "prefill": "ttftMs is missing, zero, or invalid"
+            },
+            "sourceError": "ttftMs is missing, zero, or invalid"
+          },
+          "512": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": 12.6,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-09-29T23:02:34.046Z",
+            "phaseErrors": {
+              "prefill": "ttftMs is missing, zero, or invalid"
+            },
+            "sourceError": "ttftMs is missing, zero, or invalid"
+          }
+        }
+      }
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "Default options",
+    "config": {
+      "backend": "vulkan",
+      "generationLength": 128,
+      "repetitions": 5,
+      "flashAttention": true,
+      "benchmarkMode": "separate-prefill-decode"
+    },
+    "updatedAt": "2026-09-29T23:02:34.046Z"
+  },
+  "dailyRecoveries": [
+    {
+      "taskId": "1126",
+      "deviceRunId": "3f09816f-384b-4209-beea-cc8cfa1d6214",
+      "sourceVersion": "b11259",
+      "sourceResultSha256": "786df02ccbcb43103d435e96a09b0d28012a1441fe11409f55b4e595f5c9d99e",
+      "completedAt": "2026-09-29T23:02:34.040Z",
+      "publishedAt": "2026-09-29T23:03:33.853Z",
+      "measurementsUnchanged": true,
+      "expectedDailyModels": [
+        "Phi-4-mini-instruct",
+        "Qwen3.5-2B",
+        "Qwen3.5-4B",
+        "gemma-4-e2b-it"
+      ],
+      "expectedDailyInputs": [
+        128,
+        512,
+        1024
+      ],
+      "published": [
+        {
+          "model": "Qwen3.5-2B",
+          "input": 128,
+          "complete": true,
+          "phases": [
+            "prefill",
+            "decode"
+          ]
+        },
+        {
+          "model": "gemma-4-e2b-it",
+          "input": 128,
+          "complete": true,
+          "phases": [
+            "prefill",
+            "decode"
+          ]
+        }
+      ],
+      "skipped": [
+        {
+          "model": "Qwen3.5-2B",
+          "input": 512,
+          "reason": "ttftMs is missing, zero, or invalid"
+        },
+        {
+          "model": "Qwen3.5-2B",
+          "input": 1024,
+          "reason": "timeout"
+        },
+        {
+          "model": "Qwen3.5-4B",
+          "input": 128,
+          "reason": "ttftMs is missing, zero, or invalid"
+        },
+        {
+          "model": "Qwen3.5-4B",
+          "input": 512,
+          "reason": "ttftMs is missing, zero, or invalid"
+        },
+        {
+          "model": "Qwen3.5-4B",
+          "input": 1024,
+          "reason": "timeout"
+        },
+        {
+          "model": "gemma-4-e2b-it",
+          "input": 512,
+          "reason": "ttftMs is missing, zero, or invalid"
+        },
+        {
+          "model": "gemma-4-e2b-it",
+          "input": 1024,
+          "reason": "timeout"
+        }
+      ],
+      "note": "Partial recovery only. Missing prefill remains null; decode-only points do not satisfy paired daily coverage."
+    },
+    {
+      "taskId": "1126",
+      "deviceRunId": "3f09816f-384b-4209-beea-cc8cfa1d6214",
+      "sourceVersion": "b11259",
+      "sourceResultSha256": "786df02ccbcb43103d435e96a09b0d28012a1441fe11409f55b4e595f5c9d99e",
+      "publicationSchema": 2,
+      "completedAt": "2026-09-29T23:02:34.040Z",
+      "publishedAt": "2026-09-29T23:08:51.876Z",
+      "measurementsUnchanged": true,
+      "expectedDailyModels": [
+        "Phi-4-mini-instruct",
+        "Qwen3.5-2B",
+        "Qwen3.5-4B",
+        "gemma-4-e2b-it"
+      ],
+      "expectedDailyInputs": [
+        128,
+        512,
+        1024
+      ],
+      "published": [
+        {
+          "model": "Qwen3.5-2B",
+          "input": 128,
+          "complete": true,
+          "phases": [
+            "prefill",
+            "decode"
+          ]
+        },
+        {
+          "model": "Qwen3.5-2B",
+          "input": 512,
+          "complete": false,
+          "phases": [
+            "decode"
+          ]
+        },
+        {
+          "model": "Qwen3.5-4B",
+          "input": 128,
+          "complete": false,
+          "phases": [
+            "decode"
+          ]
+        },
+        {
+          "model": "Qwen3.5-4B",
+          "input": 512,
+          "complete": false,
+          "phases": [
+            "decode"
+          ]
+        },
+        {
+          "model": "gemma-4-e2b-it",
+          "input": 128,
+          "complete": true,
+          "phases": [
+            "prefill",
+            "decode"
+          ]
+        },
+        {
+          "model": "gemma-4-e2b-it",
+          "input": 512,
+          "complete": false,
+          "phases": [
+            "decode"
+          ]
+        }
+      ],
+      "skipped": [
+        {
+          "model": "Qwen3.5-2B",
+          "input": 1024,
+          "reason": "timeout"
+        },
+        {
+          "model": "Qwen3.5-4B",
+          "input": 1024,
+          "reason": "timeout"
+        },
+        {
+          "model": "gemma-4-e2b-it",
+          "input": 1024,
+          "reason": "timeout"
+        }
+      ],
+      "note": "Partial recovery only. Missing prefill remains null; decode-only points do not satisfy paired daily coverage."
+    }
+  ]
+}
