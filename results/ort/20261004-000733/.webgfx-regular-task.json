@@ -1,0 +1,73 @@
+{
+  "runtime": "ort",
+  "version": "20261004-000733",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-03T16:23:41.811Z",
+  "builtAt": "2026-10-04T00:10:20.324880+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "e236378862ef51e9c56b81122857bf0076107ae9",
+      "commitDate": "2026-10-02T19:30:54-07:00",
+      "title": "Revert ONNX 1.23 integration pending upstream release fixes (#33073)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/e236378862ef51e9c56b81122857bf0076107ae9"
+    },
+    "onnxruntime-genai": {
+      "commit": "35fbc68b5764e32bceba39f5695beeb6ff9ae5fc",
+      "commitDate": "2026-10-02T18:50:23-07:00",
+      "title": "Remove onnxruntime-genai-approvers CODEOWNERS requirement (#2623)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/35fbc68b5764e32bceba39f5695beeb6ff9ae5fc"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261003-193116",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "e236378862ef51e9c56b81122857bf0076107ae9",
+        "commitDate": "2026-10-02T19:30:54-07:00",
+        "title": "Revert ONNX 1.23 integration pending upstream release fixes (#33073)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/e236378862ef51e9c56b81122857bf0076107ae9"
+      },
+      "onnxruntime-genai": {
+        "commit": "35fbc68b5764e32bceba39f5695beeb6ff9ae5fc",
+        "commitDate": "2026-10-02T18:50:23-07:00",
+        "title": "Remove onnxruntime-genai-approvers CODEOWNERS requirement (#2623)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/35fbc68b5764e32bceba39f5695beeb6ff9ae5fc"
+      }
+    }
+  },
+  "pullRequests": [],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "4f83f49b896be75ac4826c0991d4b37ce8d2e65f0731a999942b380fae23f410",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "1745c98dba272aa9d916891e2c82d46889e081c4becef8177ae1de28641ef543",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "0317ce461eb61bd30be6417f30d56cc523d49dea425664a13497b1fd5ad9a7d3",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "7afbd04a10472c0067612391f76281d27c921bffae2047370df42daec3c658d4",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    }
+  ]
+}
