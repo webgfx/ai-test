@@ -1,0 +1,194 @@
+{
+  "runtime": "ort",
+  "version": "20261006-001006",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-05T17:08:39.011Z",
+  "builtAt": "2026-10-06T00:29:16.190112+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "a84958acb5222ed117b4e0bf7feaae185fb8d9b1",
+      "commitDate": "2026-10-05T08:50:02-05:00",
+      "title": "WebGPU static plugin EP (#32395)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/a84958acb5222ed117b4e0bf7feaae185fb8d9b1"
+    },
+    "onnxruntime-genai": {
+      "commit": "c2786a92a1fd8178b1a963719940b36850115392",
+      "commitDate": "2026-10-05T13:53:41Z",
+      "title": "Speed up CPU fp16 and bf16 to fp32 casts. (#2666)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/c2786a92a1fd8178b1a963719940b36850115392"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261005-000902",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "690e73121061595a6fc15f1f4b29afcda1d666dc",
+        "commitDate": "2026-10-04T00:13:40Z",
+        "title": "Add external Dawn API package CI coverage for the WebGPU plugin (#33077)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/690e73121061595a6fc15f1f4b29afcda1d666dc"
+      },
+      "onnxruntime-genai": {
+        "commit": "24b310ade7bff608067e7a9709d60a51e17aed91",
+        "commitDate": "2026-10-03T20:17:02-07:00",
+        "title": "Fix TRT-RTX export and inference for Qwen3.6-35B-A3B (#2654)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/24b310ade7bff608067e7a9709d60a51e17aed91"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32395,
+      "title": "WebGPU static plugin EP (#32395)",
+      "commit": "a84958acb5222ed117b4e0bf7feaae185fb8d9b1",
+      "committedAt": "2026-10-05T08:50:02-05:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32395",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32901,
+      "title": "[CUDA] Add tinygemm2 as a GEMM auto-tune candidate for small-M MatMul on SM 9.0+ (#32901)",
+      "commit": "d2d1e8fef249692d1f0ffa7a72c811a92421cf11",
+      "committedAt": "2026-10-04T20:50:54-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32901",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32971,
+      "title": "[CUDA] Handle missing optional input tensors in CUDA kernels (#32971)",
+      "commit": "5a7b79031eb590d530db9268b6cfdb4b29dfd976",
+      "committedAt": "2026-10-04T17:45:47-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32971",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33085,
+      "title": "[CUDA] Validate GEMM autotuning candidates using graph replay (#33085)",
+      "commit": "ba9d03207d2ca4a79d36742db6d4fcd72c3c6023",
+      "committedAt": "2026-10-05T06:08:00Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33085",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33092,
+      "title": "Extend CUDA QMoE packed INT2 prefill block sizes and weight combinations (#33092)",
+      "commit": "0c67e77bb7cb826bf3018dbdad935c9b73e7bfed",
+      "committedAt": "2026-10-05T05:00:57Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33092",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33097,
+      "title": "Validate GatherBlockQuantized output dimensions (#33097)",
+      "commit": "003599e11f643700ef9b951dc5013a4f8f8af2bc",
+      "committedAt": "2026-10-05T10:17:01Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33097",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32662,
+      "title": "Limit AOT function expansion (#32662)",
+      "commit": "2f3c9186064d55c9e76b7760b60ce59bb9d40078",
+      "committedAt": "2026-10-05T09:07:30Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32662",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33095,
+      "title": "Bound antialias resize coefficient windows (#33095)",
+      "commit": "27800d7f1761a2ad3b9c5b61b567f05972924ba0",
+      "committedAt": "2026-10-05T09:41:21Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33095",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2666,
+      "title": "Speed up CPU fp16 and bf16 to fp32 casts. (#2666)",
+      "commit": "c2786a92a1fd8178b1a963719940b36850115392",
+      "committedAt": "2026-10-05T13:53:41Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2666",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33024,
+      "title": "Bump github/codeql-action/autobuild from 3.37.7 to 4.38.2 (#33024)",
+      "commit": "d9b8ddc0c8cc9d4d5c08915f3d00e74875cc5013",
+      "committedAt": "2026-10-05T13:19:33+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33024",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33096,
+      "title": "Filter model package output options (#33096)",
+      "commit": "b0609a04f2612db42acfb7d58250736c0e44b149",
+      "committedAt": "2026-10-05T10:17:20Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33096",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33100,
+      "title": "Validate DLPack capsules before conversion (#33100)",
+      "commit": "99f13d09b0a0ba4949eb8c7adc4722b83cd485e1",
+      "committedAt": "2026-10-05T10:13:47Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33100",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "4f83f49b896be75ac4826c0991d4b37ce8d2e65f0731a999942b380fae23f410",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "1745c98dba272aa9d916891e2c82d46889e081c4becef8177ae1de28641ef543",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "0317ce461eb61bd30be6417f30d56cc523d49dea425664a13497b1fd5ad9a7d3",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "7afbd04a10472c0067612391f76281d27c921bffae2047370df42daec3c658d4",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    }
+  ]
+}
