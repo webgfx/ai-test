@@ -1,0 +1,374 @@
+{
+  "runtime": "ort",
+  "version": "20261007-000607",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-06T17:02:50.657Z",
+  "builtAt": "2026-10-07T00:24:31.255764+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "aac791ef2408a266d8ee59dd5fa0ce11d1a5a0bb",
+      "commitDate": "2026-10-06T16:53:22+02:00",
+      "title": "Fix WebGPU grouped Conv vectorization across group boundaries (#33129)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/aac791ef2408a266d8ee59dd5fa0ce11d1a5a0bb"
+    },
+    "onnxruntime-genai": {
+      "commit": "a13e9949295b364db769791395af8328bb6b04bb",
+      "commitDate": "2026-10-06T00:40:52-07:00",
+      "title": "Add integrated-device eligibility to runtime profiles (#2678)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/a13e9949295b364db769791395af8328bb6b04bb"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261006-001006",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "a84958acb5222ed117b4e0bf7feaae185fb8d9b1",
+        "commitDate": "2026-10-05T08:50:02-05:00",
+        "title": "WebGPU static plugin EP (#32395)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/a84958acb5222ed117b4e0bf7feaae185fb8d9b1"
+      },
+      "onnxruntime-genai": {
+        "commit": "c2786a92a1fd8178b1a963719940b36850115392",
+        "commitDate": "2026-10-05T13:53:41Z",
+        "title": "Speed up CPU fp16 and bf16 to fp32 casts. (#2666)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/c2786a92a1fd8178b1a963719940b36850115392"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32618,
+      "title": "[CUDA][WebGPU] Add packed sparse attention indexer for continuous batching (#32618)",
+      "commit": "3188a2eeb1a58b881b552f2f3087a74062d5d8b9",
+      "committedAt": "2026-10-05T13:58:22-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32618",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32656,
+      "title": "[CUDA] [WebGPU] Optimize sparse attention indexers and add packed QSA state updates (#32656)",
+      "commit": "9dde2edb9360267f880733f18028dbfc0ff84b10",
+      "committedAt": "2026-10-05T19:48:24-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32656",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32752,
+      "title": "Upgrade transformers to 5.3.0 (#32752)",
+      "commit": "0fddc3fcd99e2af897e77122da46e746c2216376",
+      "committedAt": "2026-10-05T11:03:49-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32752",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32878,
+      "title": "Add WebGPU INT2 and mixed-width QMoE support (#32878)",
+      "commit": "ec1d573c1f139bf480a301d99b204ce4eeb2a1de",
+      "committedAt": "2026-10-05T15:20:51-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32878",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32887,
+      "title": "Add CUDA QMoE block-scaled FP8 support with routed-expert compaction (#32887)",
+      "commit": "51f986229cad6d2a176d7e1a7383fd6e920dad71",
+      "committedAt": "2026-10-05T19:19:30-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32887",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33047,
+      "title": "[MLAS] Build the SVE asm generator's input TUs as C++20 (#33047)",
+      "commit": "e8a4eb54f546569c1db06f9f6a908a8c195738b0",
+      "committedAt": "2026-10-05T13:19:06-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33047",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33068,
+      "title": "Raise ir_version to 10 when MatMulNBitsQuantizer emits INT4/UINT4 tensors (#33068)",
+      "commit": "f152edba9b143cd073494bc6650899a62678b052",
+      "committedAt": "2026-10-05T13:28:04-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33068",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33098,
+      "title": "Validate PackedMultiHeadAttention token offsets (#33098)",
+      "commit": "ca3e9482041e4417364a23657168d3af40198f08",
+      "committedAt": "2026-10-05T13:26:31-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33098",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33122,
+      "title": "Fix WebGPU DequantizeLinear scalar/vector shader cache collisions (#33122)",
+      "commit": "dafbea65c4bd7931738e93962777fcfe8e1633c7",
+      "committedAt": "2026-10-06T20:19:37+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33122",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33129,
+      "title": "Fix WebGPU grouped Conv vectorization across group boundaries (#33129)",
+      "commit": "aac791ef2408a266d8ee59dd5fa0ce11d1a5a0bb",
+      "committedAt": "2026-10-06T16:53:22+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33129",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32265,
+      "title": "Promote EPContext data callbacks to stable API (#32265)",
+      "commit": "772123e90cb2f86855fae1d94ff82a617a502bd9",
+      "committedAt": "2026-10-05T14:31:15-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32265",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32749,
+      "title": "Add sliding window AVX-512 NCHWc depthwise kernel (bitwise identical) (#32749)",
+      "commit": "9f4b6f4f2ec7acb4506716e457f9f416ff9f59f0",
+      "committedAt": "2026-10-05T13:17:51-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32749",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32940,
+      "title": "Validate optional graph inputs and Constant node shape during model load (#32940)",
+      "commit": "8aa1feca636b0bc9812797c19a598d41aa257008",
+      "committedAt": "2026-10-05T18:56:26-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32940",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33063,
+      "title": "Bind external data validation to opened files (#33063)",
+      "commit": "780c0c01c27826a49c8d15e320652927daeefbc2",
+      "committedAt": "2026-10-05T17:27:54-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33063",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33079,
+      "title": "Fix LayerNorm fusion with zero normalized dimensions (#33079)",
+      "commit": "43ed141ad1b5989a3b8540e806e8068de179343d",
+      "committedAt": "2026-10-05T13:27:01-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33079",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33099,
+      "title": "Validate RestorePadding token offsets (#33099)",
+      "commit": "0ea42b2ba581c35bcb0a5c77e0aefaba25820602",
+      "committedAt": "2026-10-05T13:39:42-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33099",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33111,
+      "title": "Fix Python WHL builds for older CUDA version. Filter out __grid_constant__ from tinygemm2 (#33111)",
+      "commit": "fc8f71cf80c713524992c41700819aaf91b95f86",
+      "committedAt": "2026-10-05T21:42:09Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33111",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2678,
+      "title": "Add integrated-device eligibility to runtime profiles (#2678)",
+      "commit": "a13e9949295b364db769791395af8328bb6b04bb",
+      "committedAt": "2026-10-06T00:40:52-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2678",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 29168,
+      "title": "Add reference examples and guidance (especially for multi-device scenarios) for ValidateCompiledModelCompatibilityInfo  (#29168)",
+      "commit": "dba3629f131231a371cc7f08c5c5f25867fd4c62",
+      "committedAt": "2026-10-05T15:28:07-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29168",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32270,
+      "title": "Add C# EPContext data callbacks (#32270)",
+      "commit": "63ec2b0fce3fdbbd298cac72297888df8bda9efd",
+      "committedAt": "2026-10-06T08:00:27Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32270",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32271,
+      "title": "Add Python bindings for EPContext data callbacks (#32271)",
+      "commit": "869072817453c1b09e59e83d6ce2ff667e1594dc",
+      "committedAt": "2026-10-05T21:35:49-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32271",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32305,
+      "title": "Add Java EPContext data callbacks (#32305)",
+      "commit": "e0227cb9d34a8d11f0fc5b3be972f47f3c4b09b7",
+      "committedAt": "2026-10-06T01:22:47-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32305",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32308,
+      "title": "Add JavaScript EPContext data callbacks (#32308)",
+      "commit": "99433be6709e55cf1624dc60bfb4cf81f3c4145c",
+      "committedAt": "2026-10-06T10:53:09Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32308",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32309,
+      "title": "Add Objective-C EPContext data callbacks (#32309)",
+      "commit": "1ebb43386f162657ffcd29c18f7bae8a2274eb4d",
+      "committedAt": "2026-10-05T21:36:39-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32309",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32310,
+      "title": "Add Rust EPContext data callbacks (#32310)",
+      "commit": "642c0da9e700e026077c7c0d4cab17db6880292f",
+      "committedAt": "2026-10-05T21:09:14-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32310",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32592,
+      "title": "Add onnxruntime_DISABLE_DEVICE_DISCOVERY to skip platform device probing (#32592)",
+      "commit": "b734c811fe67605fd8a1599bfcedf21c25b4cba0",
+      "committedAt": "2026-10-05T16:34:52Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32592",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32886,
+      "title": "[js/web] Add LoRA adapter support for the standard(non-proxy) run path (#32886)",
+      "commit": "11922849ebd233a30462d4829825f987a32c1eea",
+      "committedAt": "2026-10-06T14:27:42Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32886",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33105,
+      "title": "Fix regression in free threaded python wheel builds introduced with onnx rollback (#33105)",
+      "commit": "8eef62d5798eacff0d44308811c1f983da279f61",
+      "committedAt": "2026-10-05T14:53:15-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33105",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33116,
+      "title": "Remove windows x86 workflow (#33116)",
+      "commit": "35edaacc03c5a7fe58651d06f3f350744cd7a072",
+      "committedAt": "2026-10-06T08:33:55-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33116",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33124,
+      "title": "Update Android minimal binary size baseline (#33124)",
+      "commit": "402add8d438b059239e8992338030183ec8aa1a0",
+      "committedAt": "2026-10-06T08:19:45Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33124",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "4f83f49b896be75ac4826c0991d4b37ce8d2e65f0731a999942b380fae23f410",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "1745c98dba272aa9d916891e2c82d46889e081c4becef8177ae1de28641ef543",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "0317ce461eb61bd30be6417f30d56cc523d49dea425664a13497b1fd5ad9a7d3",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "7afbd04a10472c0067612391f76281d27c921bffae2047370df42daec3c658d4",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    }
+  ]
+}
