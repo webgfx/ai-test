@@ -1,0 +1,344 @@
+{
+  "runtime": "ort",
+  "version": "20261008-000553",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-07T17:04:00.134Z",
+  "builtAt": "2026-10-08T00:25:31.657468+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "0eb8a0478c8af2b40e6a8b44abf7e794bfab14a1",
+      "commitDate": "2026-10-07T09:05:46-07:00",
+      "title": "[CUDA] Suppress CUDA 13 MSVC build warnings (#33149)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/0eb8a0478c8af2b40e6a8b44abf7e794bfab14a1"
+    },
+    "onnxruntime-genai": {
+      "commit": "957bdd8dc717e94c09fad3b17d22f10d33217fd2",
+      "commitDate": "2026-10-07T04:01:40Z",
+      "title": "Upgrade telemetry SDK to v3.10.279.1 and disable redundant desktop device IDs (#2681)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/957bdd8dc717e94c09fad3b17d22f10d33217fd2"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261007-000607",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "aac791ef2408a266d8ee59dd5fa0ce11d1a5a0bb",
+        "commitDate": "2026-10-06T16:53:22+02:00",
+        "title": "Fix WebGPU grouped Conv vectorization across group boundaries (#33129)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/aac791ef2408a266d8ee59dd5fa0ce11d1a5a0bb"
+      },
+      "onnxruntime-genai": {
+        "commit": "a13e9949295b364db769791395af8328bb6b04bb",
+        "commitDate": "2026-10-06T00:40:52-07:00",
+        "title": "Add integrated-device eligibility to runtime profiles (#2678)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/a13e9949295b364db769791395af8328bb6b04bb"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32880,
+      "title": "Fix dead links in docs and CONTRIBUTING (#32880)",
+      "commit": "9a7c1939b78e3538e4e1d26a40f73a766b38d046",
+      "committedAt": "2026-10-07T15:45:14+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32880",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33017,
+      "title": "[WebGPU] Cache sparse indexer QSA visibility and scores (#33017)",
+      "commit": "98468bff472c5f3da19442d82dfd5deca930b4d6",
+      "committedAt": "2026-10-06T14:10:17-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33017",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33070,
+      "title": "[WebGPU] Add FP16 GEMV specialization for single-row decode projections (#33070)",
+      "commit": "b5cb51748b5b9efb3de90b31670c91b6829c4dba",
+      "committedAt": "2026-10-06T11:06:08-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33070",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33104,
+      "title": "fix(quantization): avoid intermediate overflow when calculating quantization ranges (#33104)",
+      "commit": "b40377d9b995e68f7ca2d124fca587b264f934ea",
+      "committedAt": "2026-10-07T11:35:38+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33104",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2375,
+      "title": "Fix Qwen3.5 shared-expert export node names (#2375)",
+      "commit": "fda16faffd456a895f3f45cd519a3a08076d1b79",
+      "committedAt": "2026-10-06T15:12:49-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2375",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2475,
+      "title": "[C#] Expose cached Generator through IChatClient.GetService (#2475)",
+      "commit": "6f737f3498a8f56612d498dc374ee78f91452779",
+      "committedAt": "2026-10-06T22:29:33Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2475",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2555,
+      "title": "Fix get_logits after generator rewind (#2555)",
+      "commit": "6ee1549c5b31ec2b2e670a687f9e19667ede69e4",
+      "committedAt": "2026-10-06T15:14:29-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2555",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2677,
+      "title": "Add grammar guidance only inside marked Engine output (#2677)",
+      "commit": "b9b5648b9ee09e512a235f6380a1743568aeaf6d",
+      "committedAt": "2026-10-06T14:46:11-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2677",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 29649,
+      "title": "Validate CPU kernel registrations at compile time (#29649)",
+      "commit": "053d9b06c690e0c794eeba56ba6163ac2bd860f9",
+      "committedAt": "2026-10-06T22:34:55Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29649",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31646,
+      "title": "Validate CUDA GatherND indices bounds in release mode (#31646)",
+      "commit": "ec1add891afa110ade42af5fa5ea50e207b97279",
+      "committedAt": "2026-10-06T14:46:45-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31646",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32865,
+      "title": "Validate ORT format input argument counts (#32865)",
+      "commit": "958927fbb980cb1b51400867627738c5c0bab789",
+      "committedAt": "2026-10-07T15:29:24+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32865",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33066,
+      "title": "Fix C API tensor element type conversions at ONNX boundaries (#33066)",
+      "commit": "123f085378b58e2075633183de6a9aa08a840fb5",
+      "committedAt": "2026-10-07T00:09:17Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33066",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33091,
+      "title": "Fix ReshapeFusion crash when fused Reshape's shape input is node-produced (#33091)",
+      "commit": "5652d3fa0e7b3522a1552683d178bf8be97ba225",
+      "committedAt": "2026-10-07T11:39:12+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33091",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33113,
+      "title": "Optimize CPU BatchNormalization for NC inputs (#33113)",
+      "commit": "8478e365f25b2d31f567670abb9e2410386a3da0",
+      "committedAt": "2026-10-07T11:34:27+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33113",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33115,
+      "title": "Fix duplicate node name when QDQ fusion absorbs a redundant Clip/Relu (#33115)",
+      "commit": "f3c4f31eff1cd8e17249d82d3c2a7b1e1a695ecd",
+      "committedAt": "2026-10-06T11:00:42-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33115",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33149,
+      "title": "[CUDA] Suppress CUDA 13 MSVC build warnings (#33149)",
+      "commit": "0eb8a0478c8af2b40e6a8b44abf7e794bfab14a1",
+      "committedAt": "2026-10-07T09:05:46-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33149",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2671,
+      "title": "Fix doc links after the source layout refactor (#2671)",
+      "commit": "b85ef050fdeaaf47384569d8831099335aec1031",
+      "committedAt": "2026-10-06T22:30:58Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2671",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2673,
+      "title": "Keep native exports private and bound telemetry inputs (#2673)",
+      "commit": "b537a901f9cda63a1333d7ae240cfc3942bf088f",
+      "committedAt": "2026-10-06T15:29:46-05:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2673",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2679,
+      "title": "Add free GPU memory limits to runtime profiles (#2679)",
+      "commit": "6804271d02a6169b0e5d1c5e12bd28ea298a39ea",
+      "committedAt": "2026-10-06T15:27:49-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2679",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2681,
+      "title": "Upgrade telemetry SDK to v3.10.279.1 and disable redundant desktop device IDs (#2681)",
+      "commit": "957bdd8dc717e94c09fad3b17d22f10d33217fd2",
+      "committedAt": "2026-10-07T04:01:40Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2681",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32544,
+      "title": "Detect Jetson GPUs in Linux DRM device discovery (#32544)",
+      "commit": "60e534a5f1732f3858a586e91853ffb80503ea77",
+      "committedAt": "2026-10-06T15:53:02-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32544",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32867,
+      "title": "Account for string payloads in initializer size limits (#32867)",
+      "commit": "0d427f8c0ba0220b4ca5d0a8fd23ae6c693dbb99",
+      "committedAt": "2026-10-07T11:47:07+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32867",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33051,
+      "title": "Fix provider bridge initialization failures without exceptions (#33051)",
+      "commit": "4e2e14e44ebc88b07dbcf67b4c9f19603679395f",
+      "committedAt": "2026-10-06T18:04:58Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33051",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33089,
+      "title": "Handle missing ConstantOfShape value during float16 conversion (#33089)",
+      "commit": "ae245d03d5ac1e3a13c9f49205837e1bd3ae9e8e",
+      "committedAt": "2026-10-07T11:42:52+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33089",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33138,
+      "title": "Bump sharp from 0.35.4 to 0.35.5 in /js/web/test/e2e/exports/testcases/nextjs-default (#33138)",
+      "commit": "43c6f17ee83c5fe489a24007c1ec765dec366ece",
+      "committedAt": "2026-10-07T11:17:40+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33138",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33140,
+      "title": "Fix Windows clang/no-exceptions portability (#33140)",
+      "commit": "84207093bbfe9b932085895310a9831576bec173",
+      "committedAt": "2026-10-06T18:05:16-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33140",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33142,
+      "title": "Work around certificate regression on Windows (#33142)",
+      "commit": "38dc99fba3f5bd72e201d1d942235bf4f600a1b3",
+      "committedAt": "2026-10-06T22:52:23Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33142",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "4f83f49b896be75ac4826c0991d4b37ce8d2e65f0731a999942b380fae23f410",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "1745c98dba272aa9d916891e2c82d46889e081c4becef8177ae1de28641ef543",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "0317ce461eb61bd30be6417f30d56cc523d49dea425664a13497b1fd5ad9a7d3",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "7afbd04a10472c0067612391f76281d27c921bffae2047370df42daec3c658d4",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    }
+  ]
+}
