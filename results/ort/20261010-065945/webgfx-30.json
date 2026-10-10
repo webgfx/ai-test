@@ -1,0 +1,43 @@
+{
+  "device": "webgfx-30",
+  "runtime": "ort",
+  "version": "20261010-065945",
+  "gpus": {},
+  "variants": {
+    "cfg-32e252fe": {
+      "id": "cfg-32e252fe",
+      "label": "D3D12",
+      "config": {
+        "backend": "webgpu",
+        "generationLength": 128,
+        "repetitions": 5,
+        "maxLength": 8192,
+        "randomTokens": true,
+        "reuseGenerator": true,
+        "graphCapture": false,
+        "constantFolding": "default",
+        "webgpuRobustness": "default",
+        "validationMode": "disabled",
+        "webgpuBackend": "d3d12"
+      },
+      "gpus": {
+        "150E": {
+          "backend": "webgpu",
+          "models": {
+            "Phi-4-mini-instruct": {
+              "128": {
+                "ttftMs": 449.33,
+                "plTs": 284.87,
+                "tgTs": 17.9,
+                "e2eMs": 7546.47,
+                "peakMemoryBytes": null,
+                "testedAt": "2026-10-10T00:09:01.994Z"
+              }
+            }
+          }
+        }
+      },
+      "updatedAt": "2026-10-10T00:09:01.994Z"
+    }
+  }
+}
