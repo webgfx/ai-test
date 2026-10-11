@@ -1,0 +1,179 @@
+{
+  "runtime": "ort",
+  "version": "20261011-102101",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-11T03:34:49.445Z",
+  "builtAt": "2026-10-11T10:38:55.903054+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "8fc9fd597453baae1ad73379c313f0586d812867",
+      "commitDate": "2026-10-10T10:32:06Z",
+      "title": "[WebGPU] Fix shader cache collisions across operator variants (#33242)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/8fc9fd597453baae1ad73379c313f0586d812867"
+    },
+    "onnxruntime-genai": {
+      "commit": "5c19002edce50beaa3a5c7eeefd8fe5269ee8d19",
+      "commitDate": "2026-10-10T08:08:42-07:00",
+      "title": "Update Extensions and expose literal tokenizer encoding (#2697)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/5c19002edce50beaa3a5c7eeefd8fe5269ee8d19"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261010-065945",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "29feb3ba4c6d9b31bbc874f117547c9044ea72e4",
+        "commitDate": "2026-10-09T15:53:55-07:00",
+        "title": "[WebGPU] Tile large block-FP8 QMoE expert matmuls (#33075)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/29feb3ba4c6d9b31bbc874f117547c9044ea72e4"
+      },
+      "onnxruntime-genai": {
+        "commit": "77b26933236d5e6d504bc688448a0e48a500a69b",
+        "commitDate": "2026-10-09T22:26:42Z",
+        "title": "Merge pipeline config overlays by model ID (#2553)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/77b26933236d5e6d504bc688448a0e48a500a69b"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32605,
+      "title": "[WebGPU] Widen MatMulNBits SubgroupMatrix-8x16x16 tiling to 128x256 (#32605)",
+      "commit": "bb47315d85b191056067dbfb935afaab0033cc5c",
+      "committedAt": "2026-10-10T17:48:15+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32605",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32630,
+      "title": "[WebGPU] Refactor MatMul algorithm selection (#32630)",
+      "commit": "bde59f3635a6596c514a3990e5da762ce2e38d0c",
+      "committedAt": "2026-10-10T09:22:15Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32630",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33082,
+      "title": "[WebGPU] Restore ORT 1.24.4 compatibility with per-Session recording and serialized execution (#33082)",
+      "commit": "6e0f154e325c3e4f43d23d845ebd7bd30e8d239f",
+      "committedAt": "2026-10-10T08:18:55+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33082",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33118,
+      "title": "[CUDA] Single-source remaining GQA preparation scratch sizing (#33118)",
+      "commit": "11cba206fbff12b570264ac8e188cf3841cd9487",
+      "committedAt": "2026-10-09T16:09:59-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33118",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33214,
+      "title": "Bump plugin ep versions (#33214)",
+      "commit": "9073c946f6fed725311f1adddffb5372402065b1",
+      "committedAt": "2026-10-10T08:08:31Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33214",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33231,
+      "title": "[WebGPU] Prepack ConvTranspose1D/2D initializer weights (#33231)",
+      "commit": "35714475cf8ef6ee1dd4e30e185cb639dfdeaab1",
+      "committedAt": "2026-10-10T09:55:27Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33231",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33242,
+      "title": "[WebGPU] Fix shader cache collisions across operator variants (#33242)",
+      "commit": "8fc9fd597453baae1ad73379c313f0586d812867",
+      "committedAt": "2026-10-10T10:32:06Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33242",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2670,
+      "title": "Support plugin EPs in the C++ model benchmark (#2670)",
+      "commit": "e3e8d72af593625cda3ed62a3467fba62866414c",
+      "committedAt": "2026-10-09T19:39:35-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2670",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2697,
+      "title": "Update Extensions and expose literal tokenizer encoding (#2697)",
+      "commit": "5c19002edce50beaa3a5c7eeefd8fe5269ee8d19",
+      "committedAt": "2026-10-10T08:08:42-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2697",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "4f83f49b896be75ac4826c0991d4b37ce8d2e65f0731a999942b380fae23f410",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "1745c98dba272aa9d916891e2c82d46889e081c4becef8177ae1de28641ef543",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "0317ce461eb61bd30be6417f30d56cc523d49dea425664a13497b1fd5ad9a7d3",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "7afbd04a10472c0067612391f76281d27c921bffae2047370df42daec3c658d4",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "file": "genai-public-model-package-api.patch",
+      "sha256": "f5442c99ec7a1ecf9b015d084bf4dc6d12c4dadd1921e6a5041cc69f7174d41c",
+      "reason": "Use the promoted public OrtModelPackageApi without removing model-package support",
+      "ortPublicHeaderSha256": "536ff4c7ccb76826bde1c754f79552d272ebdee136a39b57e25937f561a51e76",
+      "before": {
+        "src/models/onnxruntime_api.h": "e9d62c7ef52d28bdcb21e22f5007b8d47ebf2df43fc151acafbce18ccd37ff8f",
+        "src/models/onnxruntime_inline.h": "b56470ca1842f320552535223185a5f26ee09bcff2cbed60e12dbfd4db05e148"
+      },
+      "after": {
+        "src/models/onnxruntime_api.h": "7234069538da999f344f89d6ee6b4294f5b570ca4c1c8b64bafa5089ceff0abe",
+        "src/models/onnxruntime_inline.h": "7059460206ae66596b0faced8d44f5a451e8ceb0edf09ebda8f39ce30c6949a9"
+      }
+    }
+  ]
+}
