@@ -1,0 +1,214 @@
+{
+  "runtime": "ort",
+  "version": "20261014-001029",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-13T17:07:55.379Z",
+  "builtAt": "2026-10-14T00:28:06.150656+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "c9f4bb5655609ce406b3032fb3784eaf77b927b2",
+      "commitDate": "2026-10-13T08:43:08-07:00",
+      "title": "Fix Windows float16 model-path conversion (#33193)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/c9f4bb5655609ce406b3032fb3784eaf77b927b2"
+    },
+    "onnxruntime-genai": {
+      "commit": "0deac7ca5c91cc80fde940b0f1ccd86d8e901b3a",
+      "commitDate": "2026-10-13T01:08:24-05:00",
+      "title": "Make DFlash snapshot retention configurable in GenAI profiles (#2696)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/0deac7ca5c91cc80fde940b0f1ccd86d8e901b3a"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261013-000532",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "da8e89733833c03b71eee5192383a26e9f008732",
+        "commitDate": "2026-10-12T08:08:40-07:00",
+        "title": "Update libprotobuf-mutator to handle protobuf api changes (#33210)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/da8e89733833c03b71eee5192383a26e9f008732"
+      },
+      "onnxruntime-genai": {
+        "commit": "5c19002edce50beaa3a5c7eeefd8fe5269ee8d19",
+        "commitDate": "2026-10-10T08:08:42-07:00",
+        "title": "Update Extensions and expose literal tokenizer encoding (#2697)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/5c19002edce50beaa3a5c7eeefd8fe5269ee8d19"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 29588,
+      "title": "[CUDA] Add persistent fpA_intB MatMulNBits tactic autotune cache (#29588)",
+      "commit": "42518d89d7c5393baf97d69f8c2670668c40decf",
+      "committedAt": "2026-10-12T17:23:10-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29588",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33249,
+      "title": "[WebGPU] Support fixed subgroup size in im2col_matmul (#33249)",
+      "commit": "6a78e30eff15fc844f5a4e3bebfd948a3cf6581f",
+      "committedAt": "2026-10-13T13:17:42+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33249",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33310,
+      "title": "Fix WebGPU pipeline callback test shader keys (#33310)",
+      "commit": "63ff13bebd4651c65a9cea3efc226b79e029d842",
+      "committedAt": "2026-10-12T16:20:24-05:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33310",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2696,
+      "title": "Make DFlash snapshot retention configurable in GenAI profiles (#2696)",
+      "commit": "0deac7ca5c91cc80fde940b0f1ccd86d8e901b3a",
+      "committedAt": "2026-10-13T01:08:24-05:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2696",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32335,
+      "title": "[MLAS + CORE] Improve YOLOX FP32 models performance on CPU (#32335)",
+      "commit": "115e4499af19f88d12da5cc1986cd0badfda027b",
+      "committedAt": "2026-10-12T11:48:37-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32335",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33273,
+      "title": "Fix CPU OneHot handling of fractional floating-point indices (#33273)",
+      "commit": "9ddcd77f92d0d733d8daf01ebcd4f664c1ce424b",
+      "committedAt": "2026-10-12T11:45:29-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33273",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32863,
+      "title": "Validate inline sparse payloads before dense allocation (#32863)",
+      "commit": "9036f076a2ce4b970f2a2fb0149b0914981d8af4",
+      "committedAt": "2026-10-13T00:13:00-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32863",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33090,
+      "title": "[float16] Reuse Cast nodes for shared always-float inputs (#33090)",
+      "commit": "994f34977c5a83d74eff894c558487b114232bef",
+      "committedAt": "2026-10-12T16:14:22-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33090",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33193,
+      "title": "Fix Windows float16 model-path conversion (#33193)",
+      "commit": "c9f4bb5655609ce406b3032fb3784eaf77b927b2",
+      "committedAt": "2026-10-13T08:43:08-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33193",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33260,
+      "title": "[MLAS] Skip FP16 unit tests on CPUs without FP16 arithmetic (#33260)",
+      "commit": "208463adfb92452e9aa8a7266eb5d4497bf97b53",
+      "committedAt": "2026-10-13T08:42:07-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33260",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33315,
+      "title": "[CUDA] Include SM100 in Linux aarch64 CUDA 13 packages (#33315)",
+      "commit": "e2e7a0a02df9936c324613791fdfe00bc5972735",
+      "committedAt": "2026-10-13T01:46:19Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33315",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "4f83f49b896be75ac4826c0991d4b37ce8d2e65f0731a999942b380fae23f410",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "1745c98dba272aa9d916891e2c82d46889e081c4becef8177ae1de28641ef543",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "0317ce461eb61bd30be6417f30d56cc523d49dea425664a13497b1fd5ad9a7d3",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "7afbd04a10472c0067612391f76281d27c921bffae2047370df42daec3c658d4",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "file": "genai-public-model-package-api.patch",
+      "sha256": "f5442c99ec7a1ecf9b015d084bf4dc6d12c4dadd1921e6a5041cc69f7174d41c",
+      "reason": "Use the promoted public OrtModelPackageApi without removing model-package support",
+      "ortPublicHeaderSha256": "3e47b94a576670ff2156ea538dfdcbf80c4b780985410f8e489b3b7b2959420d",
+      "before": {
+        "src/models/onnxruntime_api.h": "e9d62c7ef52d28bdcb21e22f5007b8d47ebf2df43fc151acafbce18ccd37ff8f",
+        "src/models/onnxruntime_inline.h": "b56470ca1842f320552535223185a5f26ee09bcff2cbed60e12dbfd4db05e148"
+      },
+      "after": {
+        "src/models/onnxruntime_api.h": "7234069538da999f344f89d6ee6b4294f5b570ca4c1c8b64bafa5089ceff0abe",
+        "src/models/onnxruntime_inline.h": "7059460206ae66596b0faced8d44f5a451e8ceb0edf09ebda8f39ce30c6949a9"
+      }
+    }
+  ]
+}
