@@ -1,0 +1,115 @@
+{
+  "runtime": "ort-web",
+  "version": "20261015-000544-web-004635",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf-web",
+  "recordedAt": "2026-10-14T18:50:04.976Z",
+  "builtAt": "2026-10-14T17:00:43.799815+00:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "a5e205be24752d13bfe9ad38ea7722f1eeec9fed",
+      "commitDate": "2026-10-14T15:02:41+02:00",
+      "title": "Skip NCHWc conversion for zero-channel Conv (#33346)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/a5e205be24752d13bfe9ad38ea7722f1eeec9fed"
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32734,
+      "title": "WebGPU: Fix DequantizeLinear 1-D block_size handling (#32734)",
+      "commit": "7c1103e260f97a55fc5740d59184f973ef4876e8",
+      "committedAt": "2026-10-14T14:57:03+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32734",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32937,
+      "title": "[WebGPU] Support 16x16x16 subgroup matrix MatMul (#32937)",
+      "commit": "9c87bdf2e6676eee0073c711a32e75183dc41199",
+      "committedAt": "2026-10-14T08:54:12Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32937",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33288,
+      "title": "[WebGPU] Validate MatMul execution plans in planner (#33288)",
+      "commit": "bbfa896e7aed0f97370b0e6f4dc3df900559c607",
+      "committedAt": "2026-10-14T10:06:43+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33288",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33342,
+      "title": "Remove thread-pool parallelism assertion in GQA CPU test (#33342)",
+      "commit": "07daf405c788c300aa9fd2988104b29bcbdede23",
+      "committedAt": "2026-10-13T12:56:32-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33342",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33348,
+      "title": "[WebGPU] Fix Pow scalar operands in vectorized broadcasting (#33348)",
+      "commit": "9c21c82302d8655bb3c1928485d3578777350610",
+      "committedAt": "2026-10-14T10:05:52+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33348",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33361,
+      "title": "[WebGPU] Preserve pending JSEP reads before CPU uploads (#33361)",
+      "commit": "2db2a3abfea595c0bcc0ae5c4361f5859e57723e",
+      "committedAt": "2026-10-14T08:52:31Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33361",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33346,
+      "title": "Skip NCHWc conversion for zero-channel Conv (#33346)",
+      "commit": "a5e205be24752d13bfe9ad38ea7722f1eeec9fed",
+      "committedAt": "2026-10-14T15:02:41+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33346",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33301,
+      "title": "Add sm_110 (Jetson Thor) to the Linux aarch64 CUDA 13 packaging architectures (#33301)",
+      "commit": "6cbefccb5dced9f619fc7ad45fd176e890de5dff",
+      "committedAt": "2026-10-14T07:14:53Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33301",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "nativeVersion": "20261015-000544",
+  "executionMode": "web",
+  "wasmVariant": "jspi",
+  "artifacts": {
+    "ort.all.min.js": {
+      "size": 522543,
+      "sha256": "31e14e9fb73aee501281d512a82f58a42646c6010c4b1246af15013055dd8554"
+    },
+    "ort-wasm-simd-threaded.jspi.mjs": {
+      "size": 43631,
+      "sha256": "34aa4ef85f8a63854b03f53d58775f82ceee3739f6cef0f1f6b2cc2f6ad78e23"
+    },
+    "ort-wasm-simd-threaded.jspi.wasm": {
+      "size": 20246405,
+      "sha256": "c5f419b10257ada1cc0da3f0b95375808fcd8afc42eb6773c32ca4500f2ae3ff"
+    }
+  }
+}
