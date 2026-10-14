@@ -1,0 +1,239 @@
+{
+  "runtime": "ort",
+  "version": "20261015-000544",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-14T17:03:56.773Z",
+  "builtAt": "2026-10-15T00:24:38.368892+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "a5e205be24752d13bfe9ad38ea7722f1eeec9fed",
+      "commitDate": "2026-10-14T15:02:41+02:00",
+      "title": "Skip NCHWc conversion for zero-channel Conv (#33346)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/a5e205be24752d13bfe9ad38ea7722f1eeec9fed"
+    },
+    "onnxruntime-genai": {
+      "commit": "bdfadcf440639af6a012616dc5f831a890794ca7",
+      "commitDate": "2026-10-14T07:31:39Z",
+      "title": "Add session_options.custom_ops_libraries and share session options with auxiliary sessions (#2725)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/bdfadcf440639af6a012616dc5f831a890794ca7"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261014-001029",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "c9f4bb5655609ce406b3032fb3784eaf77b927b2",
+        "commitDate": "2026-10-13T08:43:08-07:00",
+        "title": "Fix Windows float16 model-path conversion (#33193)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/c9f4bb5655609ce406b3032fb3784eaf77b927b2"
+      },
+      "onnxruntime-genai": {
+        "commit": "0deac7ca5c91cc80fde940b0f1ccd86d8e901b3a",
+        "commitDate": "2026-10-13T01:08:24-05:00",
+        "title": "Make DFlash snapshot retention configurable in GenAI profiles (#2696)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/0deac7ca5c91cc80fde940b0f1ccd86d8e901b3a"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32734,
+      "title": "WebGPU: Fix DequantizeLinear 1-D block_size handling (#32734)",
+      "commit": "7c1103e260f97a55fc5740d59184f973ef4876e8",
+      "committedAt": "2026-10-14T14:57:03+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32734",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32937,
+      "title": "[WebGPU] Support 16x16x16 subgroup matrix MatMul (#32937)",
+      "commit": "9c87bdf2e6676eee0073c711a32e75183dc41199",
+      "committedAt": "2026-10-14T08:54:12Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32937",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33288,
+      "title": "[WebGPU] Validate MatMul execution plans in planner (#33288)",
+      "commit": "bbfa896e7aed0f97370b0e6f4dc3df900559c607",
+      "committedAt": "2026-10-14T10:06:43+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33288",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33342,
+      "title": "Remove thread-pool parallelism assertion in GQA CPU test (#33342)",
+      "commit": "07daf405c788c300aa9fd2988104b29bcbdede23",
+      "committedAt": "2026-10-13T12:56:32-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33342",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33348,
+      "title": "[WebGPU] Fix Pow scalar operands in vectorized broadcasting (#33348)",
+      "commit": "9c21c82302d8655bb3c1928485d3578777350610",
+      "committedAt": "2026-10-14T10:05:52+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33348",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33361,
+      "title": "[WebGPU] Preserve pending JSEP reads before CPU uploads (#33361)",
+      "commit": "2db2a3abfea595c0bcc0ae5c4361f5859e57723e",
+      "committedAt": "2026-10-14T08:52:31Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33361",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2664,
+      "title": "[WebGPU EP] support paged attention models (#2664)",
+      "commit": "e2e74cb5a52c8d75733d06c4b8b3de24be27ada7",
+      "committedAt": "2026-10-13T22:20:31-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2664",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2672,
+      "title": "AMDGPU EP: add graph-capture opt-out and fix per-model teardown lifetime (#2672)",
+      "commit": "64a68467060818f920a296b4a2b808a9f645bbd2",
+      "committedAt": "2026-10-14T01:13:07Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2672",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2691,
+      "title": "Enable continuous decoding for AMDGPU (#2691)",
+      "commit": "ef6432f832d2dfbe1a1a7d4d439d387692452656",
+      "committedAt": "2026-10-14T00:25:39Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2691",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2722,
+      "title": "Fix stale results in CUDA distributed Top-K selection (#2722)",
+      "commit": "beb6c9845f1792c273589f104a4d78d2146b117f",
+      "committedAt": "2026-10-13T13:20:15-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2722",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33346,
+      "title": "Skip NCHWc conversion for zero-channel Conv (#33346)",
+      "commit": "a5e205be24752d13bfe9ad38ea7722f1eeec9fed",
+      "committedAt": "2026-10-14T15:02:41+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33346",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2699,
+      "title": "Bound leased-checkpoint scans during prefix-cache planning (#2699)",
+      "commit": "83817d37a755728aa49ed2a031aa09eb1bbe6752",
+      "committedAt": "2026-10-13T11:51:11-05:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2699",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2712,
+      "title": "Update CI to ORT 1.31.0 and CUDA EP 0.3.0 (#2712)",
+      "commit": "f30633dd86a78addb34b2a3d23b59b6796be0f68",
+      "committedAt": "2026-10-13T21:27:52-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2712",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2725,
+      "title": "Add session_options.custom_ops_libraries and share session options with auxiliary sessions (#2725)",
+      "commit": "bdfadcf440639af6a012616dc5f831a890794ca7",
+      "committedAt": "2026-10-14T07:31:39Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2725",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33301,
+      "title": "Add sm_110 (Jetson Thor) to the Linux aarch64 CUDA 13 packaging architectures (#33301)",
+      "commit": "6cbefccb5dced9f619fc7ad45fd176e890de5dff",
+      "committedAt": "2026-10-14T07:14:53Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33301",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "a62f76c7ae0209756913341a1863edbd8c322fb19cccd2769554d968d1e8c4d5",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "4f83f49b896be75ac4826c0991d4b37ce8d2e65f0731a999942b380fae23f410",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "1745c98dba272aa9d916891e2c82d46889e081c4becef8177ae1de28641ef543",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "0317ce461eb61bd30be6417f30d56cc523d49dea425664a13497b1fd5ad9a7d3",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "7afbd04a10472c0067612391f76281d27c921bffae2047370df42daec3c658d4",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    }
+  ]
+}
