@@ -1,0 +1,99 @@
+{
+  "runtime": "ort",
+  "version": "20261018-000548",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-17T16:59:08.455Z",
+  "builtAt": "2026-10-18T00:18:02.876860+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "c64c9fd76404df85bbbac37485d5c0f2babcd194",
+      "commitDate": "2026-10-17T20:03:42+08:00",
+      "title": "Fix 1DS telemetry deadlock during Windows process termination (#33291)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/c64c9fd76404df85bbbac37485d5c0f2babcd194"
+    },
+    "onnxruntime-genai": {
+      "commit": "991e3560e63b8a26806d4ec7d702c04e75fb6e51",
+      "commitDate": "2026-10-15T21:09:35Z",
+      "title": "Cover sparse pools and evicted ancestry in checkpoint scan benchmarks (#2721)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/991e3560e63b8a26806d4ec7d702c04e75fb6e51"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261017-191112",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "b5375da86e523fb8d8e58677b2223fd3d467bb4a",
+        "commitDate": "2026-10-17T01:11:38Z",
+        "title": "[WebGPU] Extend FP16 MatMul GEMV fast path to M=2–8 (#33351)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/b5375da86e523fb8d8e58677b2223fd3d467bb4a"
+      },
+      "onnxruntime-genai": {
+        "commit": "991e3560e63b8a26806d4ec7d702c04e75fb6e51",
+        "commitDate": "2026-10-15T21:09:35Z",
+        "title": "Cover sparse pools and evicted ancestry in checkpoint scan benchmarks (#2721)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/991e3560e63b8a26806d4ec7d702c04e75fb6e51"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33291,
+      "title": "Fix 1DS telemetry deadlock during Windows process termination (#33291)",
+      "commit": "c64c9fd76404df85bbbac37485d5c0f2babcd194",
+      "committedAt": "2026-10-17T20:03:42+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33291",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "7149d54db8575e69c55283128d54f7311aeb14f321dd1517b0134afd1c07b663",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "5fa983f4154e61bb6500197f6a0ccfee017c1fdfcfdce28f0101470fe052ee44",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "3c6e0ec5501fbb4f51df7239bef8a268f606d455ee73b689d54e03cd88d86b80",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "c1868f2a36d8edf6ef4671d141288f42a8b8a5aef47cf6ce403c931c492417ae",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    }
+  ]
+}
