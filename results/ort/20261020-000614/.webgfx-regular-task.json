@@ -1,0 +1,208 @@
+{
+  "runtime": "ort",
+  "version": "20261020-000614",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-19T17:02:07.722Z",
+  "builtAt": "2026-10-20T00:20:48.681739+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "dc1ae7a12961348dc22decc103c70c2c92fc36e4",
+      "commitDate": "2026-10-19T06:47:37-07:00",
+      "title": "Skip MatMul BatchNormalization fusion when the channel axis moves (#33392)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/dc1ae7a12961348dc22decc103c70c2c92fc36e4"
+    },
+    "onnxruntime-genai": {
+      "commit": "4b34a64af8b763c3bb2d8781b45a26f0c3841118",
+      "commitDate": "2026-10-19T10:50:50-05:00",
+      "title": "Keep SDK state alive through telemetry shutdown and update to 3.10.281.1 (#2723)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/4b34a64af8b763c3bb2d8781b45a26f0c3841118"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261019-000556",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "c1ea5bffb8f78d6d6b7239eccf66ebfc3e5833b0",
+        "commitDate": "2026-10-18T07:34:33Z",
+        "title": "Fix safety guards in training loss fusions (#32987)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/c1ea5bffb8f78d6d6b7239eccf66ebfc3e5833b0"
+      },
+      "onnxruntime-genai": {
+        "commit": "991e3560e63b8a26806d4ec7d702c04e75fb6e51",
+        "commitDate": "2026-10-15T21:09:35Z",
+        "title": "Cover sparse pools and evicted ancestry in checkpoint scan benchmarks (#2721)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/991e3560e63b8a26806d4ec7d702c04e75fb6e51"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33074,
+      "title": "[WebGPU] Support block-quantized FP8 dense MatMul (#33074)",
+      "commit": "81f5efab456e0101118c334b67a37c484ed71aaa",
+      "committedAt": "2026-10-18T19:37:38-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33074",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33323,
+      "title": "[CUDA] Add opt-in native E4M3 block-scale conversion to NVFP4 GEMV (#33323)",
+      "commit": "9eec7d5fe26eb1c9bf8401d75f030cc530123249",
+      "committedAt": "2026-10-18T21:08:46-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33323",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33354,
+      "title": "[CUDA] Add decode GEMV kernel for K-packed NVFP4 QMoE (#33354)",
+      "commit": "69eeb2bb4aba4bf97f091d529222f1516dc98e49",
+      "committedAt": "2026-10-19T08:15:11Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33354",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33392,
+      "title": "Skip MatMul BatchNormalization fusion when the channel axis moves (#33392)",
+      "commit": "dc1ae7a12961348dc22decc103c70c2c92fc36e4",
+      "committedAt": "2026-10-19T06:47:37-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33392",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33432,
+      "title": "Fix WebGPU Conv2dMM input indexing for vec3 channels (#33432)",
+      "commit": "0614f48dbe8defe349eeb5f6ffc0d0f30692b3af",
+      "committedAt": "2026-10-19T11:48:36+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33432",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32471,
+      "title": "Revert \"Fix non-deterministic constant folding output\" (#32471)",
+      "commit": "c43d712eaf101e273b1b72a4a2b35b9366c9d3ab",
+      "committedAt": "2026-10-19T09:48:32+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32471",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2723,
+      "title": "Keep SDK state alive through telemetry shutdown and update to 3.10.281.1 (#2723)",
+      "commit": "4b34a64af8b763c3bb2d8781b45a26f0c3841118",
+      "committedAt": "2026-10-19T10:50:50-05:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2723",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2744,
+      "title": "feat: add a d1-3B decision example and tutorial (#2744)",
+      "commit": "5033f386fa75aafd38a8a89b26b9def093a35272",
+      "committedAt": "2026-10-19T05:53:46Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2744",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2745,
+      "title": "fix: pick each row's last real token when the LM head is pruned (#2745)",
+      "commit": "37ce9ee500ded064df6cea5aef91ee8e137ce5d6",
+      "committedAt": "2026-10-19T05:55:00Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2745",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2746,
+      "title": "fix: keep each row's own conv state in padded LFM2 batches (#2746)",
+      "commit": "f1f002edccf97c10dc3496fa9b07b2851de980b6",
+      "committedAt": "2026-10-19T05:56:16Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2746",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "7149d54db8575e69c55283128d54f7311aeb14f321dd1517b0134afd1c07b663",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "5fa983f4154e61bb6500197f6a0ccfee017c1fdfcfdce28f0101470fe052ee44",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "3c6e0ec5501fbb4f51df7239bef8a268f606d455ee73b689d54e03cd88d86b80",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "c1868f2a36d8edf6ef4671d141288f42a8b8a5aef47cf6ce403c931c492417ae",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "650d0c621f5c5c00ea17c414e63f6171deaa9a1fe95ab62d652e599d82dec8cb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1481",
+        "1482"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "f4ca9728e490edcb96f34fc2cea83d4e9d5142e9a398d55ea3e037cb3983378b",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "8e594b08a0c069b59ff0f634d713aa91b97418dbcbaf2f24fcaeb02f727b6e80",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a49dc158a50a300209c5d9b0fae45b2da806674b0d91c2958ffd105a57878aee"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "1faa639af61b27280bc1c2634263482da94174a82f2660974b223084a466d377",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "aa31aab85cece8a317056bee272ad9ce500335abdf49ed56568f42818eed88a9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "88c0b327af0323498039754ed04acbc05c0910fb8b49796415394abdc2ef7d65"
+      }
+    }
+  ]
+}
