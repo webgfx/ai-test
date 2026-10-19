@@ -1,0 +1,95 @@
+{
+  "runtime": "ort-web",
+  "version": "20261020-000614-web-004254",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf-web",
+  "recordedAt": "2026-10-19T17:14:01.777Z",
+  "builtAt": "2026-10-19T16:57:48.112707+00:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "dc1ae7a12961348dc22decc103c70c2c92fc36e4",
+      "commitDate": "2026-10-19T06:47:37-07:00",
+      "title": "Skip MatMul BatchNormalization fusion when the channel axis moves (#33392)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/dc1ae7a12961348dc22decc103c70c2c92fc36e4"
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33074,
+      "title": "[WebGPU] Support block-quantized FP8 dense MatMul (#33074)",
+      "commit": "81f5efab456e0101118c334b67a37c484ed71aaa",
+      "committedAt": "2026-10-18T19:37:38-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33074",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33323,
+      "title": "[CUDA] Add opt-in native E4M3 block-scale conversion to NVFP4 GEMV (#33323)",
+      "commit": "9eec7d5fe26eb1c9bf8401d75f030cc530123249",
+      "committedAt": "2026-10-18T21:08:46-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33323",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33354,
+      "title": "[CUDA] Add decode GEMV kernel for K-packed NVFP4 QMoE (#33354)",
+      "commit": "69eeb2bb4aba4bf97f091d529222f1516dc98e49",
+      "committedAt": "2026-10-19T08:15:11Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33354",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33392,
+      "title": "Skip MatMul BatchNormalization fusion when the channel axis moves (#33392)",
+      "commit": "dc1ae7a12961348dc22decc103c70c2c92fc36e4",
+      "committedAt": "2026-10-19T06:47:37-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33392",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33432,
+      "title": "Fix WebGPU Conv2dMM input indexing for vec3 channels (#33432)",
+      "commit": "0614f48dbe8defe349eeb5f6ffc0d0f30692b3af",
+      "committedAt": "2026-10-19T11:48:36+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33432",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32471,
+      "title": "Revert \"Fix non-deterministic constant folding output\" (#32471)",
+      "commit": "c43d712eaf101e273b1b72a4a2b35b9366c9d3ab",
+      "committedAt": "2026-10-19T09:48:32+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32471",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    }
+  ],
+  "nativeVersion": "20261020-000614",
+  "executionMode": "web",
+  "wasmVariant": "jspi",
+  "artifacts": {
+    "ort.all.min.js": {
+      "size": 522543,
+      "sha256": "31e14e9fb73aee501281d512a82f58a42646c6010c4b1246af15013055dd8554"
+    },
+    "ort-wasm-simd-threaded.jspi.mjs": {
+      "size": 44435,
+      "sha256": "c547e8b8f2ba009324f55c83eb05af5c71dc12a634e970d167fbdaa6d15adf23"
+    },
+    "ort-wasm-simd-threaded.jspi.wasm": {
+      "size": 20348120,
+      "sha256": "8dfc82c56fb9a2e5204eaef0b4849f8d3b4c8c9e19a84d739a8a782f7088b1c9"
+    }
+  }
+}
