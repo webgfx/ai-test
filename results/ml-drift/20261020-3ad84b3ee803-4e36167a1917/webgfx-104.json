@@ -1,0 +1,133 @@
+{
+  "device": "webgfx-104",
+  "runtime": "ml-drift",
+  "version": "20261020-3ad84b3ee803-4e36167a1917",
+  "gpus": {
+    "unverified": {
+      "backend": "d3d12",
+      "models": {
+        "Qwen3.5-2B": {
+          "128": {
+            "ttftMs": null,
+            "plTs": null,
+            "tgTs": null,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "error": "Qwen3.5-2B (input 128): Native generated tokens do not match the model reference for input 128",
+            "gpuName": "unverified",
+            "executionEvidence": {
+              "build": {
+                "schemaVersion": 1,
+                "runtime": "ml-drift",
+                "version": "20261020-3ad84b3ee803-4e36167a1917",
+                "architecture": "x64",
+                "backend": "d3d12",
+                "adapterVersion": "ort-fleet-onnx-v4",
+                "supportedModelAdapters": [
+                  "aion",
+                  "Phi-4-mini-instruct",
+                  "Qwen3.5-2B",
+                  "Qwen3.5-4B"
+                ],
+                "modelAdapterVersions": {
+                  "aion": "ort-fleet-onnx-v4",
+                  "Phi-4-mini-instruct": "ort-fleet-onnx-v4",
+                  "Qwen3.5-2B": "qwen35-onnx-v1",
+                  "Qwen3.5-4B": "qwen35-onnx-v1"
+                },
+                "modelManifests": {
+                  "Phi-4-mini-instruct": {
+                    "file": "manifest-0e86c857a723a7488dc84eaa5bfd225a14c6be2f2696b2f1bab489a71b76b3d4.json",
+                    "sha256": "0e86c857a723a7488dc84eaa5bfd225a14c6be2f2696b2f1bab489a71b76b3d4"
+                  },
+                  "aion": {
+                    "file": "manifest-160edda813754c59b59586aece2562488e7d483ae8c859ade174fda2c03e82bb.json",
+                    "sha256": "160edda813754c59b59586aece2562488e7d483ae8c859ade174fda2c03e82bb"
+                  },
+                  "Qwen3.5-2B": {
+                    "file": "manifest-0dd3fb5745231b37b233485d0241b03879a241e73af3f255292b4d6d6c1dde76.json",
+                    "sha256": "0dd3fb5745231b37b233485d0241b03879a241e73af3f255292b4d6d6c1dde76"
+                  },
+                  "Qwen3.5-4B": {
+                    "file": "manifest-de226151ffca8589cdaf7b35c11b180737780b28330223df4f295466c1490311.json",
+                    "sha256": "de226151ffca8589cdaf7b35c11b180737780b28330223df4f295466c1490311"
+                  }
+                },
+                "modelPreparationErrors": {
+                  "gemma-4-e2b-it": "Native architecture adapter is not yet available"
+                },
+                "revision": "3ad84b3ee803b90f92f8571ecfe26e374a04ce00",
+                "dawnRevision": "beead7128fc428635eb8d4378c08fb9353259de0",
+                "sourceRepository": "https://github.com/google-ai-edge/ml-drift.git",
+                "buildCommand": [
+                  "D:\\workspace\\project\\agents\\webgfx-china\\gitignore\\mldrift\\tools\\bazelisk.exe",
+                  "--batch",
+                  "--output_user_root=D:/r/bzl-mldrift",
+                  "--output_base=D:\\bml",
+                  "build",
+                  "-c",
+                  "opt",
+                  "--jobs=12",
+                  "--cxxopt=/std:c++20",
+                  "--host_cxxopt=/std:c++20",
+                  "--cxxopt=/utf-8",
+                  "--host_cxxopt=/utf-8",
+                  "--conlyopt=/std:c11",
+                  "--conlyopt=/experimental:c11atomics",
+                  "--host_conlyopt=/std:c11",
+                  "--host_conlyopt=/experimental:c11atomics",
+                  "//ml_drift/samples/llm:llm_runner_webgpu",
+                  "//ml_drift/common/kernels/tests:add_test_webgpu"
+                ],
+                "localPatchSha256": "949d30d9fa76067c2a234bdf07ef269e1b918758a51065ea78d1a6bbd04d9edf",
+                "createdAt": "2026-10-20T08:04:12.080991+00:00",
+                "files": {
+                  "add_test_webgpu.exe": "873873ae9201a56e636b31b60ae98fccf9e054e3368968121872430b424dd692",
+                  "cpuinfo-windows-arm64.patch": "14220165f73cc5a7dcca88a493d74e45d9a3a0192af18659dcb8ae51852e1b96",
+                  "d3dcompiler_47.dll": "beaeb82207c961ea7c3f3e463111ca27858ef179b4d817e028ae7761fb5cb18e",
+                  "Dawn-LICENSE.txt": "88f685736e73c57dd57c275a64bc2771707b645b22c84adb795c6b752e55681c",
+                  "dxcompiler.dll": "26e905279be2254e51acd1bacd3ee0e2f312054f51e932e9764935863bdb1442",
+                  "dxil.dll": "c893080a29710045fb96ecc4b72da209c632b33c0d1330f0ee9ec497e84b1a65",
+                  "llm_runner_webgpu.exe": "87092ca61e19e20243b90db9de2770298714a135c4c44c7d8ab81412fab2eec5",
+                  "local.patch": "949d30d9fa76067c2a234bdf07ef269e1b918758a51065ea78d1a6bbd04d9edf",
+                  "MLDrift-LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+                  "ORT-LICENSE.txt": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674",
+                  "xnnpack-windows-arm64.patch": "e1f49574a19c741359a22237efd713d32f1643aca61a435aa8e9acc0e4b97fbd"
+                }
+              },
+              "request": {
+                "models": [
+                  "Qwen3.5-2B"
+                ],
+                "promptLengths": [
+                  128
+                ],
+                "generationLength": 128,
+                "repetitions": 5,
+                "maxLength": 8192,
+                "backend": "d3d12",
+                "mode": "native"
+              }
+            },
+            "testedAt": "2026-10-20T08:07:26.796Z"
+          }
+        }
+      }
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "Native MLDrift WebGPU / D3D12",
+    "config": {
+      "version": "20261020-3ad84b3ee803-4e36167a1917",
+      "backend": "d3d12",
+      "sourceRevision": "3ad84b3ee803b90f92f8571ecfe26e374a04ce00",
+      "repetitions": 5,
+      "generationLength": 128,
+      "maxLength": 8192,
+      "prefillMeasurement": "prompt-processing",
+      "native": true
+    },
+    "updatedAt": "2026-10-20T08:07:26.796Z"
+  }
+}
