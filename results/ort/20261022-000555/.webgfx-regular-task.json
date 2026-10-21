@@ -1,0 +1,151 @@
+{
+  "runtime": "ort",
+  "version": "20261022-000555",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-21T17:04:21.147Z",
+  "builtAt": "2026-10-22T00:18:09.464444+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "314ff8d4e87816bafa1b8e0fefa476c896c4dedd",
+      "commitDate": "2026-10-21T08:54:41-07:00",
+      "title": "[Framework/CUDA] Add generic kernel dispatch policy reader (#33042)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/314ff8d4e87816bafa1b8e0fefa476c896c4dedd"
+    },
+    "onnxruntime-genai": {
+      "commit": "57b8ca8c75f330c92cba681c1528a558de62d728",
+      "commitDate": "2026-10-21T00:19:31Z",
+      "title": "Fix ignored context limits for Qwen3.6-35B-A3B in model examples (#2692)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/57b8ca8c75f330c92cba681c1528a558de62d728"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261021-113339",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "973f680e7042057bb88245347dc52ce4e19f8f40",
+        "commitDate": "2026-10-21T02:21:28Z",
+        "title": "[CICD Stability] Start transition to scaleset based providers (#33492)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/973f680e7042057bb88245347dc52ce4e19f8f40"
+      },
+      "onnxruntime-genai": {
+        "commit": "57b8ca8c75f330c92cba681c1528a558de62d728",
+        "commitDate": "2026-10-21T00:19:31Z",
+        "title": "Fix ignored context limits for Qwen3.6-35B-A3B in model examples (#2692)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/57b8ca8c75f330c92cba681c1528a558de62d728"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33042,
+      "title": "[Framework/CUDA] Add generic kernel dispatch policy reader (#33042)",
+      "commit": "314ff8d4e87816bafa1b8e0fefa476c896c4dedd",
+      "committedAt": "2026-10-21T08:54:41-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33042",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32200,
+      "title": "Validate ORT format edge slots (#32200)",
+      "commit": "b923407cf40455dfca0b72bae63e369c004eb92e",
+      "committedAt": "2026-10-20T23:39:13-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32200",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32982,
+      "title": "Fix correctness guards in training graph optimizers (#32982)",
+      "commit": "c55286e574e728117542787ab674db1f52aab290",
+      "committedAt": "2026-10-21T10:45:56+02:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32982",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "7149d54db8575e69c55283128d54f7311aeb14f321dd1517b0134afd1c07b663",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "5fa983f4154e61bb6500197f6a0ccfee017c1fdfcfdce28f0101470fe052ee44",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "3c6e0ec5501fbb4f51df7239bef8a268f606d455ee73b689d54e03cd88d86b80",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "c1868f2a36d8edf6ef4671d141288f42a8b8a5aef47cf6ce403c931c492417ae",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "d40c2897f8ef08a1538aacc1a01129244fc524a5ad929f6a2ea2ddf21f068cdf",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "97b0cbd4c775202439e4108c71d31c45dab3be2401be69379b711864642b31da",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "2a8a4d8be84138e6a4b97665c921e1b47a5e0082e2ee6bf2ba0bfe9d8250e1e9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a49dc158a50a300209c5d9b0fae45b2da806674b0d91c2958ffd105a57878aee"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "92345968746a36869b0214977163696ea500bc031e993e30b838a1b32991cbcf",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "5f9488859a27b9883bf99a23f7ca54064b5e459fa6f3c5833de41198a0577c73",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "88c0b327af0323498039754ed04acbc05c0910fb8b49796415394abdc2ef7d65"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
