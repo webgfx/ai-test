@@ -1,0 +1,351 @@
+{
+  "runtime": "ort",
+  "version": "20261023-000559",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-22T17:12:16.463Z",
+  "builtAt": "2026-10-23T00:26:57.681303+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "34c34a3589cf30df593c8e65c6df7d48827d5573",
+      "commitDate": "2026-10-22T10:21:34-04:00",
+      "title": "Bump electron from 41.10.6 to 42.11.3 in /js/web (#33522)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/34c34a3589cf30df593c8e65c6df7d48827d5573"
+    },
+    "onnxruntime-genai": {
+      "commit": "6b7ff3ca3efa15da219050fdb4ecf8bed67875af",
+      "commitDate": "2026-10-21T23:43:12-07:00",
+      "title": "Adding word level timestamps to Nemotron Streaming Pipeline (#2591)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/6b7ff3ca3efa15da219050fdb4ecf8bed67875af"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261022-000555",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "314ff8d4e87816bafa1b8e0fefa476c896c4dedd",
+        "commitDate": "2026-10-21T08:54:41-07:00",
+        "title": "[Framework/CUDA] Add generic kernel dispatch policy reader (#33042)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/314ff8d4e87816bafa1b8e0fefa476c896c4dedd"
+      },
+      "onnxruntime-genai": {
+        "commit": "57b8ca8c75f330c92cba681c1528a558de62d728",
+        "commitDate": "2026-10-21T00:19:31Z",
+        "title": "Fix ignored context limits for Qwen3.6-35B-A3B in model examples (#2692)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/57b8ca8c75f330c92cba681c1528a558de62d728"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32898,
+      "title": "[CUDA] Honor deterministic compute for MatMulNBits tactic selection (#32898)",
+      "commit": "ed8f79bcef8b073d83270a45d68046a72a5166bd",
+      "committedAt": "2026-10-21T13:15:46-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32898",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33363,
+      "title": "Preserve distinct epsilons in GQA pre-norm fusion (#33363)",
+      "commit": "9a43d1c9b24ffda3af7bcc90c307100c9d694752",
+      "committedAt": "2026-10-22T10:49:13+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33363",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33367,
+      "title": "[CUDA] Optimize dense prefill for NVFP4 hybrid QSA/GDN models (#33367)",
+      "commit": "e460778cd50d89da56f4747fe24c01ba41b0d67f",
+      "committedAt": "2026-10-22T01:26:19Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33367",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33383,
+      "title": "[CUDA] Add state_status output to PackedSparseAttentionIndexer (#33383)",
+      "commit": "2d8060a897211c1f022422a5678d2b196ddf2e64",
+      "committedAt": "2026-10-21T14:56:35-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33383",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33493,
+      "title": "[WebGPU] Add bit-exact convolution state replay for speculative decoding (#33493)",
+      "commit": "8b17e671f4b6f3011712ca1c4d8651ba220994da",
+      "committedAt": "2026-10-21T09:29:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33493",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2582,
+      "title": "Accelerate image preprocessing with a persistent thread pool (#2582)",
+      "commit": "78a91ff35b19b50d9703207c10947b250b6ac862",
+      "committedAt": "2026-10-21T22:19:31Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2582",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2591,
+      "title": "Adding word level timestamps to Nemotron Streaming Pipeline (#2591)",
+      "commit": "6b7ff3ca3efa15da219050fdb4ecf8bed67875af",
+      "committedAt": "2026-10-21T23:43:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2591",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2648,
+      "title": "Add non-generative component package builders (#2648)",
+      "commit": "c3eec80d5a3ac2b28cd5b52253fca6f18e2aee47",
+      "committedAt": "2026-10-21T14:55:10-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2648",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2700,
+      "title": "Integrate GPU-native GatedDeltaNet state replay on WebGPU (#2700)",
+      "commit": "b75bd098dbacf9d51de934da2af8bc1ac70d6946",
+      "committedAt": "2026-10-21T15:30:53-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2700",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 28971,
+      "title": "Fix CUDA LayerNorm/RMSNorm silent wrong output for rank-reduced scale (#28971)",
+      "commit": "a926b837fb8a39b0e4840fcb997ff1336cdf5db1",
+      "committedAt": "2026-10-21T12:56:31-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/28971",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 31981,
+      "title": "Allow OpenVINO CPU EP discovery on non-Intel CPUs (#31981)",
+      "commit": "8755f3ef11f5e604177290fda3f8d34f54954858",
+      "committedAt": "2026-10-21T22:46:28Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/31981",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33357,
+      "title": "[CUDA] Cosmos3 - Fix variance cancellation in fused BERT layer normalization (#33357)",
+      "commit": "f7b31b70308167e2f277b419f1931aed837c83ad",
+      "committedAt": "2026-10-21T13:07:31-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33357",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33484,
+      "title": "Fix Gemm transpose fusion with public input outputs (#33484)",
+      "commit": "db5f5eaff7c32e09e90520374ac19b78d89094ae",
+      "committedAt": "2026-10-21T09:36:24-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33484",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2724,
+      "title": "Support rank-4 multimodal embedding buffers (#2724)",
+      "commit": "8632956c7f7f26132653e4fee20ed8f87a4f08c2",
+      "committedAt": "2026-10-21T13:45:12-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2724",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2740,
+      "title": "Fix graph capture identity after LoRA adapter activation (#2740)",
+      "commit": "00482780a3255540e007a9e091406fb2bcc6147a",
+      "committedAt": "2026-10-21T22:22:50-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2740",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2747,
+      "title": "Add optional anchor_row_index input to the DFlash 2 drafter (#2747)",
+      "commit": "6170337409552dbc38a0befee158f6eed0a85c42",
+      "committedAt": "2026-10-21T17:52:24-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2747",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2752,
+      "title": "refactor: apply the review follow-ups from #2744, #2745 and #2746 (#2752)",
+      "commit": "fd0c5c50c733fee689e6a9e29785042e00a967d5",
+      "committedAt": "2026-10-21T22:47:05-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2752",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33407,
+      "title": "Avoid quadratic allocation-planner free-buffer scans (#33407)",
+      "commit": "c33b4eb542f360ba077518b3966ca00b09bdd884",
+      "committedAt": "2026-10-21T13:10:01-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33407",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33494,
+      "title": "Bump follow-redirects from 1.16.0 to 1.16.1 in /onnxruntime/test/wasm (#33494)",
+      "commit": "f3a2b3c02a5d193b9757497cc41b13ad91f8027a",
+      "committedAt": "2026-10-21T18:37:41-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33494",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33496,
+      "title": "Bump follow-redirects from 1.16.0 to 1.16.1 in /js/web (#33496)",
+      "commit": "e710fb2aa959f9cf4c6c8332dc0a935428680d16",
+      "committedAt": "2026-10-21T18:38:01-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33496",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33507,
+      "title": "Bump vite from 7.3.6 to 7.3.7 in /js/web/test/e2e (#33507)",
+      "commit": "3d7ea7ea1ae5e025a86cba516c0566c3eccb05d4",
+      "committedAt": "2026-10-22T09:57:38-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33507",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33521,
+      "title": "Bump vite from 6.4.2 to 6.4.5 in /js/web/test/e2e/exports/testcases/vite-default (#33521)",
+      "commit": "4aa7c7c8f33dc66f8eee2cde837a7480f1204e50",
+      "committedAt": "2026-10-22T09:56:24-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33521",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33522,
+      "title": "Bump electron from 41.10.6 to 42.11.3 in /js/web (#33522)",
+      "commit": "34c34a3589cf30df593c8e65c6df7d48827d5573",
+      "committedAt": "2026-10-22T10:21:34-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33522",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "7149d54db8575e69c55283128d54f7311aeb14f321dd1517b0134afd1c07b663",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "5fa983f4154e61bb6500197f6a0ccfee017c1fdfcfdce28f0101470fe052ee44",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "3c6e0ec5501fbb4f51df7239bef8a268f606d455ee73b689d54e03cd88d86b80",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "c1868f2a36d8edf6ef4671d141288f42a8b8a5aef47cf6ce403c931c492417ae",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "d40c2897f8ef08a1538aacc1a01129244fc524a5ad929f6a2ea2ddf21f068cdf",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "97b0cbd4c775202439e4108c71d31c45dab3be2401be69379b711864642b31da",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "2a8a4d8be84138e6a4b97665c921e1b47a5e0082e2ee6bf2ba0bfe9d8250e1e9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a49dc158a50a300209c5d9b0fae45b2da806674b0d91c2958ffd105a57878aee"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "92345968746a36869b0214977163696ea500bc031e993e30b838a1b32991cbcf",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "5f9488859a27b9883bf99a23f7ca54064b5e459fa6f3c5833de41198a0577c73",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "88c0b327af0323498039754ed04acbc05c0910fb8b49796415394abdc2ef7d65"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
