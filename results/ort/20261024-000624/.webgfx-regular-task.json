@@ -1,0 +1,271 @@
+{
+  "runtime": "ort",
+  "version": "20261024-000624",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-23T17:05:05.425Z",
+  "builtAt": "2026-10-24T00:19:12.374534+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "871ad998e74a2766c70e774cd8f5dba2c9dd9b3a",
+      "commitDate": "2026-10-23T11:25:44-04:00",
+      "title": "Bump markdown-it from 14.3.2 to 14.3.3 in /js/common (#33506)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/871ad998e74a2766c70e774cd8f5dba2c9dd9b3a"
+    },
+    "onnxruntime-genai": {
+      "commit": "6b7ff3ca3efa15da219050fdb4ecf8bed67875af",
+      "commitDate": "2026-10-21T23:43:12-07:00",
+      "title": "Adding word level timestamps to Nemotron Streaming Pipeline (#2591)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/6b7ff3ca3efa15da219050fdb4ecf8bed67875af"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261023-000559",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "34c34a3589cf30df593c8e65c6df7d48827d5573",
+        "commitDate": "2026-10-22T10:21:34-04:00",
+        "title": "Bump electron from 41.10.6 to 42.11.3 in /js/web (#33522)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/34c34a3589cf30df593c8e65c6df7d48827d5573"
+      },
+      "onnxruntime-genai": {
+        "commit": "6b7ff3ca3efa15da219050fdb4ecf8bed67875af",
+        "commitDate": "2026-10-21T23:43:12-07:00",
+        "title": "Adding word level timestamps to Nemotron Streaming Pipeline (#2591)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/6b7ff3ca3efa15da219050fdb4ecf8bed67875af"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32946,
+      "title": "Validate Attention projection and cache dimensions (#32946)",
+      "commit": "2e91258072170aeb377fbcb1c7b6bf7836bb2727",
+      "committedAt": "2026-10-22T16:17:38-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32946",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33313,
+      "title": "[CUDA] Make MatMulNBits and packed attention L1 estimates route-complete (#33313)",
+      "commit": "0cbe57561cd74aba34f04d6db4a4793cd78c594b",
+      "committedAt": "2026-10-22T16:12:04-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33313",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33394,
+      "title": "P0/P1: packed-code foundation and INT3 QMoE v1 contract (#33394)",
+      "commit": "d9c279b72f5ed6b4f5f67cbda1eb118b7e9dca41",
+      "committedAt": "2026-10-22T22:41:14Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33394",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33491,
+      "title": "[WebGPU] Batch input uploads for built-in and plugin EPs (#33491)",
+      "commit": "07ac1719bf07e0f56ab8f63ef56e0e9ea6263009",
+      "committedAt": "2026-10-23T14:03:11+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33491",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33509,
+      "title": "[WebGPU] Capture and replay explicit buffer clears (#33509)",
+      "commit": "cb2a4f584be4f18d60bfb072e0813b9d110a6f9b",
+      "committedAt": "2026-10-23T14:15:18+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33509",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33520,
+      "title": "Refine WebGPU EP release process documentation. (#33520)",
+      "commit": "6188bc0900d68174d5e887a32c1b32ed07da80af",
+      "committedAt": "2026-10-22T16:27:53-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33520",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33526,
+      "title": "Fix WebGPU bundled Dawn platform cleanup (#33526)",
+      "commit": "1f4b965e51ed6701358ecc54e271de9ce0afa77b",
+      "committedAt": "2026-10-22T09:43:53-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33526",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33542,
+      "title": "Bump actions/cache from 5 to 6 (#33542)",
+      "commit": "5b8db9ab876b05aa10482f358d9fa8694b24880e",
+      "committedAt": "2026-10-23T11:25:10-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33542",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 29647,
+      "title": "Make CPU fallback type policy compile-time (#29647)",
+      "commit": "4e9488c3628e33cc2231dcfcaa2cbdcf00b9b381",
+      "committedAt": "2026-10-22T16:21:54-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29647",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33482,
+      "title": "Add onnxruntime_DISABLE_STREAM build option (#33482)",
+      "commit": "96dd9658a6c6d3ac60c0c03b1ead1cea1ba9f1f1",
+      "committedAt": "2026-10-22T16:36:50-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33482",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33506,
+      "title": "Bump markdown-it from 14.3.2 to 14.3.3 in /js/common (#33506)",
+      "commit": "871ad998e74a2766c70e774cd8f5dba2c9dd9b3a",
+      "committedAt": "2026-10-23T11:25:44-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33506",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33532,
+      "title": "fix: scope tpause_spin_delay_cycles to the _tpause branch (#33532)",
+      "commit": "fe7700a7e700c7966a822c41ae781ef3523a2538",
+      "committedAt": "2026-10-22T20:24:00Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33532",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33533,
+      "title": "Group CodeQL action updates in Dependabot (#33533)",
+      "commit": "5cd8dbb1ab9fece2342976289b855f61666acf9b",
+      "committedAt": "2026-10-22T19:03:10Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33533",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33541,
+      "title": "Bump the codeql group with 4 updates (#33541)",
+      "commit": "84829e76d4fbb4a7258202f777fa4ff0876a3564",
+      "committedAt": "2026-10-23T09:18:59-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33541",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33552,
+      "title": "Bump electron from 42.11.3 to 42.11.9 in /js/web (#33552)",
+      "commit": "f838a306fd2ce90f312bcf35e7d30b7d822c8405",
+      "committedAt": "2026-10-23T09:18:32-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33552",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "7149d54db8575e69c55283128d54f7311aeb14f321dd1517b0134afd1c07b663",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "5fa983f4154e61bb6500197f6a0ccfee017c1fdfcfdce28f0101470fe052ee44",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "3c6e0ec5501fbb4f51df7239bef8a268f606d455ee73b689d54e03cd88d86b80",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "c1868f2a36d8edf6ef4671d141288f42a8b8a5aef47cf6ce403c931c492417ae",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "d40c2897f8ef08a1538aacc1a01129244fc524a5ad929f6a2ea2ddf21f068cdf",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "97b0cbd4c775202439e4108c71d31c45dab3be2401be69379b711864642b31da",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "2a8a4d8be84138e6a4b97665c921e1b47a5e0082e2ee6bf2ba0bfe9d8250e1e9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a49dc158a50a300209c5d9b0fae45b2da806674b0d91c2958ffd105a57878aee"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "92345968746a36869b0214977163696ea500bc031e993e30b838a1b32991cbcf",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "5f9488859a27b9883bf99a23f7ca54064b5e459fa6f3c5833de41198a0577c73",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "88c0b327af0323498039754ed04acbc05c0910fb8b49796415394abdc2ef7d65"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
