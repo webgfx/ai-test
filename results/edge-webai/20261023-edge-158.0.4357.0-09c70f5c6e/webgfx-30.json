@@ -1,0 +1,3149 @@
+{
+  "device": "webgfx-30",
+  "runtime": "edge-webai",
+  "version": "20261023-edge-158.0.4357.0-09c70f5c6e",
+  "gpus": {
+    "150E": {
+      "backend": "webgpu",
+      "models": {
+        "aion": {
+          "128": {
+            "ttftMs": 43.87999997138977,
+            "plTs": 2917.579879016256,
+            "tgTs": 24.157466537032196,
+            "e2eMs": 3479.8199999570847,
+            "peakMemoryBytes": null,
+            "samples": [
+              {
+                "inputTokens": 128,
+                "outputTokens": 84,
+                "firstResponseMs": 42,
+                "completionMs": 3485,
+                "ttftMs": 44,
+                "prefillTps": 2909.090909090909,
+                "decodeTps": 24.10688353180366,
+                "e2eMs": 3486.899999976158,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 274,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 1
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 133,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1185,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 6795,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 402,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 2
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 217,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1227,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 1
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 10280,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "637716df04d998c70053563588df50324343fe8061164d3fd39d1e74bfeacc59",
+                "promptSha256": "8be65eead0906347b0abcd6ee6ac66595faa3db24671694074bc5bc7125c7031"
+              },
+              {
+                "inputTokens": 128,
+                "outputTokens": 84,
+                "firstResponseMs": 43,
+                "completionMs": 3469,
+                "ttftMs": 44.60000002384186,
+                "prefillTps": 2869.955155416478,
+                "decodeTps": 24.226503210741388,
+                "e2eMs": 3471.100000023842,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 402,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 2
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 217,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1227,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 1
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 10280,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 530,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 3
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 301,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 2
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1270,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 2
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 13749,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 2
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "637716df04d998c70053563588df50324343fe8061164d3fd39d1e74bfeacc59",
+                "promptSha256": "8be65eead0906347b0abcd6ee6ac66595faa3db24671694074bc5bc7125c7031"
+              },
+              {
+                "inputTokens": 128,
+                "outputTokens": 84,
+                "firstResponseMs": 42,
+                "completionMs": 3477,
+                "ttftMs": 43.59999990463257,
+                "prefillTps": 2935.77982293527,
+                "decodeTps": 24.16302765647744,
+                "e2eMs": 3478.6999999284744,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 530,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 3
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 301,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 2
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1270,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 2
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 13749,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 2
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 658,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 4
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 385,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1312,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 3
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 17226,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 3
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "637716df04d998c70053563588df50324343fe8061164d3fd39d1e74bfeacc59",
+                "promptSha256": "8be65eead0906347b0abcd6ee6ac66595faa3db24671694074bc5bc7125c7031"
+              },
+              {
+                "inputTokens": 128,
+                "outputTokens": 84,
+                "firstResponseMs": 43,
+                "completionMs": 3479,
+                "ttftMs": 44.299999952316284,
+                "prefillTps": 2889.3905222974463,
+                "decodeTps": 24.155995343422585,
+                "e2eMs": 3480.6999999284744,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 658,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 4
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 385,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1312,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 3
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 17226,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 3
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 786,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 5
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 469,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1355,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 4
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 20705,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 4
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "637716df04d998c70053563588df50324343fe8061164d3fd39d1e74bfeacc59",
+                "promptSha256": "8be65eead0906347b0abcd6ee6ac66595faa3db24671694074bc5bc7125c7031"
+              },
+              {
+                "inputTokens": 128,
+                "outputTokens": 84,
+                "firstResponseMs": 41,
+                "completionMs": 3480,
+                "ttftMs": 42.89999997615814,
+                "prefillTps": 2983.682985341178,
+                "decodeTps": 24.134922942715907,
+                "e2eMs": 3481.6999999284744,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 786,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 5
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 469,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1355,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 4
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 20705,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 4
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 914,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 114,
+                        "high": 135,
+                        "count": 6
+                      },
+                      {
+                        "low": 135,
+                        "high": 160,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 553,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 1
+                      },
+                      {
+                        "low": 68,
+                        "high": 81,
+                        "count": 1
+                      },
+                      {
+                        "low": 81,
+                        "high": 96,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1396,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 5
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 926,
+                        "high": 1177,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 24185,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 5
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "637716df04d998c70053563588df50324343fe8061164d3fd39d1e74bfeacc59",
+                "promptSha256": "8be65eead0906347b0abcd6ee6ac66595faa3db24671694074bc5bc7125c7031"
+              }
+            ],
+            "warmup": {
+              "inputTokens": 128,
+              "outputTokens": 65,
+              "firstResponseMs": 239,
+              "completionMs": 2885,
+              "ttftMs": 240.69999992847443,
+              "prefillTps": 531.7823017782968,
+              "decodeTps": 24.18745275888133,
+              "e2eMs": 2887,
+              "ttftScope": "prompt-api-first-response",
+              "decodeScope": "browser-full-response-histograms",
+              "before": {
+                "OnDeviceModel.TokenCount.Context": {
+                  "name": "OnDeviceModel.TokenCount.Context",
+                  "sum": 146,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 135,
+                      "high": 160,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                  "sum": 68,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 68,
+                      "high": 81,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                  "sum": 946,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 926,
+                      "high": 1177,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                  "sum": 3910,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 3900,
+                      "high": 4955,
+                      "count": 1
+                    }
+                  ]
+                }
+              },
+              "after": {
+                "OnDeviceModel.TokenCount.Context": {
+                  "name": "OnDeviceModel.TokenCount.Context",
+                  "sum": 274,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 114,
+                      "high": 135,
+                      "count": 1
+                    },
+                    {
+                      "low": 135,
+                      "high": 160,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                  "sum": 133,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 57,
+                      "high": 68,
+                      "count": 1
+                    },
+                    {
+                      "low": 68,
+                      "high": 81,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                  "sum": 1185,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 220,
+                      "high": 280,
+                      "count": 1
+                    },
+                    {
+                      "low": 926,
+                      "high": 1177,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                  "sum": 6795,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 2415,
+                      "high": 3069,
+                      "count": 1
+                    },
+                    {
+                      "low": 3900,
+                      "high": 4955,
+                      "count": 1
+                    }
+                  ]
+                }
+              },
+              "session": {
+                "samplingMode": "most-predictable",
+                "contextWindow": 7168,
+                "contextUsage": 0
+              },
+              "responseSha256": "000236037df7e72b948d9b3e9b6ebec18007fc3ea742af454da95648485e86fb",
+              "promptSha256": "8be65eead0906347b0abcd6ee6ac66595faa3db24671694074bc5bc7125c7031"
+            },
+            "modelProvenance": {
+              "name": "Aion-1.1-Instruct",
+              "revision": "2026.10.15.1",
+              "manifestSha256": "0a82df03b7a145f54ba38145015b5ab8ead9f8ba63e8779c9f860f4eb19e378b",
+              "spec": {
+                "supported_performance_hints": [
+                  2,
+                  1
+                ],
+                "name": "Aion-1.1-Instruct",
+                "version": "2026.10.15.1",
+                "type": "webgpu"
+              },
+              "selection": {
+                "source": "Edge on-device broker",
+                "name": "edge_base_model_gpu",
+                "backendType": "GPU (highest quality)",
+                "weightsFile": "EdgeLLMOnDeviceModel/2026.10.15.1/model.onnx"
+              }
+            },
+            "browser": {
+              "name": "edge-canary",
+              "version": "Edg/158.0.4357.0"
+            },
+            "gpuName": "AMD Radeon(TM) 880M Graphics",
+            "executionEvidence": {
+              "api": "LanguageModel",
+              "features": [
+                "AIPromptAPI",
+                "AIPromptAPIParams",
+                "msEdgeOptimizationGuideManifestBroker",
+                "msEdgeLLMOnDeviceModelPrerelease"
+              ],
+              "profileDirectory": "C:\\Users\\ygu\\AppData\\Local\\WebGFX\\edge-webai\\profiles\\aion",
+              "initialAvailability": "available",
+              "componentUpdates": [],
+              "runtimeComponent": {
+                "beforeVersion": "2026.10.12.1",
+                "version": "2026.10.12.1",
+                "status": "Up-to-date"
+              },
+              "sourceSha256": "4a79a698f84426fd75ac48286068c3dbdefd5c08fc6286c149367dc0a5563668",
+              "inputCollections": [
+                {
+                  "input": 128,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-09c70f5c6e"
+                },
+                {
+                  "input": 512,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-fe6ca405d5"
+                },
+                {
+                  "input": 1024,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-950a457879"
+                }
+              ]
+            },
+            "validation": {
+              "kind": "isolated-browser-histograms",
+              "passed": true
+            },
+            "testedAt": "2026-10-23T16:10:42.666Z"
+          },
+          "512": {
+            "ttftMs": 45.8,
+            "plTs": 11179.145889861962,
+            "tgTs": 23.45094320978069,
+            "e2eMs": 2860.6199999809264,
+            "peakMemoryBytes": null,
+            "samples": [
+              {
+                "inputTokens": 512,
+                "outputTokens": 67,
+                "firstResponseMs": 44,
+                "completionMs": 2860,
+                "ttftMs": 45.800000071525574,
+                "prefillTps": 11179.039283851807,
+                "decodeTps": 23.4375,
+                "e2eMs": 2862,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 1042,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 2
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 132,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 2
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1913,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 7763,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 1554,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 199,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1957,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 1
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 10623,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "f2c4597b7bf633237544fef04da5a17bf595a9ade02444859fab86b4c0272605",
+                "promptSha256": "095b7e286919e7d586dd20790e07566f417c61bf53bdb8d24ea5b04317069d22"
+              },
+              {
+                "inputTokens": 512,
+                "outputTokens": 67,
+                "firstResponseMs": 44,
+                "completionMs": 2853,
+                "ttftMs": 45.699999928474426,
+                "prefillTps": 11203.501111626627,
+                "decodeTps": 23.495906016375933,
+                "e2eMs": 2855.2999999523163,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 1554,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 199,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 1957,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 1
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 10623,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 2066,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 266,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 2001,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 2
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 13476,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 2
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "f2c4597b7bf633237544fef04da5a17bf595a9ade02444859fab86b4c0272605",
+                "promptSha256": "095b7e286919e7d586dd20790e07566f417c61bf53bdb8d24ea5b04317069d22"
+              },
+              {
+                "inputTokens": 512,
+                "outputTokens": 67,
+                "firstResponseMs": 44,
+                "completionMs": 2870,
+                "ttftMs": 46,
+                "prefillTps": 11130.434782608696,
+                "decodeTps": 23.35456475583864,
+                "e2eMs": 2872,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 2066,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 266,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 2001,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 2
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 13476,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 2
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 2578,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 333,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 2045,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 3
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 16346,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 3
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "f2c4597b7bf633237544fef04da5a17bf595a9ade02444859fab86b4c0272605",
+                "promptSha256": "095b7e286919e7d586dd20790e07566f417c61bf53bdb8d24ea5b04317069d22"
+              },
+              {
+                "inputTokens": 512,
+                "outputTokens": 67,
+                "firstResponseMs": 44,
+                "completionMs": 2853,
+                "ttftMs": 45.89999997615814,
+                "prefillTps": 11154.68410165465,
+                "decodeTps": 23.495906016375933,
+                "e2eMs": 2855.1999999284744,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 2578,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 333,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 2045,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 3
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 16346,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 3
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 3090,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 400,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 2089,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 4
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 19199,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 4
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "f2c4597b7bf633237544fef04da5a17bf595a9ade02444859fab86b4c0272605",
+                "promptSha256": "095b7e286919e7d586dd20790e07566f417c61bf53bdb8d24ea5b04317069d22"
+              },
+              {
+                "inputTokens": 512,
+                "outputTokens": 67,
+                "firstResponseMs": 44,
+                "completionMs": 2856,
+                "ttftMs": 45.60000002384186,
+                "prefillTps": 11228.070169568025,
+                "decodeTps": 23.470839260312946,
+                "e2eMs": 2858.600000023842,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 3090,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 400,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 2089,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 4
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 19199,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 4
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 3602,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 449,
+                        "high": 533,
+                        "count": 7
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 467,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 57,
+                        "high": 68,
+                        "count": 7
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 2133,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 5
+                      },
+                      {
+                        "low": 220,
+                        "high": 280,
+                        "count": 1
+                      },
+                      {
+                        "low": 1496,
+                        "high": 1901,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 22055,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 5
+                      },
+                      {
+                        "low": 3069,
+                        "high": 3900,
+                        "count": 1
+                      },
+                      {
+                        "low": 3900,
+                        "high": 4955,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "f2c4597b7bf633237544fef04da5a17bf595a9ade02444859fab86b4c0272605",
+                "promptSha256": "095b7e286919e7d586dd20790e07566f417c61bf53bdb8d24ea5b04317069d22"
+              }
+            ],
+            "warmup": {
+              "inputTokens": 512,
+              "outputTokens": 67,
+              "firstResponseMs": 234,
+              "completionMs": 3097,
+              "ttftMs": 236.09999990463257,
+              "prefillTps": 2168.5726395883576,
+              "decodeTps": 23.052741879147746,
+              "e2eMs": 3099.5,
+              "ttftScope": "prompt-api-first-response",
+              "decodeScope": "browser-full-response-histograms",
+              "before": {
+                "OnDeviceModel.TokenCount.Context": {
+                  "name": "OnDeviceModel.TokenCount.Context",
+                  "sum": 530,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 449,
+                      "high": 533,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                  "sum": 65,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 57,
+                      "high": 68,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                  "sum": 1679,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 1496,
+                      "high": 1901,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                  "sum": 4666,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 3900,
+                      "high": 4955,
+                      "count": 1
+                    }
+                  ]
+                }
+              },
+              "after": {
+                "OnDeviceModel.TokenCount.Context": {
+                  "name": "OnDeviceModel.TokenCount.Context",
+                  "sum": 1042,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 449,
+                      "high": 533,
+                      "count": 2
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                  "sum": 132,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 57,
+                      "high": 68,
+                      "count": 2
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                  "sum": 1913,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 220,
+                      "high": 280,
+                      "count": 1
+                    },
+                    {
+                      "low": 1496,
+                      "high": 1901,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                  "sum": 7763,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 3069,
+                      "high": 3900,
+                      "count": 1
+                    },
+                    {
+                      "low": 3900,
+                      "high": 4955,
+                      "count": 1
+                    }
+                  ]
+                }
+              },
+              "session": {
+                "samplingMode": "most-predictable",
+                "contextWindow": 7168,
+                "contextUsage": 0
+              },
+              "responseSha256": "f2c4597b7bf633237544fef04da5a17bf595a9ade02444859fab86b4c0272605",
+              "promptSha256": "095b7e286919e7d586dd20790e07566f417c61bf53bdb8d24ea5b04317069d22"
+            },
+            "modelProvenance": {
+              "name": "Aion-1.1-Instruct",
+              "revision": "2026.10.15.1",
+              "manifestSha256": "0a82df03b7a145f54ba38145015b5ab8ead9f8ba63e8779c9f860f4eb19e378b",
+              "spec": {
+                "supported_performance_hints": [
+                  2,
+                  1
+                ],
+                "name": "Aion-1.1-Instruct",
+                "version": "2026.10.15.1",
+                "type": "webgpu"
+              },
+              "selection": {
+                "source": "Edge on-device broker",
+                "name": "edge_base_model_gpu",
+                "backendType": "GPU (highest quality)",
+                "weightsFile": "EdgeLLMOnDeviceModel/2026.10.15.1/model.onnx"
+              }
+            },
+            "browser": {
+              "name": "edge-canary",
+              "version": "Edg/158.0.4357.0"
+            },
+            "gpuName": "AMD Radeon(TM) 880M Graphics",
+            "executionEvidence": {
+              "api": "LanguageModel",
+              "features": [
+                "AIPromptAPI",
+                "AIPromptAPIParams",
+                "msEdgeOptimizationGuideManifestBroker",
+                "msEdgeLLMOnDeviceModelPrerelease"
+              ],
+              "profileDirectory": "C:\\Users\\ygu\\AppData\\Local\\WebGFX\\edge-webai\\profiles\\aion",
+              "initialAvailability": "available",
+              "componentUpdates": [],
+              "runtimeComponent": {
+                "beforeVersion": "2026.10.12.1",
+                "version": "2026.10.12.1",
+                "status": "Up-to-date"
+              },
+              "sourceSha256": "4a79a698f84426fd75ac48286068c3dbdefd5c08fc6286c149367dc0a5563668",
+              "inputCollections": [
+                {
+                  "input": 128,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-09c70f5c6e"
+                },
+                {
+                  "input": 512,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-fe6ca405d5"
+                },
+                {
+                  "input": 1024,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-950a457879"
+                }
+              ]
+            },
+            "validation": {
+              "kind": "isolated-browser-histograms",
+              "passed": true
+            },
+            "testedAt": "2026-10-23T16:10:42.666Z"
+          },
+          "1024": {
+            "ttftMs": 47.9,
+            "plTs": 21380.08318536864,
+            "tgTs": 22.485285201054893,
+            "e2eMs": 2182.8,
+            "peakMemoryBytes": null,
+            "samples": [
+              {
+                "inputTokens": 1024,
+                "outputTokens": 49,
+                "firstResponseMs": 45,
+                "completionMs": 2188,
+                "ttftMs": 47.10000002384186,
+                "prefillTps": 21740.976634430037,
+                "decodeTps": 22.398506766215586,
+                "e2eMs": 2190.5,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 2066,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 2
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 107,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 2
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3155,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 8048,
+                    "count": 2,
+                    "buckets": [
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 3090,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 156,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3200,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 1
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 10236,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "d472be999b97345b40453e39101f4d7b0717ff4b14d9ed9d5b64ec5c543151ef",
+                "promptSha256": "44eddf467e7b6bab0ca92ec47348f1d81afa64988855d76fc4d776c18f8c2992"
+              },
+              {
+                "inputTokens": 1024,
+                "outputTokens": 49,
+                "firstResponseMs": 46,
+                "completionMs": 2165,
+                "ttftMs": 48.299999952316284,
+                "prefillTps": 21200.82817828021,
+                "decodeTps": 22.652194431335534,
+                "e2eMs": 2167.399999976158,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 3090,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 156,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 3
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3200,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 1
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 10236,
+                    "count": 3,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 4114,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 205,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3246,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 2
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 12401,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 2
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "d472be999b97345b40453e39101f4d7b0717ff4b14d9ed9d5b64ec5c543151ef",
+                "promptSha256": "44eddf467e7b6bab0ca92ec47348f1d81afa64988855d76fc4d776c18f8c2992"
+              },
+              {
+                "inputTokens": 1024,
+                "outputTokens": 49,
+                "firstResponseMs": 46,
+                "completionMs": 2176,
+                "ttftMs": 48.40000009536743,
+                "prefillTps": 21157.024751700596,
+                "decodeTps": 22.535211267605632,
+                "e2eMs": 2178,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 4114,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 205,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 4
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3246,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 2
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 12401,
+                    "count": 4,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 2
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 5138,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 254,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3292,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 3
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 14577,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 3
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "d472be999b97345b40453e39101f4d7b0717ff4b14d9ed9d5b64ec5c543151ef",
+                "promptSha256": "44eddf467e7b6bab0ca92ec47348f1d81afa64988855d76fc4d776c18f8c2992"
+              },
+              {
+                "inputTokens": 1024,
+                "outputTokens": 49,
+                "firstResponseMs": 46,
+                "completionMs": 2200,
+                "ttftMs": 48.09999990463257,
+                "prefillTps": 21288.981331190756,
+                "decodeTps": 22.284122562674096,
+                "e2eMs": 2202.399999976158,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 5138,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 254,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 5
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3292,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 3
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 14577,
+                    "count": 5,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 3
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 6162,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 303,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3338,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 4
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 16777,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 4
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "d472be999b97345b40453e39101f4d7b0717ff4b14d9ed9d5b64ec5c543151ef",
+                "promptSha256": "44eddf467e7b6bab0ca92ec47348f1d81afa64988855d76fc4d776c18f8c2992"
+              },
+              {
+                "inputTokens": 1024,
+                "outputTokens": 49,
+                "firstResponseMs": 45,
+                "completionMs": 2173,
+                "ttftMs": 47.60000002384186,
+                "prefillTps": 21512.605031241586,
+                "decodeTps": 22.55639097744361,
+                "e2eMs": 2175.7000000476837,
+                "ttftScope": "prompt-api-first-response",
+                "decodeScope": "browser-full-response-histograms",
+                "before": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 6162,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 303,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 6
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3338,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 4
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 16777,
+                    "count": 6,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 4
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "after": {
+                  "OnDeviceModel.TokenCount.Context": {
+                    "name": "OnDeviceModel.TokenCount.Context",
+                    "sum": 7186,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 894,
+                        "high": 1062,
+                        "count": 7
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                    "sum": 352,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 48,
+                        "high": 57,
+                        "count": 7
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                    "sum": 3383,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 41,
+                        "high": 52,
+                        "count": 5
+                      },
+                      {
+                        "low": 280,
+                        "high": 356,
+                        "count": 1
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      }
+                    ]
+                  },
+                  "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                    "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                    "sum": 18950,
+                    "count": 7,
+                    "buckets": [
+                      {
+                        "low": 1901,
+                        "high": 2415,
+                        "count": 5
+                      },
+                      {
+                        "low": 2415,
+                        "high": 3069,
+                        "count": 1
+                      },
+                      {
+                        "low": 4955,
+                        "high": 6296,
+                        "count": 1
+                      }
+                    ]
+                  }
+                },
+                "session": {
+                  "samplingMode": "most-predictable",
+                  "contextWindow": 7168,
+                  "contextUsage": 0
+                },
+                "responseSha256": "d472be999b97345b40453e39101f4d7b0717ff4b14d9ed9d5b64ec5c543151ef",
+                "promptSha256": "44eddf467e7b6bab0ca92ec47348f1d81afa64988855d76fc4d776c18f8c2992"
+              }
+            ],
+            "warmup": {
+              "inputTokens": 1024,
+              "outputTokens": 54,
+              "firstResponseMs": 293,
+              "completionMs": 2638,
+              "ttftMs": 295.7000000476837,
+              "prefillTps": 3462.9692250080243,
+              "decodeTps": 22.601279317697227,
+              "e2eMs": 2640.2000000476837,
+              "ttftScope": "prompt-api-first-response",
+              "decodeScope": "browser-full-response-histograms",
+              "before": {
+                "OnDeviceModel.TokenCount.Context": {
+                  "name": "OnDeviceModel.TokenCount.Context",
+                  "sum": 1042,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 894,
+                      "high": 1062,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                  "sum": 53,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 48,
+                      "high": 57,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                  "sum": 2862,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 2415,
+                      "high": 3069,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                  "sum": 5410,
+                  "count": 1,
+                  "buckets": [
+                    {
+                      "low": 4955,
+                      "high": 6296,
+                      "count": 1
+                    }
+                  ]
+                }
+              },
+              "after": {
+                "OnDeviceModel.TokenCount.Context": {
+                  "name": "OnDeviceModel.TokenCount.Context",
+                  "sum": 2066,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 894,
+                      "high": 1062,
+                      "count": 2
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTokens.PromptApi",
+                  "sum": 107,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 48,
+                      "high": 57,
+                      "count": 2
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceFirstResponseTime.PromptApi",
+                  "sum": 3155,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 280,
+                      "high": 356,
+                      "count": 1
+                    },
+                    {
+                      "low": 2415,
+                      "high": 3069,
+                      "count": 1
+                    }
+                  ]
+                },
+                "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi": {
+                  "name": "OptimizationGuide.ModelExecution.OnDeviceResponseCompleteTime.PromptApi",
+                  "sum": 8048,
+                  "count": 2,
+                  "buckets": [
+                    {
+                      "low": 2415,
+                      "high": 3069,
+                      "count": 1
+                    },
+                    {
+                      "low": 4955,
+                      "high": 6296,
+                      "count": 1
+                    }
+                  ]
+                }
+              },
+              "session": {
+                "samplingMode": "most-predictable",
+                "contextWindow": 7168,
+                "contextUsage": 0
+              },
+              "responseSha256": "d4acb19503c83fbb45476d86cf126624d4c1009fcf3a42f709880cb1312e1cd5",
+              "promptSha256": "44eddf467e7b6bab0ca92ec47348f1d81afa64988855d76fc4d776c18f8c2992"
+            },
+            "modelProvenance": {
+              "name": "Aion-1.1-Instruct",
+              "revision": "2026.10.15.1",
+              "manifestSha256": "0a82df03b7a145f54ba38145015b5ab8ead9f8ba63e8779c9f860f4eb19e378b",
+              "spec": {
+                "supported_performance_hints": [
+                  2,
+                  1
+                ],
+                "name": "Aion-1.1-Instruct",
+                "version": "2026.10.15.1",
+                "type": "webgpu"
+              },
+              "selection": {
+                "source": "Edge on-device broker",
+                "name": "edge_base_model_gpu",
+                "backendType": "GPU (highest quality)",
+                "weightsFile": "EdgeLLMOnDeviceModel/2026.10.15.1/model.onnx"
+              }
+            },
+            "browser": {
+              "name": "edge-canary",
+              "version": "Edg/158.0.4357.0"
+            },
+            "gpuName": "AMD Radeon(TM) 880M Graphics",
+            "executionEvidence": {
+              "api": "LanguageModel",
+              "features": [
+                "AIPromptAPI",
+                "AIPromptAPIParams",
+                "msEdgeOptimizationGuideManifestBroker",
+                "msEdgeLLMOnDeviceModelPrerelease"
+              ],
+              "profileDirectory": "C:\\Users\\ygu\\AppData\\Local\\WebGFX\\edge-webai\\profiles\\aion",
+              "initialAvailability": "available",
+              "componentUpdates": [],
+              "runtimeComponent": {
+                "beforeVersion": "2026.10.12.1",
+                "version": "2026.10.12.1",
+                "status": "Up-to-date"
+              },
+              "sourceSha256": "4a79a698f84426fd75ac48286068c3dbdefd5c08fc6286c149367dc0a5563668",
+              "inputCollections": [
+                {
+                  "input": 128,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-09c70f5c6e"
+                },
+                {
+                  "input": 512,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-fe6ca405d5"
+                },
+                {
+                  "input": 1024,
+                  "collectionVersion": "20261023-edge-158.0.4357.0-950a457879"
+                }
+              ]
+            },
+            "validation": {
+              "kind": "isolated-browser-histograms",
+              "passed": true
+            },
+            "testedAt": "2026-10-23T16:10:42.666Z"
+          }
+        }
+      }
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "Edge Canary WebAI Edg/158.0.4357.0",
+    "config": {
+      "executionMode": "edge-webai",
+      "sampling": "greedy",
+      "samplingMode": "most-predictable",
+      "repetitions": 5,
+      "warmups": 1,
+      "inputPolicy": "exact-service-token-count",
+      "generationPolicy": "natural-completion",
+      "browserIsolation": "input",
+      "cachePolicy": "browser-managed; fresh browser per input, fresh session per request",
+      "ttftScope": "prompt-api-first-response",
+      "decodeScope": "browser-full-response-histograms",
+      "features": [
+        "AIPromptAPI",
+        "AIPromptAPIParams",
+        "msEdgeOptimizationGuideManifestBroker",
+        "msEdgeLLMOnDeviceModelPrerelease"
+      ],
+      "browser": "Edg/158.0.4357.0"
+    },
+    "updatedAt": "2026-10-23T16:10:42.666Z"
+  }
+}
