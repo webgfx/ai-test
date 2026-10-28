@@ -1,0 +1,151 @@
+{
+  "runtime": "ort",
+  "version": "20261029-000544",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-28T16:59:59.223Z",
+  "builtAt": "2026-10-29T00:20:36.662757+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "526e95a1447a43af1d1ac71c0cd8b1de62b47f5d",
+      "commitDate": "2026-10-28T08:51:01-04:00",
+      "title": "Bump actions/download-artifact from 8.0.1 to 8.0.2 (#33387)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/526e95a1447a43af1d1ac71c0cd8b1de62b47f5d"
+    },
+    "onnxruntime-genai": {
+      "commit": "73db9fdc25b2265320f3ff3096e7e43f2667d630",
+      "commitDate": "2026-10-28T03:17:24-07:00",
+      "title": "Fix Qwen mRoPE inputs for WebGPU graph capture (#2751)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/73db9fdc25b2265320f3ff3096e7e43f2667d630"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261028-175159",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "85c8b6dd6a5dd919823b07644be1ef8e0c4501b5",
+        "commitDate": "2026-10-28T07:43:10Z",
+        "title": "[WebGPU] Fix Gemm with rank-0 scalar bias (#33664)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/85c8b6dd6a5dd919823b07644be1ef8e0c4501b5"
+      },
+      "onnxruntime-genai": {
+        "commit": "4c98c4e473fa49f9fca59ce086fc5d2092964ff5",
+        "commitDate": "2026-10-27T19:20:47-04:00",
+        "title": "Add memory-backed CPU model loading for sandboxed inference (#2749)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/4c98c4e473fa49f9fca59ce086fc5d2092964ff5"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33387,
+      "title": "Bump actions/download-artifact from 8.0.1 to 8.0.2 (#33387)",
+      "commit": "526e95a1447a43af1d1ac71c0cd8b1de62b47f5d",
+      "committedAt": "2026-10-28T08:51:01-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33387",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33668,
+      "title": "[WebGPU] Return empty pooling outputs without dispatching (#33668)",
+      "commit": "9fd928c29066faf9e170708691ead6385a237cb9",
+      "committedAt": "2026-10-28T11:54:33Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33668",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2751,
+      "title": "Fix Qwen mRoPE inputs for WebGPU graph capture (#2751)",
+      "commit": "73db9fdc25b2265320f3ff3096e7e43f2667d630",
+      "committedAt": "2026-10-28T03:17:24-07:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2751",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "7149d54db8575e69c55283128d54f7311aeb14f321dd1517b0134afd1c07b663",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "5fa983f4154e61bb6500197f6a0ccfee017c1fdfcfdce28f0101470fe052ee44",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "3c6e0ec5501fbb4f51df7239bef8a268f606d455ee73b689d54e03cd88d86b80",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "c1868f2a36d8edf6ef4671d141288f42a8b8a5aef47cf6ce403c931c492417ae",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "d40c2897f8ef08a1538aacc1a01129244fc524a5ad929f6a2ea2ddf21f068cdf",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "355db6b0601fcbf71aff77c141d4f066cd9165d566b8c2b510b0efb242f40f26",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "2a8a4d8be84138e6a4b97665c921e1b47a5e0082e2ee6bf2ba0bfe9d8250e1e9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a49dc158a50a300209c5d9b0fae45b2da806674b0d91c2958ffd105a57878aee"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "990fa1cd0f0c806914a572cbe8867040813bbdd7cc918c4ceeb9693947b5c726",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "5f9488859a27b9883bf99a23f7ca54064b5e459fa6f3c5833de41198a0577c73",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "88c0b327af0323498039754ed04acbc05c0910fb8b49796415394abdc2ef7d65"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
