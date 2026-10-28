@@ -1,0 +1,601 @@
+{
+  "runtime": "ort",
+  "version": "20261028-175159",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-10-28T10:51:24.168Z",
+  "builtAt": "2026-10-28T18:07:03.293246+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "85c8b6dd6a5dd919823b07644be1ef8e0c4501b5",
+      "commitDate": "2026-10-28T07:43:10Z",
+      "title": "[WebGPU] Fix Gemm with rank-0 scalar bias (#33664)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/85c8b6dd6a5dd919823b07644be1ef8e0c4501b5"
+    },
+    "onnxruntime-genai": {
+      "commit": "4c98c4e473fa49f9fca59ce086fc5d2092964ff5",
+      "commitDate": "2026-10-27T19:20:47-04:00",
+      "title": "Add memory-backed CPU model loading for sandboxed inference (#2749)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/4c98c4e473fa49f9fca59ce086fc5d2092964ff5"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261024-000624",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "871ad998e74a2766c70e774cd8f5dba2c9dd9b3a",
+        "commitDate": "2026-10-23T11:25:44-04:00",
+        "title": "Bump markdown-it from 14.3.2 to 14.3.3 in /js/common (#33506)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/871ad998e74a2766c70e774cd8f5dba2c9dd9b3a"
+      },
+      "onnxruntime-genai": {
+        "commit": "6b7ff3ca3efa15da219050fdb4ecf8bed67875af",
+        "commitDate": "2026-10-21T23:43:12-07:00",
+        "title": "Adding word level timestamps to Nemotron Streaming Pipeline (#2591)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/6b7ff3ca3efa15da219050fdb4ecf8bed67875af"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 32194,
+      "title": "Fix QMoE SM80 FP4 init order: don't let the tactic seed throw (#32194)",
+      "commit": "5d466ba8a7579d7d593de95edcaca500e2799745",
+      "committedAt": "2026-10-23T16:27:13-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32194",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32276,
+      "title": "Deprecate provider-bridge legacy NvTensorRTRTXExecutionProvider (#32276)",
+      "commit": "979b6d1d3e30aac4ad0b6e911bcd1ad3eb51062f",
+      "committedAt": "2026-10-28T02:06:22Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32276",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32951,
+      "title": "Honor explicit rotary positions in CUDA GroupQueryAttention fast decode (#32951)",
+      "commit": "59e37c29415e796e22718d9c03306bd9e4bec98b",
+      "committedAt": "2026-10-27T16:26:45-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32951",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33386,
+      "title": "Bump actions/checkout from 6 to 7 (#33386)",
+      "commit": "7c6db8e6a9308899b24006d2cfcd317fb65f7840",
+      "committedAt": "2026-10-27T08:58:30-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33386",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33470,
+      "title": "[CUDA] Add BFloat16 ArgMax/ArgMin support and extend GatedAdd with projected gate (#33470)",
+      "commit": "8c8e154f1516c1b6a70a70d91283454f94756e64",
+      "committedAt": "2026-10-27T10:35:37-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33470",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33471,
+      "title": "Extend GDN and causal convolution fused state handling (#33471)",
+      "commit": "6d63e0e0eced03da31b7602a66e2c4fa6d1aa0d6",
+      "committedAt": "2026-10-27T17:50:11-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33471",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33472,
+      "title": "Extend sparse attention caches and optimize packed indexing (#33472)",
+      "commit": "a23131fe36c224a0ce35c1029c8b7c6a82cb7fc7",
+      "committedAt": "2026-10-27T17:51:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33472",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33531,
+      "title": "[WebGPU] Fix subgroup matrix configs not populated in WASM builds (#33531)",
+      "commit": "c130fb69e10a5ba280069f8e23f0779597ce4f5f",
+      "committedAt": "2026-10-28T09:15:55+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33531",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33551,
+      "title": "[WebGPU] Use Queue.WriteBuffer for small CPU-to-GPU uploads (#33551)",
+      "commit": "49481a71199c3d4416360b2e8fd6755abd34ceba",
+      "committedAt": "2026-10-27T23:06:40-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33551",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33559,
+      "title": "[CPU/WebGPU] Support empty MatMulNBits weights (#33559)",
+      "commit": "03a19a747291b30d301b0402049fb992c611c201",
+      "committedAt": "2026-10-28T09:10:53+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33559",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33560,
+      "title": "[WebGPU] Optimize DP4A for large Qualcomm subgroups (#33560)",
+      "commit": "034e0eaabb0fd3d3d4304a0c155a0afafb8965f2",
+      "committedAt": "2026-10-28T09:37:19+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33560",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33567,
+      "title": "[WebGPU] Batch streamless GPU-to-GPU copy vectors (#33567)",
+      "commit": "af0a4bab0d2c360f1a2bc40b09d1e61099c8c840",
+      "committedAt": "2026-10-27T22:58:20-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33567",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33569,
+      "title": "[CUDA] Add fast INT3 QMoE kernels and offline SM80 INT2/INT4 prepack support (#33569)",
+      "commit": "bd6010c0e1ff09b016c3fa6c9c818b6699ccd9b9",
+      "committedAt": "2026-10-24T18:09:22-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33569",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33571,
+      "title": "Fix OrtMemoryInfo ABI mismatch across the plugin EP boundary (#33571)",
+      "commit": "3b4a0fff56c9b89f644acfc6613ae4dad3aeb5ff",
+      "committedAt": "2026-10-26T21:56:46Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33571",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33585,
+      "title": "[CUDA] Optimize INT3 QMoE decode/prefill kernels and S=8 GEMV finalize dispatch (#33585)",
+      "commit": "c026a50999772f94d6f48d07df5964465c721131",
+      "committedAt": "2026-10-27T23:08:22-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33585",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33595,
+      "title": "[CUDA][QMoE] Use PickPrefillTactic with Ampere 64x128x64 fallback for INT4 deterministic prefill (#33595)",
+      "commit": "cad4827e44bae7834e1d9c586509b327b62abb8a",
+      "committedAt": "2026-10-27T13:00:39-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33595",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33597,
+      "title": "[CUDA][PagedAttention] Fuse small-batch sequence-length sanitizer and add session.paged_attention.skip_input_sanitizer (#33597)",
+      "commit": "55ab2dfff389902bb98e3404276dc44e2c71b2ee",
+      "committedAt": "2026-10-27T13:04:18-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33597",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33600,
+      "title": "[CUDA] Extend M=8 narrow CtaN=2 in fpA_intB_gemv to BF16 and INT8 small-N projections (#33600)",
+      "commit": "f30f7fcb621a8d92c729ed0212c55f4e699f5679",
+      "committedAt": "2026-10-28T06:07:14Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33600",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33601,
+      "title": "[CUDA] Optimize GatedDeltaNetChunkedKernel with ldmatrix/SyncBeforeStore and add GatedRMSNormWarp128Kernel (#33601)",
+      "commit": "1e3c937dfd019fd8e602a88be20ff1067bdf0da6",
+      "committedAt": "2026-10-27T22:18:47-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33601",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33617,
+      "title": "Centralize .NET SDK setup for GitHub Actions and Azure Pipelines (#33617)",
+      "commit": "7e89fc6733b763bff2a10c9ea81bad2417b4f6f3",
+      "committedAt": "2026-10-26T11:58:00-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33617",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33664,
+      "title": "[WebGPU] Fix Gemm with rank-0 scalar bias (#33664)",
+      "commit": "85c8b6dd6a5dd919823b07644be1ef8e0c4501b5",
+      "committedAt": "2026-10-28T07:43:10Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33664",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33384,
+      "title": "[CUDA] Add HyperConnectionLowRankMix fused low-rank hyper-connection op (#33384)",
+      "commit": "245f59b73423ec3c4af5692a4c2d0b7822fdc7ac",
+      "committedAt": "2026-10-23T13:55:00-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33384",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33469,
+      "title": "Add exact normalization and rotary CUDA operator modes (#33469)",
+      "commit": "c7873286778c3d3509773ec3796f2ba443514bfe",
+      "committedAt": "2026-10-24T15:59:43-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33469",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33474,
+      "title": "[CUDA] Add SpeculativePrefixCommit contrib operator (#33474)",
+      "commit": "1b6e8e064a18159e236d154695244bebc711237f",
+      "committedAt": "2026-10-27T10:37:57-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33474",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33523,
+      "title": "[CUDA] Harden GatedDeltaNet BFloat16 fp16-mode guards and add split-engine fp16 path (#33523)",
+      "commit": "a6f085c3faeaaf43fa45a5153a3b416c492b7542",
+      "committedAt": "2026-10-26T17:26:35-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33523",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33548,
+      "title": "[CUDA] Optimize HyperConnectionLowRankMix for S<=8 speculative decode and deterministic prefill (#33548)",
+      "commit": "812043410eebd29c4bdd46b906447e2e5b77f7b2",
+      "committedAt": "2026-10-27T10:38:54-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33548",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33554,
+      "title": "[CUDA] Fix Windows nvcc error for FP4 rescale device variable template (#33554)",
+      "commit": "36f07f760dccb74a96d0a3c851163d6448bdfd21",
+      "committedAt": "2026-10-23T23:42:44Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33554",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33591,
+      "title": "Require patched Python ONNX releases in tooling dependencies (#33591)",
+      "commit": "e5c5d686b35e0ced28298838803c7282a9a17b9d",
+      "committedAt": "2026-10-26T12:00:23-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33591",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33596,
+      "title": "[CUDA][QMoE] Wire LaunchFusedRouteMaps into CutlassMoeFCRunner for S<=8 and E<=512 (#33596)",
+      "commit": "a3c3cf98d188abf633d483e146dcc4c316208ba2",
+      "committedAt": "2026-10-27T13:01:05-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33596",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2749,
+      "title": "Add memory-backed CPU model loading for sandboxed inference (#2749)",
+      "commit": "4c98c4e473fa49f9fca59ce086fc5d2092964ff5",
+      "committedAt": "2026-10-27T19:20:47-04:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2749",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 29561,
+      "title": "Include originating function in C-API catch-all exception message (#29561)",
+      "commit": "73b0fc6c0533771f01958ca1f19dc0d77ed36ce3",
+      "committedAt": "2026-10-23T15:21:05-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/29561",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33034,
+      "title": "[Python] Add an experimental CUDA 13 unified-wheel packaging pipeline (#33034)",
+      "commit": "7c914a2a4b3249f0fc9e2c8cb583aea6dec87fea",
+      "committedAt": "2026-10-23T09:08:56-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33034",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33216,
+      "title": "Add executable EPContext fixture for encrypted binding tests (#33216)",
+      "commit": "7617fc8c069fd1adec5dc0f893b85b0f1987950d",
+      "committedAt": "2026-10-26T19:49:15-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33216",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33553,
+      "title": "Bump next from 15.5.27 to 15.5.28 in /js/web/test/e2e/exports/testcases/nextjs-default (#33553)",
+      "commit": "ec2db7180896171751465333001588e477d0a162",
+      "committedAt": "2026-10-26T08:20:12-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33553",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33561,
+      "title": "Fix combined packaging stage (#33561)",
+      "commit": "7ec270791d92a789db39c868e565d05ce7d1654b",
+      "committedAt": "2026-10-23T13:34:09-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33561",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33564,
+      "title": "Increase macOS CI build-and-test timeout to 150 minutes (#33564)",
+      "commit": "db2039d05cb92218ec5567d39b5a61af308fe4b1",
+      "committedAt": "2026-10-23T15:36:31-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33564",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33587,
+      "title": "Update Browserslist for CVE-2026-73088 and CVE-2026-73089 (#33587)",
+      "commit": "123c0ba9dabc54ac67253c88804585f7b4447abf",
+      "committedAt": "2026-10-26T11:56:53-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33587",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33588,
+      "title": "fix(js): update shell-quote for CVE-2026-102422 (#33588)",
+      "commit": "df8eca0202d6dd1a5d7c21625dbc2c083c46c5f7",
+      "committedAt": "2026-10-26T10:44:11-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33588",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33589,
+      "title": "Fix nanoid CVE-2026-67213 in Next.js export test fixture (#33589)",
+      "commit": "c1aa337ef78ae3203c5d2b396123663602c0f53f",
+      "committedAt": "2026-10-26T12:00:34-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33589",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33606,
+      "title": "Bump setuptools from 78.1.1 to 84.1.0 in /tools/ci_build/github/linux/docker/scripts (#33606)",
+      "commit": "997d2d1b26bff594f3af6953f1804d0b4329c9ed",
+      "committedAt": "2026-10-27T10:29:37-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33606",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33607,
+      "title": "Bump serialize-javascript from 7.1.2 to 7.1.4 in /js/web/test/e2e (#33607)",
+      "commit": "08e91d9d416dc19df682def469950f653d95fbae",
+      "committedAt": "2026-10-26T15:33:41-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33607",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33608,
+      "title": "Bump undici from 7.30.0 to 7.30.1 in /js/web (#33608)",
+      "commit": "16c44618fa031f6f1a80bdf352073f48b0bb6665",
+      "committedAt": "2026-10-26T15:33:18-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33608",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33609,
+      "title": "Bump electron from 42.11.9 to 42.11.16 in /js/web (#33609)",
+      "commit": "11fdbcdc56128c20c843445396952261e9953660",
+      "committedAt": "2026-10-26T11:17:55-04:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33609",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33613,
+      "title": "[CI] Remove unused Rust setup from lint workflows (#33613)",
+      "commit": "6efb18ac9d2ec462c84d00bd872ea2761dcf62b3",
+      "committedAt": "2026-10-26T11:53:19-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33613",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33615,
+      "title": "Fix Python API docs failure by pinning analytics extension 0.6 (#33615)",
+      "commit": "9095ba87f9081b13ec1f0a121d7c531badb689ba",
+      "committedAt": "2026-10-26T11:53:39-07:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33615",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33649,
+      "title": "[CUDA] Include SM103 in Linux aarch64 CUDA 13 packages (#33649)",
+      "commit": "edb399aa0761ba9a9bc77f74fc8e8e205d76fbbf",
+      "committedAt": "2026-10-28T01:31:55Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33649",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33653,
+      "title": "Use image-cached Temurin JDK for CodeQL (#33653)",
+      "commit": "c3a573868e821050d6189500c93113df52891849",
+      "committedAt": "2026-10-28T00:32:22Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33653",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33656,
+      "title": "Update Pillow minimum version to 13.0.0 (#33656)",
+      "commit": "7201c96570759372e18b122ffe6d4a24367d542a",
+      "committedAt": "2026-10-28T02:44:57Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33656",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "7149d54db8575e69c55283128d54f7311aeb14f321dd1517b0134afd1c07b663",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "5fa983f4154e61bb6500197f6a0ccfee017c1fdfcfdce28f0101470fe052ee44",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "3c6e0ec5501fbb4f51df7239bef8a268f606d455ee73b689d54e03cd88d86b80",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "c1868f2a36d8edf6ef4671d141288f42a8b8a5aef47cf6ce403c931c492417ae",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "d40c2897f8ef08a1538aacc1a01129244fc524a5ad929f6a2ea2ddf21f068cdf",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "355db6b0601fcbf71aff77c141d4f066cd9165d566b8c2b510b0efb242f40f26",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "2a8a4d8be84138e6a4b97665c921e1b47a5e0082e2ee6bf2ba0bfe9d8250e1e9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a49dc158a50a300209c5d9b0fae45b2da806674b0d91c2958ffd105a57878aee"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "990fa1cd0f0c806914a572cbe8867040813bbdd7cc918c4ceeb9693947b5c726",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "5f9488859a27b9883bf99a23f7ca54064b5e459fa6f3c5833de41198a0577c73",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "88c0b327af0323498039754ed04acbc05c0910fb8b49796415394abdc2ef7d65"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
