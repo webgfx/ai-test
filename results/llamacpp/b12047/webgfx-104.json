@@ -1,0 +1,34 @@
+{
+  "device": "webgfx-104",
+  "runtime": "llamacpp",
+  "version": "b12047",
+  "gpus": {
+    "2C02": {
+      "backend": "vulkan",
+      "models": {
+        "Phi-4-mini-instruct": {
+          "128": {
+            "ttftMs": 16.96,
+            "plTs": 7546.01,
+            "tgTs": 231.12,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-11-03T15:32:34.578Z"
+          }
+        }
+      }
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "Default options",
+    "config": {
+      "backend": "vulkan",
+      "generationLength": 128,
+      "repetitions": 5,
+      "flashAttention": true,
+      "benchmarkMode": "separate-prefill-decode"
+    },
+    "updatedAt": "2026-11-03T15:32:34.578Z"
+  }
+}
