@@ -1,0 +1,60 @@
+{
+  "device": "webgfx-32",
+  "runtime": "llamacpp",
+  "version": "b12047",
+  "gpus": {
+    "B080": {
+      "backend": "vulkan",
+      "models": {
+        "Qwen3.5-2B": {
+          "128": {
+            "ttftMs": 52.54,
+            "plTs": 2437.08,
+            "tgTs": 71.13,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-11-03T16:22:29.565Z"
+          },
+          "512": {
+            "ttftMs": 129.22,
+            "plTs": 3964.58,
+            "tgTs": 61.95,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-11-03T16:22:29.565Z"
+          }
+        },
+        "gemma-4-e2b-it": {
+          "128": {
+            "ttftMs": 67.75,
+            "plTs": 1889.36,
+            "tgTs": 57.43,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-11-03T16:22:29.565Z"
+          },
+          "512": {
+            "ttftMs": 152.57,
+            "plTs": 3355.92,
+            "tgTs": 56.77,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-11-03T16:22:29.565Z"
+          }
+        }
+      }
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "Default options",
+    "config": {
+      "backend": "vulkan",
+      "generationLength": 128,
+      "repetitions": 5,
+      "flashAttention": true,
+      "benchmarkMode": "separate-prefill-decode"
+    },
+    "updatedAt": "2026-11-03T16:22:29.565Z"
+  }
+}
