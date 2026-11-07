@@ -1,0 +1,42 @@
+{
+  "device": "webgfx-30",
+  "runtime": "llamacpp",
+  "version": "20261108-confirm-b12189",
+  "gpus": {
+    "150E": {
+      "backend": "vulkan",
+      "models": {
+        "Qwen3.5-4B": {
+          "512": {
+            "ttftMs": 1237.93,
+            "plTs": 413.68,
+            "tgTs": 25.98,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-11-07T16:31:36.685Z"
+          },
+          "1024": {
+            "ttftMs": 2526,
+            "plTs": 405.41,
+            "tgTs": 25.75,
+            "e2eMs": null,
+            "peakMemoryBytes": null,
+            "testedAt": "2026-11-07T16:31:36.685Z"
+          }
+        }
+      }
+    }
+  },
+  "defaultVariant": {
+    "id": "default",
+    "label": "Default options",
+    "config": {
+      "backend": "vulkan",
+      "generationLength": 128,
+      "repetitions": 5,
+      "flashAttention": true,
+      "benchmarkMode": "separate-prefill-decode"
+    },
+    "updatedAt": "2026-11-07T16:31:36.685Z"
+  }
+}
