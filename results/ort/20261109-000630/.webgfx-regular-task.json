@@ -1,0 +1,161 @@
+{
+  "runtime": "ort",
+  "version": "20261109-000630",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-11-09T03:22:03.305Z",
+  "builtAt": "2026-11-09T00:15:18.293385+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "3e68363ed74e28365687805e17866d9d441ff4d6",
+      "commitDate": "2026-11-08T08:29:50Z",
+      "title": "[🤗 WebGPU] Gather optimizations (#33718)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/3e68363ed74e28365687805e17866d9d441ff4d6"
+    },
+    "onnxruntime-genai": {
+      "commit": "6a94c154eacb960b36e832425182cf65f49837c9",
+      "commitDate": "2026-11-07T08:10:37-08:00",
+      "title": "Report which EOS token ended an Engine turn (#2895)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/6a94c154eacb960b36e832425182cf65f49837c9"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261108-000533",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "1f84d5308115bcb96085f1202e21c9a108d37fbe",
+        "commitDate": "2026-11-06T22:43:29-08:00",
+        "title": "GQA: read a total_sequence_length produced by a device node (#33945)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/1f84d5308115bcb96085f1202e21c9a108d37fbe"
+      },
+      "onnxruntime-genai": {
+        "commit": "39ed1ef2f79c47328690884fe7ccdc243dc7fdd6",
+        "commitDate": "2026-11-07T15:06:21Z",
+        "title": "Bump the github-actions group with 2 updates (#2894)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/39ed1ef2f79c47328690884fe7ccdc243dc7fdd6"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33718,
+      "title": "[🤗 WebGPU] Gather optimizations (#33718)",
+      "commit": "3e68363ed74e28365687805e17866d9d441ff4d6",
+      "committedAt": "2026-11-08T08:29:50Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33718",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33935,
+      "title": "[CUDA] Improve QMoE offload decode throughput via AVX2 spill elimination and working-set retention (#33935)",
+      "commit": "4e9f07f70be8afdfc096b04a4cb01b50a0ee9193",
+      "committedAt": "2026-11-07T14:37:08-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33935",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33944,
+      "title": "[CUDA] Tail expert substitution for QMoE offload decode (stacked on #33935) (#33944)",
+      "commit": "5b127362e2a95645ee0d5580954f3316ee94a93c",
+      "committedAt": "2026-11-07T19:56:44-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33944",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2895,
+      "title": "Report which EOS token ended an Engine turn (#2895)",
+      "commit": "6a94c154eacb960b36e832425182cf65f49837c9",
+      "committedAt": "2026-11-07T08:10:37-08:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2895",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "5723c4adcea55efffe591923d8fe2a3137a3c892630a710765d818ec706b9145",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "3a08e6076eb9c8012811bfd427207232657086753267a2e0580fcd13bca8d7ce",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "555e50a575d9acec914897b891b78dfd9e514d150e28755d4e8dc39107701f2e",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "10c699680b345902c6398472d5ae0428e8fae92a65d46aa57a81ecdbb380b639",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "47f607bce639f238ca14014344367d8ccfb66aa8c59263c58c219be7c9ffb30d",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "0a9ffd42472bd8d7ca5fdaf4bf38e4584ddb8a952f950de3efc3b713e0117fd2",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "ca3f2635d9ad502860bc5ff9c6b1aa46593664e7ce46c0a6d660829f532fc2e0",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a1305e649451b8823470ae240af5dde3b9baa688c49f74aaaded01d5d890d118"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "16fc602c17860cb09efe00d314857eff7dc90eb1e18cba5a901645a861c4bca6",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "63cbb30f460d28c20ac3893b333cf48a1f41063f8805677c799ea112a33868f9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "3d4bbe13c644cf80cf52a36ee8900a57e7692300ceff7609a932a472e21cd187"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
