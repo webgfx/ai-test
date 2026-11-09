@@ -1,0 +1,75 @@
+{
+  "runtime": "ort-web",
+  "version": "20261110-000542-web-005856",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf-web",
+  "recordedAt": "2026-11-09T17:17:36.278Z",
+  "builtAt": "2026-11-09T17:14:05.016787+00:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "924b50b0166d278cdc62fd39e0ce1a4c5cebe06c",
+      "commitDate": "2026-11-09T07:06:19-08:00",
+      "title": "[MLAS] Verify AMX tile-state preservation before QGEMM dispatch (#33258)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/924b50b0166d278cdc62fd39e0ce1a4c5cebe06c"
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33817,
+      "title": "[CUDA] Add KDA per-key-dim decay support to GatedDeltaNet across CPU, WebGPU, and CUDA (#33817)",
+      "commit": "d93f5446f362d9c70bea81de953f32a26aa26d25",
+      "committedAt": "2026-11-08T12:19:34-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33817",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33877,
+      "title": "Support direct external initializer buffers in AddExternalInitializers (#33877)",
+      "commit": "3875bc0ca63a0d8ad7d15e43d18fefc9c9799c04",
+      "committedAt": "2026-11-08T12:14:31-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33877",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33518,
+      "title": "Fix NCHWc Add layout fallback for an empty batch (#33518)",
+      "commit": "870a122a59694aa472865e8514d1c697ca4a1d3a",
+      "committedAt": "2026-11-09T07:03:51-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33518",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33258,
+      "title": "[MLAS] Verify AMX tile-state preservation before QGEMM dispatch (#33258)",
+      "commit": "924b50b0166d278cdc62fd39e0ce1a4c5cebe06c",
+      "committedAt": "2026-11-09T07:06:19-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33258",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "nativeVersion": "20261110-000542",
+  "executionMode": "web",
+  "wasmVariant": "jspi",
+  "artifacts": {
+    "ort.all.min.js": {
+      "size": 522857,
+      "sha256": "e039c3647ce64cc234240ed19fecbb7a9203326c50dcac88f5d07ce671d597f8"
+    },
+    "ort-wasm-simd-threaded.jspi.mjs": {
+      "size": 44435,
+      "sha256": "47148303bdffa3398db572fc4e05c4a2e28e5b3cad98638ae97e293157200d67"
+    },
+    "ort-wasm-simd-threaded.jspi.wasm": {
+      "size": 21492257,
+      "sha256": "349d97e27466301ac2be3fb50eb3bf0aac38d50630e9c206813b20f0e2f23fb3"
+    }
+  }
+}
