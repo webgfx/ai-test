@@ -1,0 +1,361 @@
+{
+  "runtime": "ort",
+  "version": "20261112-000546",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-11-11T17:41:08.871Z",
+  "builtAt": "2026-11-12T00:39:35.019123+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "79d8fdadbbf46c60ff81ce5d4cf66e94a8647b8b",
+      "commitDate": "2026-11-11T22:21:55+08:00",
+      "title": "[WebGPU] Handle absent optional bias in convolution and Attention (#33719)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/79d8fdadbbf46c60ff81ce5d4cf66e94a8647b8b"
+    },
+    "onnxruntime-genai": {
+      "commit": "1c1dac176809e6726731be19e88e12a3fc97df3d",
+      "commitDate": "2026-11-10T23:54:48-08:00",
+      "title": "[Qwen38] Capture decode CUDA graphs on first offload warmup run and enable adaptive context budget by default (#2876)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/1c1dac176809e6726731be19e88e12a3fc97df3d"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261111-000610",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "116967d5d67a109c070fd1ec1247747a3f82e1e1",
+        "commitDate": "2026-11-10T14:53:05Z",
+        "title": "Split Windows WebGPU static-plugin build/test jobs and cache vcpkg binaries (#34038)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/116967d5d67a109c070fd1ec1247747a3f82e1e1"
+      },
+      "onnxruntime-genai": {
+        "commit": "59ae23569b06c40906c785ab7a01d111edb6eea4",
+        "commitDate": "2026-11-10T01:00:30Z",
+        "title": "Recreate Qwen38 decode state on Engine owner thread (#2896)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/59ae23569b06c40906c785ab7a01d111edb6eea4"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33719,
+      "title": "[WebGPU] Handle absent optional bias in convolution and Attention (#33719)",
+      "commit": "79d8fdadbbf46c60ff81ce5d4cf66e94a8647b8b",
+      "committedAt": "2026-11-11T22:21:55+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33719",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33808,
+      "title": "FlashAttention: use subgroup size 32 on Intel Xe2 and Xe3 (#33808)",
+      "commit": "47716d3686ee540d8c4b8b5887cf417cf76b3189",
+      "committedAt": "2026-11-11T10:41:42+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33808",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33901,
+      "title": "[WebGPU] Fuse QLoRA QKV and MLP projections (#33901)",
+      "commit": "1f307f811e65e96f425b14b305d3185eb6e32f76",
+      "committedAt": "2026-11-11T10:25:34+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33901",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33997,
+      "title": "[CUDA] Support FP16 KV cache and FP16 query/key in DynamicSparseAttention<BFloat16> and FP32 rotary cache / FP16 output in RMSNormRotary (#33997)",
+      "commit": "c93c80ff90a42204b74a4b3224e815bd1d0c5104",
+      "committedAt": "2026-11-10T09:05:26-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33997",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34081,
+      "title": "[CUDA] Zero the cuDNN SDPA graph cache key before hashing it (#34081)",
+      "commit": "dbbdc8a1018658adffc1afe1a2593bcc424874bb",
+      "committedAt": "2026-11-10T21:40:20Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34081",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34084,
+      "title": "[CI] Split Windows Dawn builds from GPU tests (#34084)",
+      "commit": "6cc3c09506eca32a1f077eb210b4442e51890847",
+      "committedAt": "2026-11-10T23:09:22-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34084",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34085,
+      "title": "Bump plugin-ep-webgpu/VERSION_NUMBER to 0.7.0. (#34085)",
+      "commit": "4e1d7665c10494cf8a945b0a4753d3d5a9752147",
+      "committedAt": "2026-11-10T21:39:50-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34085",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34088,
+      "title": "[CUDA] Build FlashAttention for SM80 but not SM86/SM89 by default (#34088)",
+      "commit": "82d47d09230327010104f3caadf8c92705e734c5",
+      "committedAt": "2026-11-10T15:20:13-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34088",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2729,
+      "title": "Add Qwen3.8-Flash Engine qualification and benchmark tools (#2729)",
+      "commit": "b6541450975a3013b8c0ac8230baf066c3ec2e55",
+      "committedAt": "2026-11-10T15:01:37-08:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2729",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2779,
+      "title": "Support fixed-shape Gemma4 vision preprocessing (#2779)",
+      "commit": "349f5dc9e59f95260d1ffe5957dceb7b847b4f78",
+      "committedAt": "2026-11-10T14:09:46-08:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2779",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2876,
+      "title": "[Qwen38] Capture decode CUDA graphs on first offload warmup run and enable adaptive context budget by default (#2876)",
+      "commit": "1c1dac176809e6726731be19e88e12a3fc97df3d",
+      "committedAt": "2026-11-10T23:54:48-08:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2876",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2888,
+      "title": "fix: refuse images or audio in a later SetInputs call (#2888)",
+      "commit": "27df3c942bfaa21e5c885e1ef1f2cf81e8abab25",
+      "committedAt": "2026-11-11T07:05:58Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2888",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32546,
+      "title": "Reject zero divisors in CUDA Mod kernels (#32546)",
+      "commit": "9dd1d33d3ede0e2f23227ba5af50c4b010541d32",
+      "committedAt": "2026-11-10T16:25:59-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32546",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32899,
+      "title": "Improve the app-EP weightless contract (#32899)",
+      "commit": "d7ab0d271b0399d889c6b9540cacf04a84b74333",
+      "committedAt": "2026-11-10T11:08:04-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32899",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33973,
+      "title": "[CUDA] Add MoEPacked CPU/GPU hybrid offload and consolidate QMoE/GGUF offload optimizations (#33973)",
+      "commit": "e3b9e0df2950dddf0b0c61861f0e0b0975e13b5a",
+      "committedAt": "2026-11-10T14:11:29-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33973",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34062,
+      "title": "Add BF16 support to CPU and CUDA Pad kernels (#34062)",
+      "commit": "adf4e9713c294a6e06bd322208cd5fd3155680d1",
+      "committedAt": "2026-11-10T16:26:17-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34062",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34089,
+      "title": "[CUDA] Build the aarch64 wheel with family targets and fix CUDA arch gating (#34089)",
+      "commit": "bbedf7b115be0077a2f4b76fd927fa94a82d0d1a",
+      "committedAt": "2026-11-10T15:20:13-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34089",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2843,
+      "title": "Add BailingMoeV3 (Ling-3.0-tiny) KDA + MLA + MoE model builder and CUDA plugin EP fallback (#2843)",
+      "commit": "a5aecc30373d194c52cdba81046438db5d2b690d",
+      "committedAt": "2026-11-10T17:37:50-08:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2843",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2866,
+      "title": "Apply sliding_window to every layer when the config has no layer_types (#2866)",
+      "commit": "5e4a2630421a0221ff1c2e3c74193fe1b2c0b3dc",
+      "committedAt": "2026-11-11T01:48:11Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2866",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2884,
+      "title": "[Model Builder] Gemma 3: support Transformers 5 rope_parameters and unscaled local RoPE caches (#2884)",
+      "commit": "25809d6f0d09f7aadb3e0a202a8b1ac625962db5",
+      "committedAt": "2026-11-11T01:51:41Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2884",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33826,
+      "title": "Constrain portable shared asset paths (#33826)",
+      "commit": "06d4aa368f661968edd33b17681180825e1244e1",
+      "committedAt": "2026-11-10T22:03:10Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33826",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33841,
+      "title": "[S0] Add internal capability planning protocol types (#33841)",
+      "commit": "e396ab51938b89c3eb23223915fec929c1ec6445",
+      "committedAt": "2026-11-10T09:16:31-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33841",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34039,
+      "title": "Run Python tooling tests in CI (#34039)",
+      "commit": "6998d9e0c89d165f1b7b8aabbb8018ef8151193d",
+      "committedAt": "2026-11-10T12:11:50-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34039",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34096,
+      "title": "Bump onnxruntime version to 1.33 and cuda plugin ep to 0.5.0 (#34096)",
+      "commit": "2cfe9073663640eab4ae10599f8450c72f11c08f",
+      "committedAt": "2026-11-11T03:17:40Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34096",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "80cf83ce7e2263fc7e7b27f660dc6941996ab4f665ac92c384fc234a538b8ec7",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "3a08e6076eb9c8012811bfd427207232657086753267a2e0580fcd13bca8d7ce",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "a8a5f1c49a9f81c9436b5210e2bb4046ec062b3047516f9bf37695b077d7e019",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "10c699680b345902c6398472d5ae0428e8fae92a65d46aa57a81ecdbb380b639",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "47f607bce639f238ca14014344367d8ccfb66aa8c59263c58c219be7c9ffb30d",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "0a9ffd42472bd8d7ca5fdaf4bf38e4584ddb8a952f950de3efc3b713e0117fd2",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "ca3f2635d9ad502860bc5ff9c6b1aa46593664e7ce46c0a6d660829f532fc2e0",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a1305e649451b8823470ae240af5dde3b9baa688c49f74aaaded01d5d890d118"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "16fc602c17860cb09efe00d314857eff7dc90eb1e18cba5a901645a861c4bca6",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "63cbb30f460d28c20ac3893b333cf48a1f41063f8805677c799ea112a33868f9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "3d4bbe13c644cf80cf52a36ee8900a57e7692300ceff7609a932a472e21cd187"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
