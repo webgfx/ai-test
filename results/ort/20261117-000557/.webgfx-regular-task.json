@@ -1,0 +1,181 @@
+{
+  "runtime": "ort",
+  "version": "20261117-000557",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-11-17T02:33:25.448Z",
+  "builtAt": "2026-11-17T00:24:35.682804+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "382e8a5747713a9d3bf3558b0f7bad2d4f6fe75d",
+      "commitDate": "2026-11-16T08:02:42-08:00",
+      "title": "Add MultiHeadLatentAttention contrib op with a CPU kernel (#33914)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/382e8a5747713a9d3bf3558b0f7bad2d4f6fe75d"
+    },
+    "onnxruntime-genai": {
+      "commit": "3ddcfa160dd322f4adfcee0be31db9d15009d6dd",
+      "commitDate": "2026-11-15T23:38:51-08:00",
+      "title": "feat: add LFM3-VL image support to the builder and runtime (#2882)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/3ddcfa160dd322f4adfcee0be31db9d15009d6dd"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261116-000605",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "1f539821173ae0647165c42f408513460fed18d9",
+        "commitDate": "2026-11-14T10:23:14-08:00",
+        "title": "[CUDA] Reserve MoE GEMM profiler scratch outside the arena (#34167)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/1f539821173ae0647165c42f408513460fed18d9"
+      },
+      "onnxruntime-genai": {
+        "commit": "da29a76b66e7d69658e2dfd1026322a3b370c2a1",
+        "commitDate": "2026-11-14T05:41:21Z",
+        "title": "Enable bounded prefix caching for native Bolt (#2942)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/da29a76b66e7d69658e2dfd1026322a3b370c2a1"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33854,
+      "title": " [WebGPU] Fuse unmasked ViT attention into MultiHeadAttention (#33854)",
+      "commit": "368a6729835340f7ee7defbd52ee7ec95883d3dd",
+      "committedAt": "2026-11-16T22:30:29+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33854",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33914,
+      "title": "Add MultiHeadLatentAttention contrib op with a CPU kernel (#33914)",
+      "commit": "382e8a5747713a9d3bf3558b0f7bad2d4f6fe75d",
+      "committedAt": "2026-11-16T08:02:42-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33914",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33978,
+      "title": "[WebGPU] optimizations for audio models (DFT, STFT, ConvTranspose, LSTM, GRU) (#33978)",
+      "commit": "d889b8bdebd234bcf8d343aa6b4deae5d729d42d",
+      "committedAt": "2026-11-16T06:27:34+08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33978",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34128,
+      "title": "[WebGPU] Skip MatMulNBits-DP4A for padded weights (#34128)",
+      "commit": "14a22c471aa384b6340980aa71c1f0ab5a9a8384",
+      "committedAt": "2026-11-16T06:42:42Z",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34128",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2882,
+      "title": "feat: add LFM3-VL image support to the builder and runtime (#2882)",
+      "commit": "3ddcfa160dd322f4adfcee0be31db9d15009d6dd",
+      "committedAt": "2026-11-15T23:38:51-08:00",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2882",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34151,
+      "title": "Replace vulnerable C# DocFX template (#34151)",
+      "commit": "addeacc8ca8c95c0c562d2629b12ce649cadccd0",
+      "committedAt": "2026-11-16T09:19:20-05:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34151",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "80cf83ce7e2263fc7e7b27f660dc6941996ab4f665ac92c384fc234a538b8ec7",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "3a08e6076eb9c8012811bfd427207232657086753267a2e0580fcd13bca8d7ce",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "a8a5f1c49a9f81c9436b5210e2bb4046ec062b3047516f9bf37695b077d7e019",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "10c699680b345902c6398472d5ae0428e8fae92a65d46aa57a81ecdbb380b639",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "47f607bce639f238ca14014344367d8ccfb66aa8c59263c58c219be7c9ffb30d",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "0a9ffd42472bd8d7ca5fdaf4bf38e4584ddb8a952f950de3efc3b713e0117fd2",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "ca3f2635d9ad502860bc5ff9c6b1aa46593664e7ce46c0a6d660829f532fc2e0",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a1305e649451b8823470ae240af5dde3b9baa688c49f74aaaded01d5d890d118"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "16fc602c17860cb09efe00d314857eff7dc90eb1e18cba5a901645a861c4bca6",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "63cbb30f460d28c20ac3893b333cf48a1f41063f8805677c799ea112a33868f9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "3d4bbe13c644cf80cf52a36ee8900a57e7692300ceff7609a932a472e21cd187"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
