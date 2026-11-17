@@ -1,0 +1,115 @@
+{
+  "runtime": "ort-web",
+  "version": "20261118-000618-web-010435",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf-web",
+  "recordedAt": "2026-11-17T17:25:37.541Z",
+  "builtAt": "2026-11-17T17:20:07.167824+00:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "f1b4861a41e980c917079f825e26b57f1ae35c81",
+      "commitDate": "2026-11-17T06:37:27-08:00",
+      "title": "Use wide accumulation for FLOAT8 weight statistics (#34186)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/f1b4861a41e980c917079f825e26b57f1ae35c81"
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33739,
+      "title": "KFI-779 Avoid SME2 on GEMV DynamicQuantizeMatMul. (#33739)",
+      "commit": "7172420c0467ceec0fd5f06f87eb218bf7705e55",
+      "committedAt": "2026-11-16T10:20:07-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33739",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34179,
+      "title": "Fix numerical stability of distribution calibration moments (#34179)",
+      "commit": "eeb564b1103d309adae70687d7f1f00caf7fea5d",
+      "committedAt": "2026-11-16T09:55:44-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34179",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34180,
+      "title": "Preserve histogram probability mass in entropy calibration (#34180)",
+      "commit": "3d51a42f203ee81a3965102b5778a67635a8c865",
+      "committedAt": "2026-11-16T10:05:45-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34180",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34185,
+      "title": "Handle scalar and empty tensors in integer quantization helpers (#34185)",
+      "commit": "dd9b78ab823c465bcd37538be3d4b9b2737d6f2a",
+      "committedAt": "2026-11-16T10:01:56-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34185",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34186,
+      "title": "Use wide accumulation for FLOAT8 weight statistics (#34186)",
+      "commit": "f1b4861a41e980c917079f825e26b57f1ae35c81",
+      "committedAt": "2026-11-17T06:37:27-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34186",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34190,
+      "title": "Honor 16-bit overrides when upgrading FLOAT8 quantization opsets (#34190)",
+      "commit": "a4f51c7b63ba3eb0a9dfc4d61818d262a0825c52",
+      "committedAt": "2026-11-16T09:57:47-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34190",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32354,
+      "title": "Allocate Einsum's CUDA intermediates on the stream that uses them (#32354)",
+      "commit": "5e289356eff2c1c66e83696a7b119f388230d5af",
+      "committedAt": "2026-11-16T20:59:41-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32354",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33508,
+      "title": "Select model package variants in EP priority order (#33508)",
+      "commit": "01713b72cf4f929ea9c5d7ca4addcfe25e24a313",
+      "committedAt": "2026-11-16T14:43:17-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33508",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "nativeVersion": "20261118-000618",
+  "executionMode": "web",
+  "wasmVariant": "jspi",
+  "artifacts": {
+    "ort.all.min.js": {
+      "size": 522147,
+      "sha256": "9185d61a1e09e55339ef998f4d99c743a9e5fd722b0086145fbed4a2d347969e"
+    },
+    "ort-wasm-simd-threaded.jspi.mjs": {
+      "size": 44435,
+      "sha256": "7c46a17558daafac1d5e9ac783e713d8d3313a0f17d8262dca341e88d7097065"
+    },
+    "ort-wasm-simd-threaded.jspi.wasm": {
+      "size": 22013018,
+      "sha256": "ba34a7e07f697b2b3ba513917ecd861073ff5c1b8ac6e44ab86f0c002f23dda5"
+    }
+  }
+}
