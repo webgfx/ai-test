@@ -1,0 +1,221 @@
+{
+  "runtime": "ort",
+  "version": "20261118-000618",
+  "builtFromSource": true,
+  "workflow": "ort-webgpu-perf",
+  "recordedAt": "2026-11-17T17:24:48.824Z",
+  "builtAt": "2026-11-18T00:32:06.541761+08:00",
+  "repositories": {
+    "onnxruntime": {
+      "commit": "f1b4861a41e980c917079f825e26b57f1ae35c81",
+      "commitDate": "2026-11-17T06:37:27-08:00",
+      "title": "Use wide accumulation for FLOAT8 weight statistics (#34186)",
+      "url": "https://github.com/microsoft/onnxruntime/commit/f1b4861a41e980c917079f825e26b57f1ae35c81"
+    },
+    "onnxruntime-genai": {
+      "commit": "314f3f68a85ccf907bf53ca9ebe90f845299e5b5",
+      "commitDate": "2026-11-17T01:24:35Z",
+      "title": "feat: give LFM3-VL's sliding-window layers window-sized KV caches (#2989)",
+      "url": "https://github.com/microsoft/onnxruntime-genai/commit/314f3f68a85ccf907bf53ca9ebe90f845299e5b5"
+    }
+  },
+  "webgpuBackends": [
+    "d3d12",
+    "vulkan"
+  ],
+  "webgpuCmakeDefines": [
+    "onnxruntime_ENABLE_DAWN_BACKEND_VULKAN=ON",
+    "onnxruntime_ENABLE_DAWN_BACKEND_D3D12=ON",
+    "DAWN_USE_AGILITY_SDK=OFF",
+    "DAWN_FORCE_SYSTEM_COMPONENT_LOAD=ON"
+  ],
+  "previousBuild": {
+    "version": "20261117-000557",
+    "repositories": {
+      "onnxruntime": {
+        "commit": "382e8a5747713a9d3bf3558b0f7bad2d4f6fe75d",
+        "commitDate": "2026-11-16T08:02:42-08:00",
+        "title": "Add MultiHeadLatentAttention contrib op with a CPU kernel (#33914)",
+        "url": "https://github.com/microsoft/onnxruntime/commit/382e8a5747713a9d3bf3558b0f7bad2d4f6fe75d"
+      },
+      "onnxruntime-genai": {
+        "commit": "3ddcfa160dd322f4adfcee0be31db9d15009d6dd",
+        "commitDate": "2026-11-15T23:38:51-08:00",
+        "title": "feat: add LFM3-VL image support to the builder and runtime (#2882)",
+        "url": "https://github.com/microsoft/onnxruntime-genai/commit/3ddcfa160dd322f4adfcee0be31db9d15009d6dd"
+      }
+    }
+  },
+  "pullRequests": [
+    {
+      "repository": "onnxruntime",
+      "number": 33739,
+      "title": "KFI-779 Avoid SME2 on GEMV DynamicQuantizeMatMul. (#33739)",
+      "commit": "7172420c0467ceec0fd5f06f87eb218bf7705e55",
+      "committedAt": "2026-11-16T10:20:07-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33739",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34179,
+      "title": "Fix numerical stability of distribution calibration moments (#34179)",
+      "commit": "eeb564b1103d309adae70687d7f1f00caf7fea5d",
+      "committedAt": "2026-11-16T09:55:44-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34179",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34180,
+      "title": "Preserve histogram probability mass in entropy calibration (#34180)",
+      "commit": "3d51a42f203ee81a3965102b5778a67635a8c865",
+      "committedAt": "2026-11-16T10:05:45-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34180",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34185,
+      "title": "Handle scalar and empty tensors in integer quantization helpers (#34185)",
+      "commit": "dd9b78ab823c465bcd37538be3d4b9b2737d6f2a",
+      "committedAt": "2026-11-16T10:01:56-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34185",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34186,
+      "title": "Use wide accumulation for FLOAT8 weight statistics (#34186)",
+      "commit": "f1b4861a41e980c917079f825e26b57f1ae35c81",
+      "committedAt": "2026-11-17T06:37:27-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34186",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 34190,
+      "title": "Honor 16-bit overrides when upgrading FLOAT8 quantization opsets (#34190)",
+      "commit": "a4f51c7b63ba3eb0a9dfc4d61818d262a0825c52",
+      "committedAt": "2026-11-16T09:57:47-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/34190",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2933,
+      "title": "feat: add LFM3-Audio speech input to the builder and runtime (#2933)",
+      "commit": "9dc425934f08922ac5e0149dd2f14ab473756ef2",
+      "committedAt": "2026-11-16T22:13:25Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2933",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime-genai",
+      "number": 2989,
+      "title": "feat: give LFM3-VL's sliding-window layers window-sized KV caches (#2989)",
+      "commit": "314f3f68a85ccf907bf53ca9ebe90f845299e5b5",
+      "committedAt": "2026-11-17T01:24:35Z",
+      "url": "https://github.com/microsoft/onnxruntime-genai/pull/2989",
+      "relevance": "high",
+      "reason": "Touches WebGPU or LLM performance-sensitive code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 32354,
+      "title": "Allocate Einsum's CUDA intermediates on the stream that uses them (#32354)",
+      "commit": "5e289356eff2c1c66e83696a7b119f388230d5af",
+      "committedAt": "2026-11-16T20:59:41-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/32354",
+      "relevance": "medium",
+      "reason": "Touches GenAI, graph optimization, or execution-provider code"
+    },
+    {
+      "repository": "onnxruntime",
+      "number": 33508,
+      "title": "Select model package variants in EP priority order (#33508)",
+      "commit": "01713b72cf4f929ea9c5d7ca4addcfe25e24a313",
+      "committedAt": "2026-11-16T14:43:17-08:00",
+      "url": "https://github.com/microsoft/onnxruntime/pull/33508",
+      "relevance": "low",
+      "reason": "Merged between the two benchmarked source revisions"
+    }
+  ],
+  "sourcePatches": [
+    {
+      "file": "ort-amd150e-head512-recovery.patch",
+      "sha256": "edf47f5ccdf40bf7c1cbce4bbc12b10f4d21291f8930b7a4dca626c706b8143b",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1153",
+        "1154",
+        "1155",
+        "1156"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "80cf83ce7e2263fc7e7b27f660dc6941996ab4f665ac92c384fc234a538b8ec7",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "3a08e6076eb9c8012811bfd427207232657086753267a2e0580fcd13bca8d7ce",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "80b64c1a7e0dea7ca006c34002a8653e8aad2af312427f764e4111b09443393b"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.cc": "a8a5f1c49a9f81c9436b5210e2bb4046ec062b3047516f9bf37695b077d7e019",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention.h": "10c699680b345902c6398472d5ae0428e8fae92a65d46aa57a81ecdbb380b639",
+        "onnxruntime/contrib_ops/webgpu/bert/flash_attention_decode_qkv.wgsl.template": "d682e3c32f9624869c6c088c1bf0dcbc68b5da40d0ce5e5c102fa635d954f7d5"
+      }
+    },
+    {
+      "file": "ort-convtranspose-integer-coordinates.patch",
+      "sha256": "c59cd75c8d6c3bf6785027c8f3349936f09f46748d918dc192cddee86bf99ef7",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1340",
+        "1343"
+      ],
+      "before": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "cc191d857e83fcfd8fb7f4283264bb585a546c11e66645d3f80b936fbc01d8d1"
+      },
+      "after": {
+        "onnxruntime/core/providers/webgpu/nn/conv_backprop.cc": "1988b32b158c8a77d393760185ae5876e7cfdba601d756ecbcf8471d7b1907f7"
+      }
+    },
+    {
+      "file": "ort-qualcomm-fp16-matmul-shuffle.patch",
+      "sha256": "47f607bce639f238ca14014344367d8ccfb66aa8c59263c58c219be7c9ffb30d",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "0a9ffd42472bd8d7ca5fdaf4bf38e4584ddb8a952f950de3efc3b713e0117fd2",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "ca3f2635d9ad502860bc5ff9c6b1aa46593664e7ce46c0a6d660829f532fc2e0",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "a1305e649451b8823470ae240af5dde3b9baa688c49f74aaaded01d5d890d118"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.cc": "16fc602c17860cb09efe00d314857eff7dc90eb1e18cba5a901645a861c4bca6",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits.h": "63cbb30f460d28c20ac3893b333cf48a1f41063f8805677c799ea112a33868f9",
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_nbits_wide_tile.wgsl.template": "3d4bbe13c644cf80cf52a36ee8900a57e7692300ceff7609a932a472e21cd187"
+      }
+    },
+    {
+      "file": "ort-fp8-reciprocal-rounding.patch",
+      "sha256": "52e75f7ae2c71f2f3ebf39d21ddbe0f97834193a836f58c63dae34a1902aa2bb",
+      "repository": "onnxruntime",
+      "validatedByTasks": [
+        "1648"
+      ],
+      "before": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "0c822c977f5ade18e1870f31e97f773a26590b977dd3b7799efc0f12dcf77ccc"
+      },
+      "after": {
+        "onnxruntime/contrib_ops/webgpu/quantization/matmul_block_quantized_fp8_activation.wgsl.template": "09f6f75046d4c2a1d0b36c8b6460fa9e42027c09d8480459aedc142814a4394e"
+      }
+    }
+  ]
+}
